@@ -1,35 +1,49 @@
 header {
   padding: 20px 0;
+  clear: both;
 
   #header-wrapper {
     width: 95%;
     margin: 0 auto;
-    
-    .logo, .new-scrib {
+
+    .intro {
       float: left;
 
-      a {
-        font-family: $base-font-family;
-        font-size: $base-font-size;
-        text-decoration: none;
-        color: $accent-color;
-        display: inline-block;
-        padding: 3px 7px;
-      }
-    }
+      .logo, .new-scrib {
+        float: left;
 
-    .new-scrib {
-      margin-left: 15px;
-      
-      a {
-        color: $chalk;
-        background: $accent-color;
+        a {
+          font-family: $base-font-family;
+          font-size: $base-font-size;
+          text-decoration: none;
+          color: $accent-color;
+          display: inline-block;
+          padding: 3px 7px;
+        }
+      }
+
+      .new-scrib {
+        margin-left: 15px;
+        
+        a {
+          color: $chalk;
+          background: $accent-color;
+        }
       }
     }
+    
+    
 
     .user {
-      @extend .logo;
       float: right;
+
+      a, .username {
+        text-decoration: none;
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        color: $accent-color;
+        display: inline-block;
+      }
 
       .notification {
         padding: 3px 7px;
@@ -42,6 +56,13 @@ header {
 
       .username {
         background: $chalk;
+        padding: 3px 7px;
+        margin-left: 10px;
+
+        .fa-angle-down {
+          font-size: $small-font-size;
+          display: inline-block;
+        }
       }
     }
   }

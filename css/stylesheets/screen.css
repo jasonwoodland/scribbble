@@ -67,18 +67,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 1, ../sass/includes/_header.scss */
 header {
   padding: 20px 0;
+  clear: both;
 }
-/* line 4, ../sass/includes/_header.scss */
+/* line 5, ../sass/includes/_header.scss */
 header #header-wrapper {
   width: 95%;
   margin: 0 auto;
 }
-/* line 8, ../sass/includes/_header.scss */
-header #header-wrapper .logo, header #header-wrapper .user, header #header-wrapper .new-scrib {
+/* line 9, ../sass/includes/_header.scss */
+header #header-wrapper .intro {
   float: left;
 }
-/* line 11, ../sass/includes/_header.scss */
-header #header-wrapper .logo a, header #header-wrapper .user a, header #header-wrapper .new-scrib a {
+/* line 12, ../sass/includes/_header.scss */
+header #header-wrapper .intro .logo, header #header-wrapper .intro .new-scrib {
+  float: left;
+}
+/* line 15, ../sass/includes/_header.scss */
+header #header-wrapper .intro .logo a, header #header-wrapper .intro .new-scrib a {
   font-family: "Inconsolata";
   font-size: 16px;
   text-decoration: none;
@@ -86,20 +91,28 @@ header #header-wrapper .logo a, header #header-wrapper .user a, header #header-w
   display: inline-block;
   padding: 3px 7px;
 }
-/* line 21, ../sass/includes/_header.scss */
-header #header-wrapper .new-scrib {
+/* line 25, ../sass/includes/_header.scss */
+header #header-wrapper .intro .new-scrib {
   margin-left: 15px;
 }
-/* line 24, ../sass/includes/_header.scss */
-header #header-wrapper .new-scrib a {
+/* line 28, ../sass/includes/_header.scss */
+header #header-wrapper .intro .new-scrib a {
   color: #F3F2F2;
   background: #222222;
 }
-/* line 30, ../sass/includes/_header.scss */
+/* line 37, ../sass/includes/_header.scss */
 header #header-wrapper .user {
   float: right;
 }
-/* line 34, ../sass/includes/_header.scss */
+/* line 40, ../sass/includes/_header.scss */
+header #header-wrapper .user a, header #header-wrapper .user .username {
+  text-decoration: none;
+  font-family: "Inconsolata";
+  font-size: 16px;
+  color: #222222;
+  display: inline-block;
+}
+/* line 48, ../sass/includes/_header.scss */
 header #header-wrapper .user .notification {
   padding: 3px 7px;
   background: #F0E68C;
@@ -108,7 +121,14 @@ header #header-wrapper .user .notification {
   display: inline-block;
   margin-left: 10px;
 }
-/* line 43, ../sass/includes/_header.scss */
+/* line 57, ../sass/includes/_header.scss */
 header #header-wrapper .user .username {
   background: #F3F2F2;
+  padding: 3px 7px;
+  margin-left: 10px;
+}
+/* line 62, ../sass/includes/_header.scss */
+header #header-wrapper .user .username .fa-angle-down {
+  font-size: 12px;
+  display: inline-block;
 }
