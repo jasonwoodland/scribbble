@@ -8,8 +8,23 @@
     .row {
 
       .column4 {
-        background: $chalk;
-        height: 200px;
+        height: 220px;
+        position: relative;
+        background: #ccc;
+
+        .created-by {
+          display: block;
+          text-decoration: none;
+          position: absolute;
+          bottom: 0;
+          margin: 10px;
+          padding: 0px 0 0px 7px;
+          color: $accent-color;
+          background: $chalk;
+          font-family: $base-font-family;
+          text-transform: lowercase;
+          padding: 3px 7px;
+        }
       }
 
       .explore {

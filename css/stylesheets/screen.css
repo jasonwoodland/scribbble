@@ -141,10 +141,25 @@ header #header-wrapper .user .username .fa-angle-down {
 }
 /* line 10, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column4 {
-  background: #F3F2F2;
-  height: 200px;
+  height: 220px;
+  position: relative;
+  background: #ccc;
 }
-/* line 16, ../sass/includes/_content.scss */
+/* line 15, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column4 .created-by {
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  margin: 10px;
+  padding: 0px 0 0px 7px;
+  color: #222222;
+  background: #F3F2F2;
+  font-family: "Inconsolata";
+  text-transform: lowercase;
+  padding: 3px 7px;
+}
+/* line 31, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore a {
   font-family: "Inconsolata";
   text-decoration: none;
@@ -152,7 +167,7 @@ header #header-wrapper .user .username .fa-angle-down {
   color: #222222;
   padding: 3px 7px;
 }
-/* line 24, ../sass/includes/_content.scss */
+/* line 39, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore .active {
   background: #F3F2F2;
   color: #222222;
