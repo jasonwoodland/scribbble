@@ -1,7 +1,4 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
 /* line 5, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,4 +62,53 @@ a img {
 /* line 116, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+/* line 1, ../sass/includes/_header.scss */
+header {
+  padding: 20px 0;
+}
+/* line 4, ../sass/includes/_header.scss */
+header #header-wrapper {
+  width: 95%;
+  margin: 0 auto;
+}
+/* line 8, ../sass/includes/_header.scss */
+header #header-wrapper .logo, header #header-wrapper .user, header #header-wrapper .new-scrib {
+  float: left;
+}
+/* line 11, ../sass/includes/_header.scss */
+header #header-wrapper .logo a, header #header-wrapper .user a, header #header-wrapper .new-scrib a {
+  font-family: "Inconsolata";
+  font-size: 16px;
+  text-decoration: none;
+  color: #222222;
+  display: inline-block;
+  padding: 3px 7px;
+}
+/* line 21, ../sass/includes/_header.scss */
+header #header-wrapper .new-scrib {
+  margin-left: 15px;
+}
+/* line 24, ../sass/includes/_header.scss */
+header #header-wrapper .new-scrib a {
+  color: #F3F2F2;
+  background: #222222;
+}
+/* line 30, ../sass/includes/_header.scss */
+header #header-wrapper .user {
+  float: right;
+}
+/* line 34, ../sass/includes/_header.scss */
+header #header-wrapper .user .notification {
+  padding: 3px 7px;
+  background: #F0E68C;
+  font-family: "Inconsolata";
+  font-size: 16px;
+  display: inline-block;
+  margin-left: 10px;
+}
+/* line 43, ../sass/includes/_header.scss */
+header #header-wrapper .user .username {
+  background: #F3F2F2;
 }

@@ -1,6 +1,9 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
+//base
 @import "compass/reset";
+@import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
+//mixins and variables
+@import "variables/variables";
+
+// includes
+@import "includes/header";

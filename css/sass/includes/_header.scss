@@ -1,0 +1,48 @@
+header {
+  padding: 20px 0;
+
+  #header-wrapper {
+    width: 95%;
+    margin: 0 auto;
+    
+    .logo, .new-scrib {
+      float: left;
+
+      a {
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        text-decoration: none;
+        color: $accent-color;
+        display: inline-block;
+        padding: 3px 7px;
+      }
+    }
+
+    .new-scrib {
+      margin-left: 15px;
+      
+      a {
+        color: $chalk;
+        background: $accent-color;
+      }
+    }
+
+    .user {
+      @extend .logo;
+      float: right;
+
+      .notification {
+        padding: 3px 7px;
+        background: $notification-unread;
+        font-family: $base-font-family;
+        font-size: $base-font-size;
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+      .username {
+        background: $chalk;
+      }
+    }
+  }
+}
