@@ -132,3 +132,28 @@ header #header-wrapper .user .username .fa-angle-down {
   font-size: 12px;
   display: inline-block;
 }
+
+/* line 1, ../sass/includes/_content.scss */
+#content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+/* line 10, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column4 {
+  background: #F3F2F2;
+  height: 200px;
+}
+/* line 16, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .explore a {
+  font-family: "Inconsolata";
+  text-decoration: none;
+  margin-right: 5px;
+  color: #222222;
+  padding: 3px 7px;
+}
+/* line 24, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .explore .active {
+  background: #F3F2F2;
+  color: #222222;
+}

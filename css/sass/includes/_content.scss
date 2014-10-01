@@ -1,0 +1,31 @@
+#content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 50px;
+
+  .container12 {
+
+    .row {
+
+      .column4 {
+        background: $chalk;
+        height: 200px;
+      }
+
+      .explore {
+        a {
+          font-family: $base-font-family;
+          text-decoration: none;
+          margin-right: 5px;
+          color: $accent-color;
+          padding: 3px 7px;
+        }
+
+        .active {
+          background: $chalk;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
