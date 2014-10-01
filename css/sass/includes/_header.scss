@@ -29,6 +29,19 @@ header {
           color: $chalk;
           background: $accent-color;
         }
+
+        .fa-angle-right {
+          font-size: $mediam-font-size;
+          margin-left: -10px;
+          opacity: 0;
+          @include transition(all, 0.1s, ease-in-out);
+          padding: 0;
+        }
+
+        &:hover .fa-angle-right {
+          opacity: 1;
+          margin: 0;
+        }
       }
     }
     
@@ -60,7 +73,7 @@ header {
         margin-left: 10px;
 
         .fa-angle-down {
-          font-size: $small-font-size;
+          font-size: $mediam-font-size;
           display: inline-block;
         }
       }

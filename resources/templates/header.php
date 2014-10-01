@@ -7,7 +7,9 @@
          </div>
 
          <div class="new-scrib">
-            <a href="#">new</a>
+            <a href="#">new
+               <i class="fa fa-angle-right"></i>
+            </a>
          </div>
       </div>
 
