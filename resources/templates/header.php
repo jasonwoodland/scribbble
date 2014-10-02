@@ -1,24 +1,18 @@
-<header>
-   <div id="header-wrapper">
-
-      <div class="intro">
-         <div class="logo">
-            <a href="index.php">scribbble.io</a>
-         </div>
-
-         <div class="new-scrib">
-            <a href="#">new
-               <i class="fa fa-angle-right"></i>
-            </a>
-         </div>
-      </div>
-
-      <div class="user">
-         <a href="#">notifications<span class="notification">28</span></a>
-         <a class="username" href="#">tim bogdanov
-            <i class="fa fa-angle-down"></i>
-         </a>
-      </div>
-
-   </div>
-</header>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><?=TITLE?> - Scribbble</title>
+		<!-- fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+		<!-- font-icons -->
+		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+		<!-- styles -->
+		<link href="css/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<link href="css/stylesheets/1140.css" media="screen, projection" rel="stylesheet" type="text/css" />
+		<!-- dependencies -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="/js/main.js"></script>
+		<?=defined('ROLE') ? sprintf('<script src="%s"></script>', ROLE) : null?>
+	</head>
+	<body>
+		<?php defined('NO_HTML_HEADER') or require 'html-header.php' ?>
