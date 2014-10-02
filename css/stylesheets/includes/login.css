@@ -1,0 +1,94 @@
+/*
+Error: Undefined variable: "$base-font-family".
+        on line 17 of /var/www/scribbble-repo/css/sass/includes/login.scss
+
+12: 
+13:     a {
+14:       display: block;
+15:       text-align: center;
+16:       text-decoration: none;
+17:       font-family: $base-font-family;
+18:       font-size: $small-font-size;
+19:       color: $accent-color;
+20:       margin-bottom: 20px;
+21:     }
+22:   }
+
+Backtrace:
+/var/www/scribbble-repo/css/sass/includes/login.scss:17
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/tree/variable.rb:49:in `_perform'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/script/tree/node.rb:50:in `perform'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:384:in `visit_prop'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `map'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `block in with_base'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/tree/root_node.rb:20:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/engine.rb:268:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+/usr/lib/ruby/gems/1.9.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+/usr/lib/ruby/gems/1.9.1/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `each'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:469:in `on_file_changed'
+/usr/lib/ruby/gems/1.9.1/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/usr/lib/ruby/gems/1.9.1/gems/listen-2.7.11/lib/listen/listener.rb:282:in `call'
+/usr/lib/ruby/gems/1.9.1/gems/listen-2.7.11/lib/listen/listener.rb:282:in `_process_changes'
+/usr/lib/ruby/gems/1.9.1/gems/listen-2.7.11/lib/listen/listener.rb:239:in `block in _wait_for_changes'
+/usr/lib/ruby/gems/1.9.1/gems/listen-2.7.11/lib/listen/listener.rb:222:in `loop'
+/usr/lib/ruby/gems/1.9.1/gems/listen-2.7.11/lib/listen/listener.rb:222:in `_wait_for_changes'
+/usr/lib/ruby/gems/1.9.1/gems/listen-2.7.11/lib/listen/listener.rb:318:in `block in _start_wait_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$base-font-family\".\A         on line 17 of /var/www/scribbble-repo/css/sass/includes/login.scss\A \A 12: \A 13:     a {\A 14:       display: block;\A 15:       text-align: center;\A 16:       text-decoration: none;\A 17:       font-family: $base-font-family;\A 18:       font-size: $small-font-size;\A 19:       color: $accent-color;\A 20:       margin-bottom: 20px;\A 21:     }\A 22:   }"; }

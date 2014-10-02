@@ -110,18 +110,17 @@ header #header-wrapper .intro .new-scrib .fa-angle-right {
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  padding: 0;
 }
-/* line 41, ../sass/includes/_header.scss */
+/* line 40, ../sass/includes/_header.scss */
 header #header-wrapper .intro .new-scrib:hover .fa-angle-right {
   opacity: 1;
   margin: 0;
 }
-/* line 50, ../sass/includes/_header.scss */
+/* line 49, ../sass/includes/_header.scss */
 header #header-wrapper .user {
   float: right;
 }
-/* line 53, ../sass/includes/_header.scss */
+/* line 52, ../sass/includes/_header.scss */
 header #header-wrapper .user a, header #header-wrapper .user .username {
   text-decoration: none;
   font-family: "Inconsolata";
@@ -129,7 +128,7 @@ header #header-wrapper .user a, header #header-wrapper .user .username {
   color: #222222;
   display: inline-block;
 }
-/* line 61, ../sass/includes/_header.scss */
+/* line 60, ../sass/includes/_header.scss */
 header #header-wrapper .user .notification {
   padding: 3px 7px;
   background: #F0E68C;
@@ -138,13 +137,13 @@ header #header-wrapper .user .notification {
   display: inline-block;
   margin-left: 10px;
 }
-/* line 70, ../sass/includes/_header.scss */
+/* line 69, ../sass/includes/_header.scss */
 header #header-wrapper .user .username {
   background: #F3F2F2;
   padding: 3px 7px;
   margin-left: 10px;
 }
-/* line 75, ../sass/includes/_header.scss */
+/* line 74, ../sass/includes/_header.scss */
 header #header-wrapper .user .username .fa-angle-down {
   font-size: 13px;
   display: inline-block;
@@ -188,4 +187,52 @@ header #header-wrapper .user .username .fa-angle-down {
 #content-wrapper .container12 .row .explore .active {
   background: #F3F2F2;
   color: #222222;
+}
+
+/* line 1, ../sass/includes/login.scss */
+#login-wrapper {
+  width: 190px;
+  height: 85px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+/* line 13, ../sass/includes/login.scss */
+#login-wrapper .login-logo a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-family: "Inconsolata";
+  font-size: 12px;
+  color: #222222;
+  margin-bottom: 20px;
+}
+/* line 24, ../sass/includes/login.scss */
+#login-wrapper form {
+  text-align: center;
+}
+/* line 27, ../sass/includes/login.scss */
+#login-wrapper form input {
+  display: block;
+  padding: 9px 16px;
+  margin: 10px;
+  background: #F3F2F2;
+  border: none;
+  width: 100%;
+  font-family: "Inconsolata";
+  font-size: 13px;
+  color: #222222;
+}
+/* line 38, ../sass/includes/login.scss */
+#login-wrapper form input::-webkit-input-placeholder {
+  font-family: "Inconsolata";
+  font-size: 13px;
+  color: #222222;
+}
+/* line 44, ../sass/includes/login.scss */
+#login-wrapper form input:focus {
+  outline: none;
 }
