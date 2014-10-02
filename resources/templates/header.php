@@ -12,7 +12,7 @@
 		<!-- dependencies -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="/js/main.js"></script>
-		<?=defined('ROLE') ? sprintf('<script src="%s"></script>', ROLE) : null?>
+		<?=defined('ROLE') ? sprintf('<script src="/js/%s.js"></script>', ROLE) : null?>
 	</head>
 	<body>
 		<?php defined('NO_HTML_HEADER') or require 'html-header.php' ?>
