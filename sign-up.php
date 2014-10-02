@@ -5,17 +5,18 @@
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
 ?>
-<div id="login-wrapper">
+<div id="sign-up-wrapper">
 
 	<div class="login-logo">
-		<a href="index.php">scribbble.io</a>
+		<a href="feed.php">scribbble.io</a>
 	</div>
 	
-	<form> 
+	<form class="sign-up"> 
 		<input name="username" type="text" placeholder="username">
 		<input name="email" type="text" placeholder="email">
 		<input name="password" type="password" placeholder="password">
-		<input type="submit" value="sign up">
 	</form>
+
+	<a class="sign-option" href="sign-in.php">already have an account?</a>
 
 </div>

@@ -6,9 +6,10 @@
 @import "variables/variables";
 @import "variables/mixins";
 
-// includes
+// page includes
 @import "includes/header";
 @import "includes/content";
+@import "includes/profile";
 
-// login include
-@import "includes/login";
+// sign-in & sign-up include
+@import "includes/sign-in";

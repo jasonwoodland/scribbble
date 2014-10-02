@@ -4,13 +4,14 @@
   margin-top: 50px;
 
   .container12 {
+    margin-top: 15px;
 
     .row {
 
       .column4 {
         height: 220px;
         position: relative;
-        background: #ccc;
+        background: $chalk;
 
         .created-by {
           display: block;
@@ -20,7 +21,7 @@
           margin: 10px;
           padding: 0px 0 0px 7px;
           color: $accent-color;
-          background: $chalk;
+          background: white;
           font-family: $base-font-family;
           text-transform: lowercase;
           padding: 3px 7px;

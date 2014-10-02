@@ -1,0 +1,73 @@
+#sign-in-wrapper {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	.login-logo {
+
+		a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			font-family: $base-font-family;
+			font-size: $base-font-size;
+			color: $accent-color;
+			margin-bottom: 20px;
+		}
+	}
+
+	form {
+		text-align: center;
+
+		input {
+			display: block;
+			padding: 15px;
+			background: $chalk;
+			border: none;
+			width: 100%;
+			font-family: $base-font-family;
+			font-size: $mediam-font-size;
+			color: $accent-color;
+			margin: 10px 0;
+			box-sizing: border-box;
+
+			&::-webkit-input-placeholder {
+				font-family: $base-font-family;
+				font-size: $mediam-font-size;
+				color: $accent-color;
+			}
+
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+#sign-up-wrapper {
+	@extend #sign-in-wrapper;
+	height: 250px;
+
+	.sign-up {
+		@extend form;
+	}
+}
+
+#sign-up-wrapper, #sign-in-wrapper {
+	.sign-option {
+		text-decoration: none;
+		font-family: $base-font-family;
+		font-size: $mediam-font-size;
+		color: $accent-color;
+		text-align: center;
+		display: block;
+		margin: 20px 0;
+		padding: 15px;
+		background: $notification-unread;
+	}
+}

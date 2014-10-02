@@ -10,7 +10,7 @@
 		<link href="css/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<link href="css/stylesheets/1140.css" media="screen, projection" rel="stylesheet" type="text/css" />
 		<!-- dependencies -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="/js/main.js"></script>
 		<?=defined('ROLE') ? sprintf('<script src="/js/%s.js"></script>', ROLE) : null?>
 	</head>

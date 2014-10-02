@@ -29,18 +29,6 @@ header {
           color: $chalk;
           background: $accent-color;
         }
-
-        .fa-angle-right {
-          font-size: $mediam-font-size;
-          margin-left: -10px;
-          opacity: 0;
-          @include transition(all, 0.1s, ease-in-out);
-        }
-
-        &:hover .fa-angle-right {
-          opacity: 1;
-          margin: 0;
-        }
       }
     }
     
@@ -70,6 +58,7 @@ header {
         background: $chalk;
         padding: 3px 7px;
         margin-left: 10px;
+        position: relative;
 
         .fa-angle-down {
           font-size: $mediam-font-size;
