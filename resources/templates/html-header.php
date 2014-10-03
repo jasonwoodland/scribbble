@@ -12,7 +12,7 @@
 	  </div>
 
 	  <div class="user">
-		 <a href="#">notifications<span class="notification">28</span></a>
+		 <a href="#">notifications<span class="notification">3</span></a>
 		 <a class="username" href="profile.php">tim bogdanov
 			<i class="fa fa-angle-down"></i>
 		</a>	 
