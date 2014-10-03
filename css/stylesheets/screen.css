@@ -224,7 +224,7 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
 /* line 1, ../sass/includes/_sign-in.scss */
 #sign-in-wrapper, #sign-up-wrapper {
   width: 200px;
-  height: 200px;
+  height: 250px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -275,7 +275,7 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
   height: 250px;
 }
 
-/* line 62, ../sass/includes/_sign-in.scss */
+/* line 63, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .sign-option, #sign-in-wrapper .sign-option, #sign-up-wrapper .sign-option {
   text-decoration: none;
   font-family: "Inconsolata";
@@ -286,4 +286,25 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
   margin: 20px 0;
   padding: 15px;
   background: #F0E68C;
+}
+/* line 75, ../sass/includes/_sign-in.scss */
+#sign-up-wrapper .failed, #sign-up-wrapper .passed, #sign-in-wrapper .failed, #sign-up-wrapper .failed, #sign-in-wrapper .passed, #sign-up-wrapper .passed {
+  display: block;
+  text-align: center;
+  font-family: "Inconsolata";
+  font-size: 13px;
+  color: #222222;
+  padding: 5px 0;
+}
+/* line 84, ../sass/includes/_sign-in.scss */
+#sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden {
+  display: none;
+}
+/* line 88, ../sass/includes/_sign-in.scss */
+#sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed {
+  color: #ed7777;
+}
+/* line 92, ../sass/includes/_sign-in.scss */
+#sign-up-wrapper .passed, #sign-in-wrapper .passed, #sign-up-wrapper .passed {
+  color: #3CB371;
 }

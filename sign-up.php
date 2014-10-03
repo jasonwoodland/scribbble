@@ -5,6 +5,7 @@
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
 ?>
+
 <div id="sign-up-wrapper">
 
 	<div class="login-logo">

@@ -9,6 +9,15 @@
 	<div class="login-logo">
 		<a href="feed.php">scribbble.io</a>
 	</div>
+
+	<div class="hidden passed">
+		<p>please check your email</p>
+	</div>
+
+	<div class="hidden failed">
+		<p>incorrect credentials</p>
+	</div>
+
 	
 	<form action="#" method="#">
 		<input type="text" placeholder="username">

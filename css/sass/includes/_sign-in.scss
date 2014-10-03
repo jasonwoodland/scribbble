@@ -1,6 +1,6 @@
 #sign-in-wrapper {
 	width: 200px;
-	height: 200px;
+	height: 250px;
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -59,6 +59,7 @@
 }
 
 #sign-up-wrapper, #sign-in-wrapper {
+
 	.sign-option {
 		text-decoration: none;
 		font-family: $base-font-family;
@@ -70,4 +71,27 @@
 		padding: 15px;
 		background: $notification-unread;
 	}
+
+	.failed, .passed {
+		display: block;
+		text-align: center;
+		font-family: $base-font-family;
+		font-size: $mediam-font-size;
+		color: $accent-color;
+		padding: 5px 0;
+	}
+
+	.hidden {
+		display: none;
+	}
+
+	.failed {
+		color: $notification-error;
+	}
+
+	.passed {
+		color: #3CB371;
+	}
+
+	
 }
