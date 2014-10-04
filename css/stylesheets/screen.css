@@ -145,13 +145,13 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
   margin-top: 15px;
 }
 /* line 11, ../sass/includes/_content.scss */
-#content-wrapper .container12 .row .column3 {
+#content-wrapper .container12 .row .column3, #content-wrapper .container12 .row .column4 {
   height: 220px;
   position: relative;
   background: #F3F2F2;
 }
 /* line 16, ../sass/includes/_content.scss */
-#content-wrapper .container12 .row .column3 .created-by {
+#content-wrapper .container12 .row .column3 .created-by, #content-wrapper .container12 .row .column4 .created-by {
   display: block;
   text-decoration: none;
   position: absolute;
@@ -219,6 +219,65 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
 /* line 51, ../sass/includes/_profile.scss */
 #content-wrapper .profile-container {
   margin-top: 30px;
+}
+
+/* line 1, ../sass/includes/_editor.scss */
+#content-wrapper {
+  width: 100%;
+  display: inline-block;
+  margin: 50px auto;
+}
+/* line 6, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container {
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+}
+/* line 11, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row {
+  text-align: center;
+}
+/* line 14, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .block {
+  width: 32.3%;
+  height: 350px;
+  display: inline-block;
+  position: relative;
+}
+/* line 20, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .block textarea {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #F3F2F2;
+  padding: 15px;
+  box-sizing: border-box;
+  font-family: "Inconsolata";
+  font-family: 16px;
+  color: #222222;
+  resize: none;
+  overflow: auto;
+}
+/* line 37, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .block .resize-html {
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  color: #666666;
+}
+/* line 44, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .block .resize-js {
+  position: absolute;
+  top: 50%;
+  left: -11px;
+  color: #666666;
+}
+/* line 52, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .css {
+  margin: 0 1.1%;
 }
 
 /* line 1, ../sass/includes/_sign-in.scss */
