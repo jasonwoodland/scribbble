@@ -19,11 +19,9 @@ echo $e->getMessage();
 }
  */
 
-try {
-	if(user::create($_POST['username'], $_POST['email'], $_POST['password']))
-		echo 'TRUE';
-} catch(Exception $e) {
-	echo 'FALSE';
-}
+	echo json_encode([
+		'username' => user::exist('username', $_POST['username']) == NULL,
+		'email' => user::exist('email', $_POST['email']) == NULL
+	]);
 ?>
 

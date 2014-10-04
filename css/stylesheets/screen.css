@@ -361,9 +361,9 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
 }
 /* line 88, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed {
-  color: #ed7777;
+  color: #ed7777 !important; 
 }
 /* line 92, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .passed, #sign-in-wrapper .passed, #sign-up-wrapper .passed {
-  color: #3CB371;
+  color: #3CB371 !important;
 }
