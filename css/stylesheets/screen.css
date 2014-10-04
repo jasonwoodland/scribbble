@@ -145,13 +145,13 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
   margin-top: 15px;
 }
 /* line 11, ../sass/includes/_content.scss */
-#content-wrapper .container12 .row .column4 {
+#content-wrapper .container12 .row .column3 {
   height: 220px;
   position: relative;
   background: #F3F2F2;
 }
 /* line 16, ../sass/includes/_content.scss */
-#content-wrapper .container12 .row .column4 .created-by {
+#content-wrapper .container12 .row .column3 .created-by {
   display: block;
   text-decoration: none;
   position: absolute;
