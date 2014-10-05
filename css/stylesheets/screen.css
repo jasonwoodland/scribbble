@@ -130,6 +130,8 @@ header #header-wrapper .user li .username .fa-angle-down, header #header-wrapper
 }
 /* line 59, ../sass/includes/_header.scss */
 header #header-wrapper .user li .username:hover .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a:hover .fa-angle-down, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a:hover .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a:hover .fa-angle-down, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a:hover .fa-angle-down {
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 /* line 64, ../sass/includes/_header.scss */

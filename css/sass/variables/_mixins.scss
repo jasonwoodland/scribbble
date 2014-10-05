@@ -5,3 +5,9 @@
   -o-transition: $transition-property $transition-time $method;
   transition: $transition-property $transition-time $method;
 }
+
+@mixin rotate($rotate) {
+	-ms-transform: rotate($rotate);
+    -webkit-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
