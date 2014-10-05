@@ -52,13 +52,18 @@ header {
           .fa-angle-down {
             font-size: $mediam-font-size;
             display: inline-block;
-            margin-left: 5px;
+            margin-left: 7px;
+            @include transition(all, .2s, ease);
+          }
+
+          &:hover .fa-angle-down {
+            transform: rotate(180deg);
           }
         }
 
          &:hover .dropdown {
           opacity: 1;
-          margin-top: 5px;
+          margin-top: 3px;
           height: 500px;
         }
 
@@ -85,15 +90,16 @@ header {
 
           li {
             display: inline-block;
-            margin-bottom: 5px;
+            margin-bottom: 3px;
 
             a {
               display: block;
               background: $chalk;
               padding: 3px 7px;
+              @include transition(all, .15s, ease);
 
               &:hover {
-                background: $accent-color-light;
+                background: $accent-color;
                 color: white;
               }
             }

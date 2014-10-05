@@ -82,8 +82,8 @@
 
 	input[type=submit] {
 		cursor: pointer;
-		background: $notification-success;
-		color: white;
+		background: $notification-unread;
+		color: $accent-color;
 	}
 }
 
