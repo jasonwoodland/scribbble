@@ -59,6 +59,7 @@ header {
          &:hover .dropdown {
           opacity: 1;
           margin-top: 5px;
+          height: 500px;
         }
 
         a {
@@ -79,15 +80,22 @@ header {
           opacity: 0;
           margin-top: 0;
           transition: all .2s ease;
+          overflow: hidden;
+          height: 0;
 
           li {
-            display: block;
+            display: inline-block;
             margin-bottom: 5px;
 
             a {
               display: block;
               background: $chalk;
               padding: 3px 7px;
+
+              &:hover {
+                background: $accent-color-light;
+                color: white;
+              }
             }
           }
         }

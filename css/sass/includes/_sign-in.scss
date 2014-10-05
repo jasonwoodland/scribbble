@@ -45,12 +45,17 @@
 				outline: none;
 			}
 		}
+
+		input[type=submit] {
+			cursor: pointer;
+			background: $notification-success;
+		}
 	}
 }
 
 #sign-up-wrapper {
 	@extend #sign-in-wrapper;
-	height: 250px;
+	height: 305px;
 
 	.sign-up {
 		@extend form;
