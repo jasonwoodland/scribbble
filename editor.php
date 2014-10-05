@@ -1,5 +1,7 @@
 <?php
 	define('ROLE', 'scrib');
+	define('HTML_HEADER', 'editor-html-header.php');
+	define('NO_HTML_FOOTER', TRUE);
 	define('TITLE', 'Scrib');
 	require 'resources/controller.php';
 ?>

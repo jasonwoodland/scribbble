@@ -16,8 +16,8 @@
 		<input id="username" name="username" type="text" placeholder="username">
 		<input id="email" name="email" type="text" placeholder="email">
 		<input id="password" name="password" type="password" placeholder="password">
+		<input type="submit" value="sign up">
 	</form>
-
 	<a class="sign-option" href="sign-in.php">already have an account?</a>
 
 </div>

@@ -23,15 +23,15 @@
 		<div class="row">
 			<div class="column12">
 				<div class="scribs user-info">
-					<a href="#">scribs: 15</a>
+					<a href="#">scribs 15</a>
 				</div>
-
+				&middot;
 				<div class="following user-info">
-					<a href="#">following: 218</a>
+					<a href="#">following 218</a>
 				</div>
-
+				&middot;
 				<div class="followers user-info">
-					<a href="#">followers: 1085</a>
+					<a href="#">followers 1085</a>
 				</div>
 			</div>
 		</div>

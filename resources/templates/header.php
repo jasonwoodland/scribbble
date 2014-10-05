@@ -1,3 +1,4 @@
+<?php define('HTML_HEADER', 'html-header.php') ?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,4 +16,4 @@
 		<?=defined('ROLE') ? sprintf('<script src="/js/%s.js"></script>', ROLE) : null?>
 	</head>
 	<body>
-		<?php defined('NO_HTML_HEADER') or require 'html-header.php' ?>
+		<?php defined('NO_HTML_HEADER') or require HTML_HEADER ?>
