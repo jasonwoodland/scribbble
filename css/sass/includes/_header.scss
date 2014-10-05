@@ -36,6 +36,62 @@ header {
 
     .user {
       float: right;
+      position: relative;
+      display: block;
+
+      li {
+        display: inline-block;
+
+
+        .username {
+          background: $chalk;
+          padding: 3px 7px;
+          margin-left: 10px;
+          position: relative;
+
+          .fa-angle-down {
+            font-size: $mediam-font-size;
+            display: inline-block;
+            margin-left: 5px;
+          }
+        }
+
+         &:hover .dropdown {
+          opacity: 1;
+          margin-top: 5px;
+        }
+
+        a {
+          .notification {
+            padding: 3px 7px;
+            background: $notification-unread;
+            font-family: $base-font-family;
+            font-size: $base-font-size;
+            display: inline-block;
+            margin-left: 10px;
+          } 
+        }
+
+        .dropdown {
+          position: absolute;
+          right: 0;
+          width: 123px;
+          opacity: 0;
+          margin-top: 0;
+          transition: all .2s ease;
+
+          li {
+            display: block;
+            margin-bottom: 5px;
+
+            a {
+              display: block;
+              background: $chalk;
+              padding: 3px 7px;
+            }
+          }
+        }
+      }
 
       a, .username {
         text-decoration: none;
@@ -43,27 +99,6 @@ header {
         font-size: $base-font-size;
         color: $accent-color;
         display: inline-block;
-      }
-
-      .notification {
-        padding: 3px 7px;
-        background: $notification-unread;
-        font-family: $base-font-family;
-        font-size: $base-font-size;
-        display: inline-block;
-        margin-left: 10px;
-      }
-
-      .username {
-        background: $chalk;
-        padding: 3px 7px;
-        margin-left: 10px;
-        position: relative;
-
-        .fa-angle-down {
-          font-size: $mediam-font-size;
-          display: inline-block;
-        }
       }
     }
   }

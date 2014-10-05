@@ -2,14 +2,14 @@ $(function() {
 	$('form').keypress(function(e) {
 		if(e.keyCode == 13) {
 			// enable loading indicator
-			$.post('/api/user-sign-up', $(this).serialize(), function(response) {
+			$.post('/api/user-sign-up.php', $(this).serialize(), function(response) {
 				//disable loading indicator
 				alert(response);
 			});
 		}
 	});
 	$('form').keyup(function() {
-		$.post('/api/user-check', $(this).serialize(), function(response) {
+		$.post('/api/user-check.php', $(this).serialize(), function(response) {
 		console.log(response, response['username']);
 			$.each(['username', 'email'], function(i, v) {
 				if($('#' + v).val() != '') {

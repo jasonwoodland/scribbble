@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Inconsolata:400,700);
-/* line 5, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 5, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -21,45 +21,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../usr/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
@@ -103,17 +103,33 @@ header #header-wrapper .intro .new-scrib a {
 /* line 37, ../sass/includes/_header.scss */
 header #header-wrapper .user {
   float: right;
+  position: relative;
+  display: block;
 }
-/* line 40, ../sass/includes/_header.scss */
-header #header-wrapper .user a, header #header-wrapper .user .username, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user a {
-  text-decoration: none;
-  font-family: "Inconsolata";
-  font-size: 16px;
-  color: #222222;
+/* line 42, ../sass/includes/_header.scss */
+header #header-wrapper .user li {
   display: inline-block;
 }
-/* line 48, ../sass/includes/_header.scss */
-header #header-wrapper .user .notification {
+/* line 46, ../sass/includes/_header.scss */
+header #header-wrapper .user li .username, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a {
+  background: #F3F2F2;
+  padding: 3px 7px;
+  margin-left: 10px;
+  position: relative;
+}
+/* line 52, ../sass/includes/_header.scss */
+header #header-wrapper .user li .username .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a .fa-angle-down, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a .fa-angle-down, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a .fa-angle-down {
+  font-size: 13px;
+  display: inline-block;
+  margin-left: 5px;
+}
+/* line 59, ../sass/includes/_header.scss */
+header #header-wrapper .user li:hover .dropdown {
+  opacity: 1;
+  margin-top: 5px;
+}
+/* line 65, ../sass/includes/_header.scss */
+header #header-wrapper .user li a .notification {
   padding: 3px 7px;
   background: #F0E68C;
   font-family: "Inconsolata";
@@ -121,16 +137,32 @@ header #header-wrapper .user .notification {
   display: inline-block;
   margin-left: 10px;
 }
-/* line 57, ../sass/includes/_header.scss */
-header #header-wrapper .user .username, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user a {
+/* line 75, ../sass/includes/_header.scss */
+header #header-wrapper .user li .dropdown {
+  position: absolute;
+  right: 0;
+  width: 123px;
+  opacity: 0;
+  margin-top: 0;
+  transition: all .2s ease;
+}
+/* line 83, ../sass/includes/_header.scss */
+header #header-wrapper .user li .dropdown li {
+  display: block;
+  margin-bottom: 5px;
+}
+/* line 87, ../sass/includes/_header.scss */
+header #header-wrapper .user li .dropdown li a {
+  display: block;
   background: #F3F2F2;
   padding: 3px 7px;
-  margin-left: 10px;
-  position: relative;
 }
-/* line 63, ../sass/includes/_header.scss */
-header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-info a .fa-angle-down, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user a .fa-angle-down, header #header-wrapper .user #content-wrapper .container12 .row .column12 .bio a .fa-angle-down, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user a .fa-angle-down {
-  font-size: 13px;
+/* line 96, ../sass/includes/_header.scss */
+header #header-wrapper .user a, header #header-wrapper .user .username, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user a {
+  text-decoration: none;
+  font-family: "Inconsolata";
+  font-size: 16px;
+  color: #222222;
   display: inline-block;
 }
 
@@ -283,7 +315,7 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
 /* line 1, ../sass/includes/_sign-in.scss */
 #sign-in-wrapper, #sign-up-wrapper {
   width: 200px;
-  height: 250px;
+  height: 200px;
   margin: auto;
   position: absolute;
   top: 0;
@@ -314,27 +346,26 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
   width: 100%;
   font-family: "Inconsolata";
   font-size: 13px;
-  color: #222222;
   margin: 10px 0;
   box-sizing: border-box;
 }
-/* line 39, ../sass/includes/_sign-in.scss */
+/* line 38, ../sass/includes/_sign-in.scss */
 #sign-in-wrapper form input::-webkit-input-placeholder, #sign-up-wrapper form input::-webkit-input-placeholder, #sign-up-wrapper .sign-up input::-webkit-input-placeholder {
   font-family: "Inconsolata";
   font-size: 13px;
   color: #222222;
 }
-/* line 45, ../sass/includes/_sign-in.scss */
+/* line 44, ../sass/includes/_sign-in.scss */
 #sign-in-wrapper form input:focus, #sign-up-wrapper form input:focus, #sign-up-wrapper .sign-up input:focus {
   outline: none;
 }
 
-/* line 52, ../sass/includes/_sign-in.scss */
+/* line 51, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper {
   height: 250px;
 }
 
-/* line 63, ../sass/includes/_sign-in.scss */
+/* line 62, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .sign-option, #sign-in-wrapper .sign-option, #sign-up-wrapper .sign-option {
   text-decoration: none;
   font-family: "Inconsolata";
@@ -346,24 +377,20 @@ header #header-wrapper .user .username .fa-angle-down, header #header-wrapper .u
   padding: 15px;
   background: #F0E68C;
 }
-/* line 75, ../sass/includes/_sign-in.scss */
+/* line 74, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .failed, #sign-up-wrapper .passed, #sign-in-wrapper .failed, #sign-up-wrapper .failed, #sign-in-wrapper .passed, #sign-up-wrapper .passed {
-  display: block;
-  text-align: center;
   font-family: "Inconsolata";
   font-size: 13px;
-  color: #222222;
-  padding: 5px 0;
 }
-/* line 84, ../sass/includes/_sign-in.scss */
+/* line 79, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden {
   display: none;
 }
-/* line 88, ../sass/includes/_sign-in.scss */
+/* line 83, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed {
-  color: #ed7777 !important; 
+  color: #FA8072;
 }
-/* line 92, ../sass/includes/_sign-in.scss */
+/* line 87, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .passed, #sign-in-wrapper .passed, #sign-up-wrapper .passed {
-  color: #3CB371 !important;
+  color: #3CB371;
 }

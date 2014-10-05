@@ -1,6 +1,6 @@
 #sign-in-wrapper {
 	width: 200px;
-	height: 250px;
+	height: 200px;
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -32,7 +32,6 @@
 			width: 100%;
 			font-family: $base-font-family;
 			font-size: $mediam-font-size;
-			color: $accent-color;
 			margin: 10px 0;
 			box-sizing: border-box;
 
@@ -73,12 +72,8 @@
 	}
 
 	.failed, .passed {
-		display: block;
-		text-align: center;
 		font-family: $base-font-family;
 		font-size: $mediam-font-size;
-		color: $accent-color;
-		padding: 5px 0;
 	}
 
 	.hidden {
