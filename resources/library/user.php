@@ -25,5 +25,11 @@
 			$result = $stmt->fetch(PDO::FETCH_OBJ);
 			return $result->id;
 		}
+
+		public static function recover($id) {
+			global $db;
+			$stmt = $db->prepare("UPDATE users SET code = ? WHERE id = ?");
+			$stmt->execute([secure::token(6), $id]);
+		
 	}
 ?>
