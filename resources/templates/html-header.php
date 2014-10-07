@@ -7,7 +7,7 @@
 		</div>
 
 		<div class="new-scrib">
-			<a href="#">new</a>
+			<a href="../../editor.php">new</a>
 		</div>
 	</div>
 
@@ -16,7 +16,7 @@
 	 	<li><a class="username" href="profile.php">tim bogdanov<i class="fa fa-angle-down"></i></a>
 
 			<ul class="dropdown">
-				<li><a href="">new</a></li>
+				<li><a href="../../editor.php">new</a></li>
 				<li><a href="">settings</a></li>
 				<li><a href="">not done</a></li>
 			</ul>

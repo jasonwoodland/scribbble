@@ -1,6 +1,6 @@
 #sign-in-wrapper {
 	width: 200px;
-	height: 240px;
+	height: 260px;
 	margin: auto;
 	position: absolute;
 	top: 0;
@@ -24,7 +24,7 @@
 
 #sign-up-wrapper {
 	@extend #sign-in-wrapper;
-	height: 300px;
+	height: 285px;
 
 	.sign-up {
 		@extend form;
@@ -44,7 +44,7 @@
 		padding: 10px;
 	}
 
-	input {
+	input[type="text"], input[type="password"], input[type="submit"] {
 		display: block;
 		padding: 15px;
 		background-color: $chalk;
@@ -66,8 +66,6 @@
 		}
 	}
 
-
-
 	.failed {
 		font-family: $base-font-family;
 		font-size: $mediam-font-size;
@@ -80,10 +78,45 @@
 		display: none;
 	}
 
-	input[type=submit] {
+	input[type="submit"] {
 		cursor: pointer;
 		background: $notification-unread;
-		color: $accent-color;
+	}
+
+	label {
+		cursor: pointer;
+		font-family: $base-font-family;
+		font-size: $mediam-font-size;
+
+		input[type="checkbox"] {
+			display: none;
+			
+			+ .label-text:before {
+				content: "\f0c8";
+				font-family: "FontAwesome";
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				-webkit-font-smoothing: antialiased;
+				width: 1em;
+				display: inline-block;
+				margin-right: 5px;
+				color: $accent-color-light;
+			}
+
+			&:checked + .label-text:before {
+				content: "\f14a";
+				-webkit-animation: tick .2s ease;
+			}
+
+			.label-text {
+				position: absolute;
+				top: 10px;
+			}
+		}
 	}
 }
 
