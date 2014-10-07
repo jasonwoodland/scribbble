@@ -388,55 +388,46 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   padding: 10px;
 }
 /* line 47, ../sass/includes/_sign-in.scss */
+#sign-up-wrapper input, #sign-in-wrapper input, #sign-up-wrapper input {
+  background-color: #F3F2F2;
+  font-family: "Inconsolata";
+  font-size: 13px;
+}
+/* line 53, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"], #sign-up-wrapper input[type="password"], #sign-up-wrapper input[type="submit"], #sign-in-wrapper input[type="text"], #sign-up-wrapper input[type="text"], #sign-in-wrapper input[type="password"], #sign-up-wrapper input[type="password"], #sign-in-wrapper input[type="submit"], #sign-up-wrapper input[type="submit"] {
   display: block;
   padding: 15px;
-  background-color: #F3F2F2;
   border: none;
   width: 100%;
-  font-family: "Inconsolata";
-  font-size: 13px;
   margin: 10px 0;
   box-sizing: border-box;
 }
-/* line 58, ../sass/includes/_sign-in.scss */
+/* line 61, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper input[type="password"]::-webkit-input-placeholder, #sign-up-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-in-wrapper input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper input[type="text"]::-webkit-input-placeholder, #sign-in-wrapper input[type="password"]::-webkit-input-placeholder, #sign-up-wrapper input[type="password"]::-webkit-input-placeholder, #sign-in-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper input[type="submit"]::-webkit-input-placeholder {
   font-family: "Inconsolata";
   font-size: 13px;
   color: #222222;
 }
-/* line 64, ../sass/includes/_sign-in.scss */
+/* line 67, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"]:focus, #sign-up-wrapper input[type="password"]:focus, #sign-up-wrapper input[type="submit"]:focus, #sign-in-wrapper input[type="text"]:focus, #sign-up-wrapper input[type="text"]:focus, #sign-in-wrapper input[type="password"]:focus, #sign-up-wrapper input[type="password"]:focus, #sign-in-wrapper input[type="submit"]:focus, #sign-up-wrapper input[type="submit"]:focus {
   outline: none;
 }
-/* line 69, ../sass/includes/_sign-in.scss */
-#sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed {
-  font-family: "Inconsolata";
-  font-size: 13px;
-  background-color: #FA8072;
-  color: white;
-  display: block;
-}
-/* line 77, ../sass/includes/_sign-in.scss */
-#sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden {
-  display: none;
-}
-/* line 81, ../sass/includes/_sign-in.scss */
+/* line 72, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="submit"], #sign-in-wrapper input[type="submit"], #sign-up-wrapper input[type="submit"] {
   cursor: pointer;
   background: #F0E68C;
 }
-/* line 86, ../sass/includes/_sign-in.scss */
+/* line 77, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label, #sign-in-wrapper label, #sign-up-wrapper label {
   cursor: pointer;
   font-family: "Inconsolata";
   font-size: 13px;
 }
-/* line 91, ../sass/includes/_sign-in.scss */
+/* line 82, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"], #sign-in-wrapper label input[type="checkbox"], #sign-up-wrapper label input[type="checkbox"] {
   display: none;
 }
-/* line 94, ../sass/includes/_sign-in.scss */
+/* line 85, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #sign-in-wrapper label input[type="checkbox"] + .label-text:before, #sign-up-wrapper label input[type="checkbox"] + .label-text:before {
   content: "\f0c8";
   font-family: "FontAwesome";
@@ -452,13 +443,25 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   margin-right: 5px;
   color: #666666;
 }
-/* line 110, ../sass/includes/_sign-in.scss */
+/* line 101, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-in-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before {
   content: "\f14a";
   -webkit-animation: tick .2s ease;
 }
-/* line 115, ../sass/includes/_sign-in.scss */
+/* line 106, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] .label-text, #sign-in-wrapper label input[type="checkbox"] .label-text, #sign-up-wrapper label input[type="checkbox"] .label-text {
   position: absolute;
   top: 10px;
+}
+/* line 113, ../sass/includes/_sign-in.scss */
+#sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed {
+  font-family: "Inconsolata";
+  font-size: 13px;
+  background-color: #FA8072;
+  color: white;
+  display: block;
+}
+/* line 121, ../sass/includes/_sign-in.scss */
+#sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden {
+  display: none;
 }

@@ -44,14 +44,17 @@
 		padding: 10px;
 	}
 
+	input {
+		background-color: $chalk;
+		font-family: $base-font-family;
+		font-size: $mediam-font-size;
+	}
+
 	input[type="text"], input[type="password"], input[type="submit"] {
 		display: block;
 		padding: 15px;
-		background-color: $chalk;
 		border: none;
 		width: 100%;
-		font-family: $base-font-family;
-		font-size: $mediam-font-size;
 		margin: 10px 0;
 		box-sizing: border-box;
 
@@ -64,18 +67,6 @@
 		&:focus {
 			outline: none;
 		}
-	}
-
-	.failed {
-		font-family: $base-font-family;
-		font-size: $mediam-font-size;
-		background-color: $notification-error;
-		color: white;
-		display: block;
-	}
-
-	.hidden {
-		display: none;
 	}
 
 	input[type="submit"] {
@@ -118,5 +109,16 @@
 			}
 		}
 	}
-}
 
+	.failed {
+		font-family: $base-font-family;
+		font-size: $mediam-font-size;
+		background-color: $notification-error;
+		color: white;
+		display: block;
+	}
+
+	.hidden {
+		display: none;
+	}
+}
