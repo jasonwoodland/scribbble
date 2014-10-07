@@ -30,6 +30,6 @@
 			global $db;
 			$stmt = $db->prepare("UPDATE users SET code = ? WHERE id = ?");
 			$stmt->execute([secure::token(6), $id]);
-		
+		}	
 	}
 ?>

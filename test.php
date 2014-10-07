@@ -2,7 +2,7 @@
 require 'resources/controller.php';
 
 $letter = new email();
-$letter->to			= 'jasonwoodland@me.com';
+$letter->to			= 'timbog80@gmail.com';
 $letter->subject	= 'Confirmation message';
 ob_start();
 require 'resources/templates/mail-sign-up.php';
