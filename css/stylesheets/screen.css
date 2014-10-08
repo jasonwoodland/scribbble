@@ -69,10 +69,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     opacity: 0;
     transform: scale(0);
   }
-  80% {
-    transform: scale(1.3);
-  }
-  10% {
+  100% {
     opacity: 1;
     transform: scale(1);
   }
@@ -232,8 +229,75 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   font-family: "Inconsolata";
   text-transform: lowercase;
   padding: 3px 7px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
-/* line 32, ../sass/includes/_content.scss */
+/* line 31, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column3 .scrib-pop, #content-wrapper .container12 .row .column4 .scrib-pop {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(240, 230, 140, 0.85);
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+/* line 42, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column3 .scrib-pop .view-scrib, #content-wrapper .container12 .row .column4 .scrib-pop .view-scrib {
+  color: #222222;
+  text-decoration: none;
+  font-family: "Inconsolata";
+  font-size: 16px;
+  padding: 3px 7px;
+  background: white;
+  line-height: 225px;
+}
+/* line 53, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column3 .scrib-info, #content-wrapper .container12 .row .column4 .scrib-info {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+/* line 61, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column3 .scrib-info a, #content-wrapper .container12 .row .column4 .scrib-info a {
+  text-decoration: none;
+  background: white;
+  padding: 3px 7px;
+  font-size: 16px;
+  font-family: "Inconsolata";
+  margin: 0;
+  display: inline-block;
+  color: #222222;
+}
+/* line 71, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column3 .scrib-info a i, #content-wrapper .container12 .row .column4 .scrib-info a i {
+  font-size: 13px;
+}
+/* line 77, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column3:hover .scrib-pop, #content-wrapper .container12 .row .column4:hover .scrib-pop {
+  opacity: 1;
+}
+/* line 81, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column3:hover .scrib-info, #content-wrapper .container12 .row .column4:hover .scrib-info {
+  opacity: 1;
+}
+/* line 87, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore a {
   font-family: "Inconsolata";
   text-decoration: none;
@@ -241,7 +305,7 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   color: #222222;
   padding: 3px 7px;
 }
-/* line 40, ../sass/includes/_content.scss */
+/* line 95, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore .active {
   background: #F3F2F2;
   color: #222222;
@@ -437,23 +501,22 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-  -webkit-font-smoothing: antialiased;
   width: 1em;
   display: inline-block;
   margin-right: 5px;
   color: #666666;
 }
-/* line 101, ../sass/includes/_sign-in.scss */
+/* line 100, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-in-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before {
   content: "\f14a";
   -webkit-animation: tick .2s ease;
 }
-/* line 106, ../sass/includes/_sign-in.scss */
+/* line 105, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] .label-text, #sign-in-wrapper label input[type="checkbox"] .label-text, #sign-up-wrapper label input[type="checkbox"] .label-text {
   position: absolute;
   top: 10px;
 }
-/* line 113, ../sass/includes/_sign-in.scss */
+/* line 112, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed {
   font-family: "Inconsolata";
   font-size: 13px;
@@ -461,7 +524,7 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   color: white;
   display: block;
 }
-/* line 121, ../sass/includes/_sign-in.scss */
+/* line 120, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden {
   display: none;
 }

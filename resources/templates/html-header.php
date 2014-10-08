@@ -18,7 +18,7 @@
 			<ul class="dropdown">
 				<li><a href="../../editor.php">new</a></li>
 				<li><a href="">settings</a></li>
-				<li><a href="">not done</a></li>
+				<li><a href="">sign out</a></li>
 			</ul>
 	 	</li>
 	 </ul> 

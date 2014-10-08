@@ -25,6 +25,61 @@
           font-family: $base-font-family;
           text-transform: lowercase;
           padding: 3px 7px;
+          @include transition(all, .2s, ease);
+        }
+
+        .scrib-pop {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background: rgba(240, 230, 140, 0.85);
+          opacity: 0;
+          @include transition(all, .2s, ease);
+          text-align: center;
+
+          .view-scrib {
+            color: $accent-color;
+            text-decoration: none;
+            font-family: $base-font-family;
+            font-size: $base-font-size;
+            padding: 3px 7px;
+            background: white;
+            line-height: 225px;
+          }
+        }
+
+        .scrib-info {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          margin: 10px;
+          opacity: 0;
+          @include transition(all, .2s, ease);
+
+          a {
+            text-decoration: none;
+            background: white;
+            padding: 3px 7px;
+            font-size: $base-font-size;
+            font-family: $base-font-family;
+            margin: 0;
+            display: inline-block;
+            color: $accent-color;
+
+            i {
+              font-size: $mediam-font-size;
+            }
+          }
+        }
+
+        &:hover .scrib-pop {
+          opacity: 1;
+        }
+
+        &:hover .scrib-info {
+          opacity: 1;
         }
       }
 

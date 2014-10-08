@@ -18,45 +18,52 @@
 	<div class="container12">
 		<div class="row">
 			<div class="column3">
-				<a class="created-by" href="#">tim bogdanov</a>
-			</div>
-			<div class="column3">
-				<a class="created-by" href="#">jason woodland</a>
-			</div>
-			<div class="column3">
-				<a class="created-by" href="#">korry arnderson</a>
-			</div>
-			<div class="column3">
-				<a class="created-by" href="#">korry arnderson</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="column3">
-				<a class="created-by" href="#">tim bogdanov</a>
-			</div>
-			<div class="column3">
-				<a class="created-by" href="#">jason woodland</a>
-			</div>
-			<div class="column3">
-				<a class="created-by" href="#">korry arnderson</a>
-			</div>
-			<div class="column3">
-				<a class="created-by" href="#">korry arnderson</a>
-			</div>
-		</div>
+				<div class="scrib-pop">
+					<a class="view-scrib" href="#">view</a>
+				</div>
 
-		<div class="row">
-			<div class="column3">
 				<a class="created-by" href="#">tim bogdanov</a>
+
+				<div class="scrib-info">
+					<a href="#"><i class="fa fa-eye"></i> 300</a>
+					<a href="#"><i class="fa fa-comment"></i> 10</a>
+				</div>
 			</div>
 			<div class="column3">
-				<a class="created-by" href="#">jason woodland</a>
+				<div class="scrib-pop">
+					<a class="view-scrib" href="#">view</a>
+				</div>
+
+				<a class="created-by" href="#">tim bogdanov</a>
+
+				<div class="scrib-info">
+					<a href="#"><i class="fa fa-eye"></i> 300</a>
+					<a href="#"><i class="fa fa-comment"></i> 10</a>
+				</div>
 			</div>
 			<div class="column3">
-				<a class="created-by" href="#">korry arnderson</a>
+				<div class="scrib-pop">
+					<a class="view-scrib" href="#">view</a>
+				</div>
+
+				<a class="created-by" href="#">tim bogdanov</a>
+
+				<div class="scrib-info">
+					<a href="#"><i class="fa fa-eye"></i> 300</a>
+					<a href="#"><i class="fa fa-comment"></i> 10</a>
+				</div>
 			</div>
 			<div class="column3">
-				<a class="created-by" href="#">korry arnderson</a>
+				<div class="scrib-pop">
+					<a class="view-scrib" href="#">view</a>
+				</div>
+
+				<a class="created-by" href="#">tim bogdanov</a>
+
+				<div class="scrib-info">
+					<a href="#"><i class="fa fa-eye"></i> 300</a>
+					<a href="#"><i class="fa fa-comment"></i> 10</a>
+				</div>
 			</div>
 		</div>
 	</div>
