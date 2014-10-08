@@ -1,5 +1,5 @@
 <?php
-	class email{
+	class mailer {
 		public $to;
 		public $subject;
 		public $message;
@@ -12,7 +12,8 @@
 				$this->to, 
 				$this->subject, 
 				$this->message,
-				$header);
+				$header
+			);
 		}
 	}
 ?>

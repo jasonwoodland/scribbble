@@ -1,6 +1,6 @@
 <?php
-	define('ROLE', 'feed');
-	define('TITLE', 'Feed');
+	define('ROLE', 'sign-in');
+	define('TITLE', 'Sign in');
 	define('NO_HTML_HEADER', TRUE);
 	require 'resources/controller.php';
 ?>
@@ -20,8 +20,8 @@
 
 	
 	<form action="#" method="#">
-		<input type="text" placeholder="username">
-		<input type="password" placeholder="password">
+		<input name="username" id="username" type="text" placeholder="username">
+		<input name="password" id="password" type="password" placeholder="password">
 
 		<label>
 			<input type="checkbox" name="check"> 

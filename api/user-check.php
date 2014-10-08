@@ -20,8 +20,8 @@ echo $e->getMessage();
  */
 
 	echo json_encode([
-		'username' => user::exist('username', $_POST['username']) == NULL,
-		'email' => user::exist('email', $_POST['email']) == NULL
+		'username' => user::find('username', $_POST['username']) == NULL,
+		'email' => user::find('email', $_POST['email']) == NULL
 	]);
 ?>
 

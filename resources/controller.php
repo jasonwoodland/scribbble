@@ -5,12 +5,19 @@
 		}
 		session_set_cookie_params(3600 * 24 * 14);
 		session_start();
+		if($_SESSION['authenticated'] == TRUE) define('authenticated', TRUE);
 		define('PDO_HOST',		'localhost');
 		define('PDO_DBNAME',	'scribbble');
 		define('PDO_DSN',		sprintf('mysql:host=%s;dbname=%s', PDO_HOST, PDO_DBNAME));
-		define('PDO_USERNAME',	'root');
-		define('PDO_PASSWORD',	'');
+		define('PDO_USERNAME',	'jason');
+		define('PDO_PASSWORD',	'rondo3000');
 		$db = new PDO(PDO_DSN, PDO_USERNAME, PDO_PASSWORD);
+		class db {
+			function __construct() {
+				global $db;
+				$this->db = &$db;
+			}
+		}
 	}
 
 	if(defined('TITLE')) {

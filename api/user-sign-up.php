@@ -18,12 +18,16 @@ catch(PDOException $e)
 echo $e->getMessage();
 }
  */
-
-try {
-	if(user::create($_POST['username'], $_POST['email'], $_POST['password']))
+	$me = new user($_POST['username']);
+var_dump($me);
+	if($me->create($_POST['email'], $_POST['password'])) {
+		$verificationCode = $me->newVerificationCode();	
+		$letter = new mailer();
+		$letter->to			= $_POST['email'];
+		$letter->subject	= 'Verify your account';
+		$letter->message	= service::execute('../resources/templates/mail-sign-up.php');
+		$letter->send();
 		echo 'TRUE';
-} catch(Exception $e) {
-	echo 'FALSE';
-}
+	} else echo 'FALSE';
 ?>
 

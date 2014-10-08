@@ -19,13 +19,11 @@ echo $e->getMessage();
 }
  */
 
-try {
-	if(user::validate($_POST['email'], $_POST['password'])) {
+	$me = new user($_POST['username']);
+	if($me->authenticate($_POST['password'])) {
 		echo 'TRUE';
-		$_SESSION['valid'] = TRUE;
-	}
-} catch(Exception $e) {
-	echo 'FALSE';
-}
+		$_SESSION['authenticated'] = TRUE;
+		$_SESSION['username'] = $_POST['username'];
+	} else echo 'FALSE';
 ?>
 

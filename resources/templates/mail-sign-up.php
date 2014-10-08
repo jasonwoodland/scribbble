@@ -1,3 +1,4 @@
+<?php global $verificationCode; ?>
 <html>
 	<head>
 		<style>
@@ -25,6 +26,6 @@
 	<body>
 		<div>scribbble.io</div>
 		<p>Thanks for signing up!<br>
-		To get started <a href="<?=$code?>">click here</a>.
+		To get started <a href="<?=sprintf('http://%s/verify/%s', $_SERVER['SERVER_NAME'], $verificationCode)?>">click here</a>.
 	</body>
 </html>
