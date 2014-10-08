@@ -1,13 +1,4 @@
 $(function() {
-	$('form').keypress(function(e) {
-		if(e.keyCode == 13) {
-			// enable loading indicator
-			$.post('/api/user-sign-up.php', $(this).serialize(), function(response) {
-				//disable loading indicator
-				alert(response);
-			});
-		}
-	});
 	$('form').keyup(function() {
 		$.post('/api/user-check.php', $(this).serialize(), function(response) {
 		console.log(response, response['username']);
@@ -19,5 +10,10 @@ $(function() {
 			});
 		}, 'json');
 	});
-
+	$('form').submit(function(e) {
+		e.preventDefault();
+		$.post('/api/user-sign-up.php', $(this).serialize(), function(response) {
+			if(response.indexOf('FALSE') == -1) window.location = 'thanks';
+		});
+	});
 });

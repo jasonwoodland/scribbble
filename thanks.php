@@ -1,10 +1,10 @@
 <?php
-	define('ROLE', 'feed');
-	define('TITLE', 'Feed');
+	define('ROLE', 'verify-account-notification');
+	define('TITLE', 'Thank you');
 	define('NO_HTML_HEADER', TRUE);
 	require 'resources/controller.php';
 ?>
 
 <div id="thanks-content">
-	<p><span>thank you</span> for signing up, check your <span>email to verify your account</span></p>
+	<p>thank you for signing up, check your email to verify your account.
 </div>

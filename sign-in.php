@@ -19,7 +19,7 @@
 	</div>
 
 	
-	<form action="#" method="#">
+	<form>
 		<input name="username" id="username" type="text" placeholder="username">
 		<input name="password" id="password" type="password" placeholder="password">
 

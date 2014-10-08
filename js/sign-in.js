@@ -11,6 +11,4 @@ $(function() {
 	$('form').keypress(function() {
 		$('#username, #password').removeClass('failed');
 	});
-
-
 });
