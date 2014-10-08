@@ -5,7 +5,8 @@
 		}
 		session_set_cookie_params(3600 * 24 * 14);
 		session_start();
-		if($_SESSION['authenticated'] == TRUE) define('authenticated', TRUE);
+		if($_SESSION['authenticated'] == TRUE) define('AUTHENTICATED', TRUE);
+		else define('AUTHENTICATED', FALSE);
 		define('PDO_HOST',		'localhost');
 		define('PDO_DBNAME',	'scribbble');
 		define('PDO_DSN',		sprintf('mysql:host=%s;dbname=%s', PDO_HOST, PDO_DBNAME));
