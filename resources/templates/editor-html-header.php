@@ -12,7 +12,7 @@
 	</div>
 
 	<ul class="user">
-		<li><a href="#">notifications<span class="notification">3</span></a></li>
+		<li><a href="#"><span class="notification">3</span></a></li>
 	 	<li><a class="username" href="profile.php">tim bogdanov<i class="fa fa-angle-down"></i></a>
 
 			<ul class="dropdown">

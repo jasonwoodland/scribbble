@@ -14,11 +14,15 @@
 			</div>
 		</div>
 
+		<!-- user img -->
+
 		<div class="row">
 			<div class="column12">
 				<a class="username" href="#">@timbogdanov</a>
 			</div>
 		</div>
+
+		<!-- user info -->
 
 		<div class="row">
 			<div class="column12">
@@ -45,6 +49,8 @@
 		</div>
 
 	</div>
+
+	<!-- user scribs -->
 
 	<div class="container12 profile-container">
 		<div class="row">

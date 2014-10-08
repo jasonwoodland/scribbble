@@ -311,108 +311,6 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   color: #222222;
 }
 
-/* line 9, ../sass/includes/_profile.scss */
-#content-wrapper .container12 .row .column12 {
-  text-align: center;
-}
-/* line 12, ../sass/includes/_profile.scss */
-#content-wrapper .container12 .row .column12 .profile-image {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  background: #F3F2F2;
-  border-radius: 50%;
-}
-/* line 20, ../sass/includes/_profile.scss */
-#content-wrapper .container12 .row .column12 .username, #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .bio a {
-  font-family: "Inconsolata";
-  color: #222222;
-  text-decoration: none;
-  font-size: 16px;
-}
-/* line 27, ../sass/includes/_profile.scss */
-#content-wrapper .container12 .row .column12 .user-info {
-  margin: 0 10px;
-  display: inline-block;
-}
-/* line 31, ../sass/includes/_profile.scss */
-#content-wrapper .container12 .row .column12 .user-info a {
-  font-size: 16px;
-  color: #666666;
-}
-/* line 38, ../sass/includes/_profile.scss */
-#content-wrapper .container12 .row .column12 .bio {
-  width: 30%;
-  margin: 0 auto;
-}
-/* line 42, ../sass/includes/_profile.scss */
-#content-wrapper .container12 .row .column12 .bio a {
-  font-size: 16px;
-}
-/* line 51, ../sass/includes/_profile.scss */
-#content-wrapper .profile-container {
-  margin-top: 30px;
-}
-
-/* line 1, ../sass/includes/_editor.scss */
-#content-wrapper {
-  width: 100%;
-  display: inline-block;
-  margin: 50px auto;
-}
-/* line 6, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container {
-  width: 95%;
-  margin: 0 auto;
-  display: block;
-}
-/* line 11, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row {
-  text-align: center;
-}
-/* line 14, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .block {
-  width: 32.3%;
-  height: 350px;
-  display: inline-block;
-  position: relative;
-}
-/* line 20, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .block textarea {
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  background: #F3F2F2;
-  padding: 15px;
-  box-sizing: border-box;
-  font-family: "Inconsolata";
-  font-family: 16px;
-  color: #222222;
-  resize: none;
-  overflow: auto;
-}
-/* line 37, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .block .resize-html {
-  position: absolute;
-  top: 50%;
-  right: -11px;
-  color: #666666;
-}
-/* line 44, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .block .resize-js {
-  position: absolute;
-  top: 50%;
-  left: -11px;
-  color: #666666;
-}
-/* line 52, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .css {
-  margin: 0 1.1%;
-}
-
 /* line 1, ../sass/includes/_sign-in.scss */
 #sign-in-wrapper, #sign-up-wrapper {
   width: 200px;
@@ -527,4 +425,130 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
 /* line 120, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden {
   display: none;
+}
+
+/* line 9, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .row .column12 {
+  text-align: center;
+}
+/* line 12, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .row .column12 .profile-image {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background: #F3F2F2;
+  border-radius: 50%;
+}
+/* line 20, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .row .column12 .username, #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .bio a {
+  font-family: "Inconsolata";
+  color: #222222;
+  text-decoration: none;
+  font-size: 16px;
+}
+/* line 27, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .row .column12 .user-info {
+  margin: 0 10px;
+  display: inline-block;
+}
+/* line 31, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .row .column12 .user-info a {
+  font-size: 16px;
+  color: #666666;
+}
+/* line 38, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .row .column12 .bio {
+  width: 30%;
+  margin: 0 auto;
+}
+/* line 42, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .row .column12 .bio a {
+  font-size: 16px;
+}
+/* line 51, ../sass/includes/_profile.scss */
+#content-wrapper .profile-container {
+  margin-top: 30px;
+}
+
+/* line 1, ../sass/includes/_editor.scss */
+#content-wrapper {
+  width: 100%;
+  display: inline-block;
+  margin: 50px auto;
+}
+/* line 6, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container {
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+}
+/* line 11, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row {
+  text-align: center;
+}
+/* line 14, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .block {
+  width: 32.3%;
+  height: 350px;
+  display: inline-block;
+  position: relative;
+}
+/* line 20, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .block textarea {
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #F3F2F2;
+  padding: 15px;
+  box-sizing: border-box;
+  font-family: "Inconsolata";
+  font-family: 16px;
+  color: #222222;
+  resize: none;
+  overflow: auto;
+}
+/* line 37, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .block .resize-html {
+  position: absolute;
+  top: 50%;
+  right: -11px;
+  color: #666666;
+}
+/* line 44, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .block .resize-js {
+  position: absolute;
+  top: 50%;
+  left: -11px;
+  color: #666666;
+}
+/* line 52, ../sass/includes/_editor.scss */
+#content-wrapper .edit-container .row .css {
+  margin: 0 1.1%;
+}
+
+/* line 1, ../sass/includes/_thanks.scss */
+#thanks-content {
+  width: 240px;
+  height: 60px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+/* line 11, ../sass/includes/_thanks.scss */
+#thanks-content p {
+  color: #222222;
+  font-family: "Inconsolata";
+  font-size: 16px;
+  text-align: center;
+  line-height: 1.3;
+}
+/* line 19, ../sass/includes/_thanks.scss */
+#thanks-content span {
+  color: #FA8072;
 }
