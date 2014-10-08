@@ -471,62 +471,29 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
 }
 
 /* line 1, ../sass/includes/_editor.scss */
-#content-wrapper {
-  width: 100%;
-  display: inline-block;
-  margin: 50px auto;
-}
-/* line 6, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container {
-  width: 95%;
-  margin: 0 auto;
-  display: block;
-}
-/* line 11, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row {
-  text-align: center;
-}
-/* line 14, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .block {
-  width: 32.3%;
-  height: 350px;
-  display: inline-block;
-  position: relative;
-}
-/* line 20, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .block textarea {
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
+#editor-layout {
+  width: 94%;
   height: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+/* line 9, ../sass/includes/_editor.scss */
+#editor-layout .block {
+  width: 32%;
+}
+/* line 12, ../sass/includes/_editor.scss */
+#editor-layout .block textarea {
   background: #F3F2F2;
-  padding: 15px;
-  box-sizing: border-box;
-  font-family: "Inconsolata";
-  font-family: 16px;
-  color: #222222;
+  border: none;
   resize: none;
-  overflow: auto;
+  width: 100%;
+  height: 350px;
 }
-/* line 37, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .block .resize-html {
-  position: absolute;
-  top: 50%;
-  right: -11px;
-  color: #666666;
-}
-/* line 44, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .block .resize-js {
-  position: absolute;
-  top: 50%;
-  left: -11px;
-  color: #666666;
-}
-/* line 52, ../sass/includes/_editor.scss */
-#content-wrapper .edit-container .row .css {
-  margin: 0 1.1%;
+/* line 19, ../sass/includes/_editor.scss */
+#editor-layout .block textarea:focus {
+  outline: none;
 }
 
 /* line 1, ../sass/includes/_thanks.scss */
@@ -551,4 +518,105 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
 /* line 19, ../sass/includes/_thanks.scss */
 #thanks-content span {
   color: #FA8072;
+}
+
+/* line 1, ../sass/includes/_settings.scss */
+.container12 {
+  margin-top: 75px !important;
+}
+/* line 7, ../sass/includes/_settings.scss */
+.container12 .row .column4 {
+  height: auto;
+  text-align: center;
+}
+/* line 13, ../sass/includes/_settings.scss */
+.container12 .row .column4 form input, .container12 .row .column4 #sign-up-wrapper .sign-up input, #sign-up-wrapper .container12 .row .column4 .sign-up input {
+  background-color: #F3F2F2;
+  font-family: "Inconsolata";
+  font-size: 13px;
+  display: block;
+  padding: 15px;
+  border: none;
+  width: 65%;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+/* line 24, ../sass/includes/_settings.scss */
+.container12 .row .column4 form input::-webkit-input-placeholder, .container12 .row .column4 #sign-up-wrapper .sign-up input::-webkit-input-placeholder, #sign-up-wrapper .container12 .row .column4 .sign-up input::-webkit-input-placeholder {
+  font-family: "Inconsolata";
+  font-size: 13px;
+  color: #222222;
+}
+/* line 30, ../sass/includes/_settings.scss */
+.container12 .row .column4 form input:focus, .container12 .row .column4 #sign-up-wrapper .sign-up input:focus, #sign-up-wrapper .container12 .row .column4 .sign-up input:focus {
+  outline: none;
+}
+/* line 35, ../sass/includes/_settings.scss */
+.container12 .row .column4 form input[type="button"], .container12 .row .column4 #sign-up-wrapper .sign-up input[type="button"], #sign-up-wrapper .container12 .row .column4 .sign-up input[type="button"] {
+  background: #FA8072;
+  color: white;
+  cursor: pointer;
+}
+/* line 41, ../sass/includes/_settings.scss */
+.container12 .row .column4 form .save, .container12 .row .column4 #sign-up-wrapper .sign-up .save, #sign-up-wrapper .container12 .row .column4 .sign-up .save {
+  background: #F0E68C !important;
+  color: #222222 !important;
+}
+/* line 46, ../sass/includes/_settings.scss */
+.container12 .row .column4 form .custom-file-input, .container12 .row .column4 #sign-up-wrapper .sign-up .custom-file-input, #sign-up-wrapper .container12 .row .column4 .sign-up .custom-file-input {
+  padding: 12px 15px;
+}
+/* line 50, ../sass/includes/_settings.scss */
+.container12 .row .column4 form .custom-file-input::-webkit-file-upload-button, .container12 .row .column4 #sign-up-wrapper .sign-up .custom-file-input::-webkit-file-upload-button, #sign-up-wrapper .container12 .row .column4 .sign-up .custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+  position: relative;
+}
+/* line 56, ../sass/includes/_settings.scss */
+.container12 .row .column4 form .custom-file-input::before, .container12 .row .column4 #sign-up-wrapper .sign-up .custom-file-input::before, #sign-up-wrapper .container12 .row .column4 .sign-up .custom-file-input::before {
+  content: 'set profile picture';
+  display: block;
+  padding: 5px 8px;
+  background: #F3F2F2;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 13px;
+  visibility: visible;
+  position: absolute;
+}
+/* line 70, ../sass/includes/_settings.scss */
+.container12 .row .column4 form .custom-file-input:hover::before, .container12 .row .column4 #sign-up-wrapper .sign-up .custom-file-input:hover::before, #sign-up-wrapper .container12 .row .column4 .sign-up .custom-file-input:hover::before {
+  visibility: visible;
+}
+/* line 76, ../sass/includes/_settings.scss */
+.container12 .row .column4 select {
+  border: 0 !important;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #F3F2F2;
+  text-overflow: "";
+  font-family: "Inconsolata";
+  font-size: 13px;
+  display: block;
+  padding: 14px 15px;
+  border: none;
+  width: 65%;
+  margin: 10px auto;
+  box-sizing: border-box;
+}
+/* line 91, ../sass/includes/_settings.scss */
+.container12 .row .column4 select option {
+  padding: 15px;
+  display: block;
+}
+/* line 96, ../sass/includes/_settings.scss */
+.container12 .row .column4 select:focus {
+  outline: none;
+}
+/* line 101, ../sass/includes/_settings.scss */
+.container12 .row .column4 select::before {
+  content: "\f107";
 }

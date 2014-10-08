@@ -7,7 +7,7 @@
 		</div>
 
 		<div class="new-scrib">
-			<a href="#">save :)</a>
+			<a href="#">save</a>
 		</div>
 	</div>
 
