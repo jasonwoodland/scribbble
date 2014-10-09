@@ -476,14 +476,21 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   height: 100%;
   margin: 0 auto;
   margin-top: 50px;
+  -webkit-display: flex;
+  -moz-display: flex;
+  -o-display: flex;
+  -ms-display: flex;
   display: flex;
-  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
 }
-/* line 9, ../sass/includes/_editor.scss */
+/* line 17, ../sass/includes/_editor.scss */
 #editor-layout .block {
   width: 32%;
 }
-/* line 12, ../sass/includes/_editor.scss */
+/* line 20, ../sass/includes/_editor.scss */
 #editor-layout .block textarea {
   background: #F3F2F2;
   border: none;
@@ -491,7 +498,7 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   width: 100%;
   height: 350px;
 }
-/* line 19, ../sass/includes/_editor.scss */
+/* line 27, ../sass/includes/_editor.scss */
 #editor-layout .block textarea:focus {
   outline: none;
 }

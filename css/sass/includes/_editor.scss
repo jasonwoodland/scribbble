@@ -3,8 +3,16 @@
 	height: 100%;
 	margin: 0 auto;
 	margin-top: 50px;
+	-webkit-display: flex;
+	-moz-display: flex;
+	-o-display: flex;
+	-ms-display: flex;
 	display: flex;
-	justify-content: space-between;
+
+	-webkit-justify-content: space-between;
+	-moz-justify-content: space-between;
+	-o-justify-content: space-between;
+	-ms-justify-content: space-between;
 
 	.block {
 		width: 32%;
