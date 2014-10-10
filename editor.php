@@ -7,15 +7,12 @@
 ?>
 
 <div id="editor-layout">
-	<div class="html block">
-		<textarea name="" id="html" cols="30" rows="10"></textarea>
+	<div class="html block" id="html-pane">
 	</div>
 
-	<div class="css block">
-		<textarea name="" id="css" cols="30" rows="10"></textarea>
+	<div class="css block" id="css-pane">
 	</div>
 
-	<div class="js block">
-		<textarea name="" id="js" cols="30" rows="10"></textarea>
+	<div class="js block" id="js-pane">
 	</div>
 </div>

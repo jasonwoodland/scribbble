@@ -51,7 +51,7 @@
 		}
 
 		public function authenticate($password) {
-			$stmt = $this->db->prepare('SELECT id FROM users WHERE username = ? AND password = ?');
+			$stmt = $this->db->prepare('SELECT id FROM users WHERE username = ? AND password = ? AND verification_code IS NULL');
 			$stmt->execute([$this->username, sha1($password, true)]);
 			$this->isAuthenticated = $stmt->rowCount() == 1;
 			return $this->isAuthenticated;
