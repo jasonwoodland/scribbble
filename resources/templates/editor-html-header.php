@@ -7,7 +7,8 @@
 		</div>
 
 		<div class="new-scrib">
-			<a href="../../editor.php">save</a>
+			<a href="#">save</a>
+			<a href="#">make private</a>
 		</div>
 	</div>
 

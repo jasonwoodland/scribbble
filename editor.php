@@ -8,11 +8,38 @@
 
 <div id="editor-layout">
 	<div class="html block" id="html-pane">
+		<div class="editor-info">
+			<div class="editor-settings">
+				<p>html</p>
+
+				<a href="#">
+					<i class="fa fa-cog"></i>
+				</a>
+			</div>
+		</div>
 	</div>
 
 	<div class="css block" id="css-pane">
+		<div class="editor-info">
+			<div class="editor-settings">
+				<p>css</p>
+
+				<a href="#">
+					<i class="fa fa-cog"></i>
+				</a>
+			</div>
+		</div>
 	</div>
 
 	<div class="js block" id="js-pane">
+		<div class="editor-info">
+			<div class="editor-settings">
+				<p>js</p>
+
+				<a href="#">
+					<i class="fa fa-cog"></i>
+				</a>
+			</div>
+		</div>
 	</div>
 </div>

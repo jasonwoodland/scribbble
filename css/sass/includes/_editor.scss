@@ -9,6 +9,8 @@
 		width: 32%;
 		display: inline-block;
 		margin: 0 auto;
+		text-align: left;
+		cursor: text;
 		
 		textarea {
 			background: $chalk;
@@ -24,6 +26,38 @@
 
 		&:nth-child(2) {
 			margin: 0 1%;
+		}
+
+		.editor-info {
+			padding: 10px;
+			background: $chalk;
+			position: relative;
+			
+			
+			.editor-settings {
+				
+
+				p {
+					font-family: $base-font-family;
+
+				}
+				
+				a {
+					color: $accent-color;
+					text-decoration: none;
+
+					.fa-cog {
+						position: absolute;
+						right: 15px;
+						top: 11px;
+					}
+				}
+			}
+		}
+
+		.CodeMirror {
+			padding: 10px 0;
+			text-align: left;
 		}
 	}
 }
