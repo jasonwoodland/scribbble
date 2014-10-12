@@ -487,12 +487,12 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
 }
 /* line 8, ../sass/includes/_editor.scss */
 #editor-layout .block {
-  width: 32.66%;
+  width: 32%;
   display: inline-block;
-  float: left;
   margin: 0 auto;
   text-align: left;
   cursor: text;
+  height: 0;
 }
 /* line 16, ../sass/includes/_editor.scss */
 #editor-layout .block textarea {
