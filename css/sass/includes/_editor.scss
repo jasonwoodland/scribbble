@@ -7,11 +7,11 @@
 
 	.block {
 		width: 32.66%;
+		display: inline-block;
 		float: left;
 		margin: 0 auto;
 		text-align: left;
 		cursor: text;
-		height: 0;
 		
 		textarea {
 			background: $chalk;
