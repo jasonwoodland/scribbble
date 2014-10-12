@@ -492,8 +492,9 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   margin: 0 auto;
   text-align: left;
   cursor: text;
+  height: 0;
 }
-/* line 15, ../sass/includes/_editor.scss */
+/* line 16, ../sass/includes/_editor.scss */
 #editor-layout .block textarea {
   background: #F3F2F2;
   border: none;
@@ -501,36 +502,36 @@ header #header-wrapper .user a, header #header-wrapper .user .username, header #
   width: 100%;
   height: 380px;
 }
-/* line 22, ../sass/includes/_editor.scss */
+/* line 23, ../sass/includes/_editor.scss */
 #editor-layout .block textarea:focus {
   outline: none;
 }
-/* line 27, ../sass/includes/_editor.scss */
+/* line 28, ../sass/includes/_editor.scss */
 #editor-layout .block:nth-child(2) {
   margin: 0 1%;
 }
-/* line 31, ../sass/includes/_editor.scss */
+/* line 32, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info {
   padding: 10px;
   background: #F3F2F2;
   position: relative;
 }
-/* line 40, ../sass/includes/_editor.scss */
+/* line 41, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings p {
   font-family: "Inconsolata";
 }
-/* line 45, ../sass/includes/_editor.scss */
+/* line 46, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a {
   color: #151515;
   text-decoration: none;
 }
-/* line 49, ../sass/includes/_editor.scss */
+/* line 50, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a .fa-cog {
   position: absolute;
   right: 15px;
   top: 11px;
 }
-/* line 58, ../sass/includes/_editor.scss */
+/* line 59, ../sass/includes/_editor.scss */
 #editor-layout .block .CodeMirror {
   padding: 10px 0;
   text-align: left;
