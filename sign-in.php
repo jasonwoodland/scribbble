@@ -20,8 +20,8 @@
 
 	
 	<form>
-		<input name="username" id="username" type="text" placeholder="username">
-		<input name="password" id="password" type="password" placeholder="password">
+		<input name="username" id="username" type="text" placeholder="username" autocomplete='off'>
+		<input name="password" id="password" type="password" placeholder="password" autocomplete='off'>
 
 		<label>
 			<input type="checkbox" name="check"> 

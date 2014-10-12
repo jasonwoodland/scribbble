@@ -13,9 +13,9 @@
 	</div>
 	
 	<form class="sign-up"> 
-		<input id="username" name="username" type="text" placeholder="username">
-		<input id="email" name="email" type="text" placeholder="email">
-		<input id="password" name="password" type="password" placeholder="password">
+		<input id="username" name="username" type="text" placeholder="username" autocomplete='off'>
+		<input id="email" name="email" type="text" placeholder="email" autocomplete='off'>
+		<input id="password" name="password" type="password" placeholder="password" autocomplete='off'>
 		<input type="submit" value="sign up">
 	</form>
 	
