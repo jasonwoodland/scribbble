@@ -13,7 +13,9 @@
 
 	<ul class="user">
 		<li><a href="#"><span class="notification">3</span></a></li>
-		<li><a class="username" href="profile.php"><?=$me->profile(PDO::FETCH_OBJ)->username?><i class="fa fa-angle-down"></i></a>
+		<li>
+			<a class="username" href="profile.php"><?=$me->profile(PDO::FETCH_OBJ)->username?><i class="fa fa-angle-down"></i></a>
+			
 			<ul class="dropdown">
 				<li><a href="/editor.php">new</a></li>
 				<li><a href="/settings">settings</a></li>
