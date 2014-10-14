@@ -31,7 +31,12 @@
 	}
 }
 
-#sign-up-wrapper, #sign-in-wrapper {
+#forgot-password-wrapper {
+	@extend #sign-in-wrapper;
+	height: 180px;
+}
+
+#sign-up-wrapper, #sign-in-wrapper, #forgot-password-wrapper {
 
 	.sign-option {
 		text-decoration: none;
@@ -53,7 +58,7 @@
 		border: none;
 	}
 
-	input[type="text"], input[type="password"], input[type="submit"] {
+	input[type="text"], input[type="password"], input[type="submit"], input[type="email"] {
 		display: block;
 		padding: 15px;
 		border: none;

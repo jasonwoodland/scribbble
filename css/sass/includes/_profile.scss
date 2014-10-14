@@ -44,6 +44,28 @@
 						font-size: $base-font-size;
 					}
 				}
+
+				.user-actions {
+					margin-top: 5px;
+
+					.follow {
+						@extend .username;
+						font-size: $base-font-size;
+						color: white;
+						background: $accent-color;
+						padding: 3px 7px;
+					}
+
+					.message {
+						@extend .follow;
+						margin: 0 3px;
+					}
+
+					.block {
+						@extend .follow;
+						background: $notification-error;
+					}
+				}
 			}
 		}
 	}

@@ -40,10 +40,13 @@
 			</div>
 		</div>
 
+		
 		<div class="row">
 			<div class="column12">
-				<div class="bio">
-					<a href="#">timbog80.github.io</a>
+				<div class="user-actions">
+					<a class="follow" href="#">follow</a>
+					<a class="message" href="#">message</a>
+					<a class="block" href="#">block</a>
 				</div>
 			</div>
 		</div>
