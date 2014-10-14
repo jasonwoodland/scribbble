@@ -23,6 +23,7 @@
           padding: 0px 0 0px 7px;
           color: $accent-color;
           background: white;
+          font-size: $mediam-font-size;
           font-family: $base-font-family;
           text-transform: lowercase;
           padding: 3px 7px;
@@ -39,6 +40,7 @@
           opacity: 0;
           @include transition(all, .2s, ease);
           text-align: center;
+          overflow: hidden;
 
           .view-scrib {
             color: $accent-color;
@@ -47,7 +49,14 @@
             font-size: $base-font-size;
             padding: 3px 7px;
             background: white;
-            line-height: 225px;
+            line-height: 221px;
+            @include transition(all, .15s, ease);
+
+
+            &:hover {
+              padding: 105px 116px;
+              background: $chalk;
+            }
           }
         }
 
@@ -63,14 +72,14 @@
             text-decoration: none;
             background: white;
             padding: 3px 7px;
-            font-size: $base-font-size;
+            font-size: $mediam-font-size;
             font-family: $base-font-family;
             margin: 0;
             display: inline-block;
             color: $accent-color;
 
             i {
-              font-size: $mediam-font-size;
+              font-size: $small-font-size;
             }
           }
         }
@@ -82,6 +91,11 @@
         &:hover .scrib-info {
           opacity: 1;
         }
+
+        &:hover .created-by {
+          display: none;
+        }
+
       }
 
       .explore {
