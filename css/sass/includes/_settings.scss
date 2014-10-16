@@ -1,3 +1,113 @@
+.profile-image, .name, .links-settings, .save-all-changes {
+	form {
+
+		input[type="text"] {
+			width: 200px;
+			display: inline-block;
+			padding: 15px;
+			border: none;
+			margin: 10px 0;
+			box-sizing: border-box;
+			background: $chalk;
+			font-family: $base-font-family;
+			font-size: $mediam-font-size;
+			color: $accent-color;
+
+			&::-webkit-input-placeholder {
+				font-family: $base-font-family;
+				font-size: $mediam-font-size;
+				color: $accent-color;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+		}
+
+		input[type="submit"] {
+			width: 200px;
+			display: inline-block;
+			padding: 15px;
+			border: none;
+			margin: 10px 0;
+			box-sizing: border-box;
+			background: $notification-unread;
+			font-family: $base-font-family;
+			font-size: $mediam-font-size;
+			color: $accent-color;
+			cursor: pointer;
+
+			&::-webkit-input-placeholder {
+				font-family: $base-font-family;
+				font-size: $mediam-font-size;
+				color: $accent-color;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
 .image-settings {
 	margin-top: 30px;
+
+	.profile-image {
+		position: relative;
+		overflow: hidden;
+
+		form {
+
+			input[type="file"] {
+				color: transparent;
+				text-align: center;
+				position: absolute;
+				left: -1px;
+				top: 100%;
+				margin: 0;
+				padding: 0;
+				background: $accent-color;
+				-webkit-appearance: none;
+				padding: 10px;
+				opacity: .8;
+				@include transition(all, .25s, ease);
+
+				&:focus {
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+
+		&:hover input[type="file"] {
+			top: 59%;
+		}
+	}
+}
+
+.name {
+	margin-top: 20px;
+}
+
+.links-settings {
+
+	form {
+
+
+		input[type="text"]:nth-child(2) {
+			margin: 0 10px;
+		}
+	}
+}
+
+p {
+	font-family: $base-font-family;
+	font-size: $mediam-font-size;
+	color: $accent-color;
+	display: inline-block;
+	text-align: center;
+	padding: $small-button;
+	margin: 0;
+	background: $notification-unread;
 }

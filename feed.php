@@ -4,6 +4,8 @@
 	require 'resources/controller.php';
 ?>
 <div id="content-wrapper">
+
+	<!-- feed type choice -->
 	<div class="container12">
 		<div class="row">
 			<div class="column12 explore">

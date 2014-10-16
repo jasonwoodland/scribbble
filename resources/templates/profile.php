@@ -13,12 +13,11 @@
 				</a>
 			</div>
 		</div>
-
-		<!-- user img -->
-
+		
+		<!-- user full name -->
 		<div class="row">
 			<div class="column12">
-				<a class="username" href="#">@timbogdanov</a>
+				<a class="username" href="#">jason woodland</a>
 			</div>
 		</div>
 
@@ -39,7 +38,6 @@
 				</div>
 			</div>
 		</div>
-
 		
 		<div class="row">
 			<div class="column12">
