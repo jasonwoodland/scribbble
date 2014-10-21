@@ -626,7 +626,6 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   left: -1px;
   top: 100%;
   margin: 0;
-  padding: 0;
   background: #151515;
   -webkit-appearance: none;
   padding: 10px;
@@ -637,27 +636,27 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 76, ../sass/includes/_settings.scss */
+/* line 75, ../sass/includes/_settings.scss */
 .image-settings .profile-image form input[type="file"]:focus, .image-settings .profile-image #sign-up-wrapper .sign-up input[type="file"]:focus, #sign-up-wrapper .image-settings .profile-image .sign-up input[type="file"]:focus {
   padding: 0;
   margin: 0;
 }
-/* line 83, ../sass/includes/_settings.scss */
+/* line 82, ../sass/includes/_settings.scss */
 .image-settings .profile-image:hover input[type="file"] {
   top: 59%;
 }
 
-/* line 89, ../sass/includes/_settings.scss */
+/* line 88, ../sass/includes/_settings.scss */
 .name {
   margin-top: 20px;
 }
 
-/* line 98, ../sass/includes/_settings.scss */
+/* line 97, ../sass/includes/_settings.scss */
 .links-settings form input[type="text"]:nth-child(2), .links-settings #sign-up-wrapper .sign-up input[type="text"]:nth-child(2), #sign-up-wrapper .links-settings .sign-up input[type="text"]:nth-child(2) {
   margin: 0 10px;
 }
 
-/* line 104, ../sass/includes/_settings.scss */
+/* line 103, ../sass/includes/_settings.scss */
 p {
   font-family: "Inconsolata";
   font-size: 14px;
