@@ -3,7 +3,7 @@
 
 	<div class="intro">
 		<div class="logo">
-			<a href="feed.php">scribbble.io &bullet; beta</a>
+			<a href="feed.php">scribbble.io</a>
 		</div>
 	</div>
 

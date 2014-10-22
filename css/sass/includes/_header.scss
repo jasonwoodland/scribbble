@@ -27,6 +27,7 @@ header {
         
         a {
           color: $chalk;
+          border-radius: 1px;
           background: $accent-color;
           margin-right: 5px;
         }
@@ -52,7 +53,7 @@ header {
           .fa-angle-down {
             font-size: $mediam-font-size;
             display: inline-block;
-            margin-left: 10px;
+            margin-left: 5px;
             @include transition(all, .2s, ease);
           }
         }
@@ -67,6 +68,8 @@ header {
             font-size: $base-font-size;
             display: inline-block;
             float: right;
+            border-radius: 1px;
+            color: white;
           } 
         }
       }
@@ -77,6 +80,7 @@ header {
         font-size: $base-font-size;
         color: $accent-color;
         display: inline-block;
+        border-radius: 1px;
       }
     }
   }

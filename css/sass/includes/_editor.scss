@@ -1,63 +1,100 @@
 #editor-layout {
-	width: 95%;
+	width: 100%;
 	margin: 0 auto;
-	margin-top: 50px;
+	margin-top: 25px;
 	text-align: center;
+	-webkit-box-sizing: border-box !important;
 
 	.block {
-		width: 32%;
+		margin: 0;
+		padding: 0 0;
+		width: 33%;
+		position: relative;
+		height: 400px;
+		-webkit-box-sizing: border-box;
 		display: inline-block;
-		margin: 0 auto;
 		text-align: left;
 		cursor: text;
-		height: 0;
 		
 		textarea {
 			background: $chalk;
 			border: none;
 			resize: none;
 			width: 100%;
-			height: 380px;
+			height: 400px;
+			-webkit-box-sizing: border-box;
+   			-moz-box-sizing: border-box;
+       		box-sizing: border-box;	
 
 			&:focus {
 				outline: none;
 			}
+
+			
 		}
 
 		&:nth-child(2) {
-			margin: 0 1%;
+			margin: 0 .1%;
+			border-right: 1px solid #555;
+			border-left: 1px solid #555; 
 		}
 
 		.editor-info {
 			padding: 10px;
 			background: $chalk;
-			position: relative;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			padding: 5px;
+			z-index: 100;
+			cursor: pointer;
+			border-radius: 1px;
 			
 			
 			.editor-settings {
-				
 
 				p {
 					font-family: $base-font-family;
-
+					background: none;
+					line-height: 0;
+					display: inline-block;
+					padding-right: 27px;
 				}
 				
 				a {
 					color: $accent-color;
 					text-decoration: none;
+					display: inline-block;
+					font-size: $large-font-size;
 
-					.fa-cog {
+					.ion-ios7-gear {
 						position: absolute;
-						right: 15px;
-						top: 11px;
+						top: 4px;
+						right: 10px;
 					}
 				}
 			}
 		}
 
 		.CodeMirror {
+			height: 380px;
 			padding: 10px 0;
+			overflow-x: hidden;
 			text-align: left;
 		}
 	}
+}
+
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #222; 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #333;
 }

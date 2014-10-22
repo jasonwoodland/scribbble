@@ -6,6 +6,7 @@
 		<!-- fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 		<!-- font-icons -->
+		<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
 		<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 		<!-- styles -->
 		<link href="/css/stylesheets/1140.css" media="screen, projection" rel="stylesheet" type="text/css" />

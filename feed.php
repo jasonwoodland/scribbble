@@ -27,9 +27,9 @@
 				<a class="created-by" href="#">jason woodland</a>
 
 				<div class="scrib-info">
-					<a href="#"><i class="fa fa-eye"></i> 300</a>
-					<a href="#"><i class="fa fa-comment"></i> 10</a>
-					<a href="#"><i class="fa fa-heart"></i> 5</a>
+					<a href="#">300</a>
+					<a href="#">10</a>
+					<a href="#">5</a>
 				</div>
 			</div>
 
@@ -41,9 +41,9 @@
 				<a class="created-by" href="#">tim bogdanov</a>
 
 				<div class="scrib-info">
-					<a href="#"><i class="fa fa-eye"></i> 300</a>
-					<a href="#"><i class="fa fa-comment"></i> 10</a>
-					<a href="#"><i class="fa fa-heart"></i> 5</a>
+					<a href="#">300</a>
+					<a href="#">10</a>
+					<a href="#">5</a>
 				</div>
 			</div>
 
@@ -55,9 +55,9 @@
 				<a class="created-by" href="#">tim bogdanov</a>
 
 				<div class="scrib-info">
-					<a href="#"><i class="fa fa-eye"></i> 300</a>
-					<a href="#"><i class="fa fa-comment"></i> 10</a>
-					<a href="#"><i class="fa fa-heart"></i> 5</a>
+					<a href="#">300</a>
+					<a href="#">10</a>
+					<a href="#">5</a>
 				</div>
 			</div>
 
@@ -69,9 +69,9 @@
 				<a class="created-by" href="#">jason woodland</a>
 
 				<div class="scrib-info">
-					<a href="#"><i class="fa fa-eye"></i> 300</a>
-					<a href="#"><i class="fa fa-comment"></i> 10</a>
-					<a href="#"><i class="fa fa-heart"></i> 5</a>
+					<a href="#">300</a>
+					<a href="#">10</a>
+					<a href="#">5</a>
 				</div>
 			</div>
 

@@ -63,7 +63,7 @@
 
 					.block {
 						@extend .follow;
-						background: $notification-error;
+						background: $notification-unread;
 					}
 				}
 			}

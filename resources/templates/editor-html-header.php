@@ -3,12 +3,13 @@
 
 	<div class="intro">
 		<div class="logo">
-			<a href="feed.php">scribbble.io &bullet; beta</a>
+			<a href="feed.php">scribbble.io</a>
 		</div>
 
 		<div class="new-scrib">
 			<a href="#">save</a>
 			<a href="#">make private</a>
+			<a href="#">share</a>
 		</div>
 	</div>
 
