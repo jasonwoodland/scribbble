@@ -1,6 +1,7 @@
 header {
   padding: 20px 0;
   clear: both;
+  width: 100%;
 
   #header-wrapper {
     width: 95%;
@@ -30,6 +31,7 @@ header {
           border-radius: 1px;
           background: $accent-color;
           margin-right: 5px;
+          border: 1px solid $accent-color-dark;
         }
       }
     }
@@ -38,7 +40,7 @@ header {
     .user {
       float: right;
       position: relative;
-      display: block;
+      display: inline-block;
 
       li {
         display: inline-block;
@@ -49,20 +51,25 @@ header {
           margin-left: 10px;
           position: relative;
           float: right;
+          border: 1px solid $chalk-dark;
 
           .fa-angle-down {
             font-size: $mediam-font-size;
             display: inline-block;
             margin-left: 5px;
-            @include transition(all, .2s, ease);
           }
+          
+          &:hover {
+            background: $chalk-dark;
+          }
+
         }
 
         .notification {
           margin: 0;
 
           span {
-            padding: $small-button;
+            padding: 4px 9px;
             background: $notification-unread;
             font-family: $base-font-family;
             font-size: $base-font-size;
@@ -70,7 +77,12 @@ header {
             float: right;
             border-radius: 1px;
             color: white;
-          } 
+            border: 1px solid #993a3b;
+
+            &:hover {
+              background: #993a3b;
+            }
+          }
         }
       }
 

@@ -30,7 +30,7 @@
 
 					a {
 						@extend .username;
-						font-size: $base-font-size;
+						font-size: $mediam-font-size;
 						color: $accent-color-light;
 					}
 				}
@@ -64,6 +64,10 @@
 					.block {
 						@extend .follow;
 						background: $notification-unread;
+					}
+
+					.block, .message, .follow {
+						border-radius: 1px;
 					}
 				}
 			}
