@@ -100,13 +100,14 @@ header #header-wrapper .intro .logo a, header #header-wrapper .intro .new-scrib 
   text-decoration: none;
   color: #151515;
   display: inline-block;
-  padding: 4px 8px;
+  padding: 5px 11px;
+  border: 1px solid transparent;
 }
-/* line 26, ../sass/includes/_header.scss */
+/* line 27, ../sass/includes/_header.scss */
 header #header-wrapper .intro .new-scrib {
   margin-left: 15px;
 }
-/* line 29, ../sass/includes/_header.scss */
+/* line 30, ../sass/includes/_header.scss */
 header #header-wrapper .intro .new-scrib a {
   color: #F3F2F2;
   border-radius: 1px;
@@ -114,56 +115,67 @@ header #header-wrapper .intro .new-scrib a {
   margin-right: 5px;
   border: 1px solid #000;
 }
-/* line 40, ../sass/includes/_header.scss */
+/* line 41, ../sass/includes/_header.scss */
 header #header-wrapper .user {
   float: right;
   position: relative;
   display: inline-block;
 }
-/* line 45, ../sass/includes/_header.scss */
+/* line 46, ../sass/includes/_header.scss */
 header #header-wrapper .user li {
   display: inline-block;
 }
-/* line 48, ../sass/includes/_header.scss */
+/* line 49, ../sass/includes/_header.scss */
 header #header-wrapper .user li .username, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .follow, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .follow, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .message, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .message, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .block, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .block {
   background: #F3F2F2;
-  padding: 4px 8px;
+  padding: 5px 11px;
   margin-left: 10px;
   position: relative;
   float: right;
   border: 1px solid #ededed;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: #474747 !important;
 }
-/* line 56, ../sass/includes/_header.scss */
-header #header-wrapper .user li .username .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a .fa-angle-down, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a .fa-angle-down, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .follow .fa-angle-down, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .follow .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .message .fa-angle-down, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .message .fa-angle-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .block .fa-angle-down, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .block .fa-angle-down {
-  font-size: 14px;
+/* line 59, ../sass/includes/_header.scss */
+header #header-wrapper .user li .username .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .follow .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .follow .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .message .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .message .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .block .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .block .ion-ios7-arrow-down {
+  font-size: 12px;
   display: inline-block;
   margin-left: 5px;
 }
-/* line 62, ../sass/includes/_header.scss */
+/* line 65, ../sass/includes/_header.scss */
 header #header-wrapper .user li .username:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a:hover, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a:hover, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .follow:hover, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .follow:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .message:hover, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .message:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-actions .block:hover, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user li .block:hover {
   background: #ededed;
 }
-/* line 68, ../sass/includes/_header.scss */
+/* line 71, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification {
   margin: 0;
 }
-/* line 71, ../sass/includes/_header.scss */
+/* line 74, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification span {
-  padding: 4px 9px;
-  background: #ac4142;
+  padding: 5px 11px;
+  background: #3cc05e;
   font-family: "Inconsolata";
   font-size: 16px;
   display: inline-block;
   float: right;
   border-radius: 1px;
   color: white;
-  border: 1px solid #993a3b;
+  border: 1px solid #36ad54;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
-/* line 82, ../sass/includes/_header.scss */
+/* line 86, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification span:hover {
-  background: #993a3b;
+  background: #36ad54;
 }
-/* line 89, ../sass/includes/_header.scss */
+/* line 93, ../sass/includes/_header.scss */
 header #header-wrapper .user .notification, header #header-wrapper .user .username, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-actions .follow, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user .follow, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-actions .message, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user .message, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-actions .block, #content-wrapper .container12 .row .column12 .user-actions header #header-wrapper .user .block {
   text-decoration: none;
   font-family: "Inconsolata";
@@ -203,7 +215,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   font-size: 14px;
   font-family: "Inconsolata";
   text-transform: lowercase;
-  padding: 4px 8px;
+  padding: 5px 11px;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -ms-transition: all 0.2s ease;
@@ -217,7 +229,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(172, 65, 66, 0.85);
+  background: rgba(21, 21, 21, 0.8);
   opacity: 0;
   -webkit-transition: all 0.15s ease;
   -moz-transition: all 0.15s ease;
@@ -233,7 +245,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   text-decoration: none;
   font-family: "Inconsolata";
   font-size: 16px;
-  padding: 4px 8px;
+  padding: 5px 11px;
   background: white;
   line-height: 230px;
 }
@@ -254,7 +266,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 #content-wrapper .container12 .row .column3 .scrib-info a, #content-wrapper .container12 .row .column4 .scrib-info a {
   text-decoration: none;
   background: white;
-  padding: 4px 8px;
+  padding: 5px 11px;
   font-size: 14px;
   font-family: "Inconsolata";
   margin: 0;
@@ -283,7 +295,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   text-decoration: none;
   margin-right: 5px;
   color: #151515;
-  padding: 4px 8px;
+  padding: 5px 11px;
 }
 /* line 103, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore .active {
@@ -368,7 +380,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 /* line 83, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="submit"], #sign-in-wrapper input[type="submit"], #sign-up-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"] {
   cursor: pointer;
-  background: #ac4142;
+  background: #3cc05e;
   color: white;
 }
 /* line 89, ../sass/includes/_sign-in.scss */
@@ -394,7 +406,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   width: 1em;
   display: inline-block;
   margin-right: 5px;
-  color: #ac4142;
+  color: #3cc05e;
 }
 /* line 112, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-in-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #forgot-password-wrapper label input[type="checkbox"]:checked + .label-text:before, #forgot-password-wrapper label input[type="checkbox"]:checked + .label-text:before {
@@ -410,7 +422,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 #sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed, #forgot-password-wrapper .failed, #forgot-password-wrapper .failed {
   font-family: "Inconsolata";
   font-size: 14px;
-  background-color: #ac4142;
+  background-color: #3cc05e;
   color: white;
   display: block;
 }
@@ -446,7 +458,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 /* line 31, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info a {
   font-size: 14px;
-  color: #222;
+  color: #474747;
 }
 /* line 38, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .bio {
@@ -464,23 +476,27 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 /* line 51, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-actions .follow, #content-wrapper .container12 .row .column12 .user-actions .message, #content-wrapper .container12 .row .column12 .user-actions .block {
   font-size: 16px;
-  color: white;
-  background: #151515;
-  padding: 4px 8px;
+  color: #474747;
+  background: #F3F2F2;
+  border: 1px solid #ededed;
+  padding: 5px 11px;
+  border-radius: 1px;
 }
-/* line 59, ../sass/includes/_profile.scss */
+/* line 61, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-actions .message {
   margin: 0 3px;
 }
-/* line 64, ../sass/includes/_profile.scss */
+/* line 66, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-actions .block {
-  background: #ac4142;
+  color: white;
+  border: 1px solid #dd483b;
+  background: #F65042;
 }
-/* line 69, ../sass/includes/_profile.scss */
+/* line 73, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-actions .block, #content-wrapper .container12 .row .column12 .user-actions .message, #content-wrapper .container12 .row .column12 .user-actions .follow, #content-wrapper .container12 .row .column12 .user-actions .message, #content-wrapper .container12 .row .column12 .user-actions .block {
   border-radius: 1px;
 }
-/* line 77, ../sass/includes/_profile.scss */
+/* line 81, ../sass/includes/_profile.scss */
 #content-wrapper .profile-container {
   margin-top: 30px;
 }
@@ -489,7 +505,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 #editor-layout {
   width: 100%;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 30px;
   text-align: center;
   height: 0;
   -webkit-box-sizing: border-box !important;
@@ -529,7 +545,6 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 }
 /* line 43, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info {
-  padding: 10px;
   background: #F3F2F2;
   position: absolute;
   top: 10px;
@@ -538,26 +553,28 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   z-index: 100;
   cursor: pointer;
   border-radius: 1px;
+  border: 1px solid #ededed;
 }
-/* line 57, ../sass/includes/_editor.scss */
+/* line 56, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings p {
   font-family: "Inconsolata";
   background: none;
   line-height: 0;
   display: inline-block;
-  padding-right: 27px;
+  margin-right: 15px;
+  color: #151515;
 }
 /* line 65, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a {
-  color: #151515;
+  color: #151515 !important;
   text-decoration: none;
   display: inline-block;
-  font-size: 18px;
+  font-size: 16px;
 }
 /* line 71, ../sass/includes/_editor.scss */
-#editor-layout .block .editor-info .editor-settings a .ion-ios7-gear {
+#editor-layout .block .editor-info .editor-settings a .ion-gear-a {
   position: absolute;
-  top: 4px;
+  top: 5px;
   right: 10px;
 }
 /* line 80, ../sass/includes/_editor.scss */
@@ -607,7 +624,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 }
 /* line 19, ../sass/includes/_thanks.scss */
 #thanks-content span {
-  color: #ac4142;
+  color: #3cc05e;
 }
 
 /* line 4, ../sass/includes/_settings.scss */
@@ -641,10 +658,10 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   border: none;
   margin: 10px 0;
   box-sizing: border-box;
-  background: #ac4142;
+  background: #3cc05e;
   font-family: "Inconsolata";
   font-size: 14px;
-  color: #151515;
+  color: white;
   cursor: pointer;
 }
 /* line 40, ../sass/includes/_settings.scss */
@@ -709,10 +726,10 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 p {
   font-family: "Inconsolata";
   font-size: 14px;
-  color: #151515;
+  color: white;
   display: inline-block;
   text-align: center;
-  padding: 4px 8px;
+  padding: 5px 11px;
   margin: 0;
-  background: #ac4142;
+  background: #3cc05e;
 }

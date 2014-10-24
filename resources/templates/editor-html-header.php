@@ -17,7 +17,7 @@
 		<li><a href="#" class="notification"><span>3</span></a></li>
 		<li>
 			<a class="username" href="profile.php"><?=$me->profile(PDO::FETCH_OBJ)->username?>
-			<i class="fa fa-angle-down"></i></a>
+			<i class="ion-ios7-arrow-down"></i></a>
 	 	</li>
 	 </ul> 
 

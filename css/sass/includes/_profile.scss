@@ -31,7 +31,7 @@
 					a {
 						@extend .username;
 						font-size: $mediam-font-size;
-						color: $accent-color-light;
+						color: #474747;
 					}
 				}
 
@@ -51,9 +51,11 @@
 					.follow {
 						@extend .username;
 						font-size: $base-font-size;
-						color: white;
-						background: $accent-color;
+						color: #474747;
+						background: $chalk;
+						border: 1px solid $chalk-dark;
 						padding: $small-button;
+						border-radius: 1px;
 					}
 
 					.message {
@@ -63,7 +65,9 @@
 
 					.block {
 						@extend .follow;
-						background: $notification-unread;
+						color: white;
+						border: 1px solid #dd483b;
+						background: $notification-error;
 					}
 
 					.block, .message, .follow {

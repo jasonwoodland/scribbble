@@ -20,6 +20,7 @@ header {
           color: $accent-color;
           display: inline-block;
           padding: $small-button;
+          border: 1px solid transparent;
         }
       }
 
@@ -52,9 +53,11 @@ header {
           position: relative;
           float: right;
           border: 1px solid $chalk-dark;
+          @include transition(all, .2s, ease);
+          color: #474747 !important;
 
-          .fa-angle-down {
-            font-size: $mediam-font-size;
+          .ion-ios7-arrow-down {
+            font-size: $small-font-size;
             display: inline-block;
             margin-left: 5px;
           }
@@ -69,7 +72,7 @@ header {
           margin: 0;
 
           span {
-            padding: 4px 9px;
+            padding: $small-button;
             background: $notification-unread;
             font-family: $base-font-family;
             font-size: $base-font-size;
@@ -77,10 +80,11 @@ header {
             float: right;
             border-radius: 1px;
             color: white;
-            border: 1px solid #993a3b;
+            border: 1px solid #36ad54;
+            @include transition(all, .2s, ease);
 
             &:hover {
-              background: #993a3b;
+              background: #36ad54;
             }
           }
         }

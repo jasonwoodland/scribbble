@@ -34,7 +34,7 @@
 			background: $notification-unread;
 			font-family: $base-font-family;
 			font-size: $mediam-font-size;
-			color: $accent-color;
+			color: white;
 			cursor: pointer;
 
 			&::-webkit-input-placeholder {
@@ -103,7 +103,7 @@
 p {
 	font-family: $base-font-family;
 	font-size: $mediam-font-size;
-	color: $accent-color;
+	color: white;
 	display: inline-block;
 	text-align: center;
 	padding: $small-button;

@@ -13,7 +13,7 @@
 				<p>html</p>
 
 				<a href="#">
-					<i class="ion-ios7-gear"></i>
+					<i class="ion-gear-a"></i>
 				</a>
 			</div>
 		</div>
@@ -25,7 +25,7 @@
 				<p>css</p>
 
 				<a href="#">
-					<i class="ion-ios7-gear"></i>
+					<i class="ion-gear-a"></i>
 				</a>
 			</div>
 		</div>
@@ -37,7 +37,7 @@
 				<p>js</p>
 
 				<a href="#">
-					<i class="ion-ios7-gear"></i>
+					<i class="ion-gear-a"></i>
 				</a>
 			</div>
 		</div>
