@@ -31,7 +31,7 @@
 					a {
 						@extend .username;
 						font-size: $mediam-font-size;
-						color: #474747;
+						color: $chalk-dark-text;
 					}
 				}
 
@@ -51,7 +51,7 @@
 					.follow {
 						@extend .username;
 						font-size: $base-font-size;
-						color: #474747;
+						color: $chalk-dark-text;
 						background: $chalk;
 						border: 1px solid $chalk-dark;
 						padding: $small-button;

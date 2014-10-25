@@ -22,17 +22,35 @@ header {
           padding: $small-button;
           border: 1px solid transparent;
         }
+
+        .logo-anchor {
+          padding: 5px 0;
+        }
       }
 
       .new-scrib {
         margin-left: 15px;
         
         a {
-          color: $chalk;
+          color: $chalk-dark-text;
           border-radius: 1px;
-          background: $accent-color;
+          background: $chalk;
           margin-right: 5px;
-          border: 1px solid $accent-color-dark;
+          border: 1px solid $chalk-dark;
+          padding: 5px 5px 5px 11px;
+        }
+
+        .ion-ios7-arrow-right {
+          font-size: $small-font-size;
+          margin-left: -4px;
+          opacity: 0;
+          @include transition(all, .15s, ease);
+        }
+
+        &:hover .ion-ios7-arrow-right {
+          opacity: 1;
+          margin: 0 0 0 3px;
+          padding-right: 5px;
         }
       }
     }
@@ -54,7 +72,7 @@ header {
           float: right;
           border: 1px solid $chalk-dark;
           @include transition(all, .2s, ease);
-          color: #474747 !important;
+          color: $chalk-dark-text !important;
 
           .ion-ios7-arrow-down {
             font-size: $small-font-size;
@@ -64,6 +82,7 @@ header {
           
           &:hover {
             background: $chalk-dark;
+            color: $accent-color;
           }
 
         }

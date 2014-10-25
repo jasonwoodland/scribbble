@@ -3,7 +3,7 @@
 
 	<div class="intro">
 		<div class="logo">
-			<a href="feed.php">scribbble.io</a>
+			<a class="logo-anchor" href="feed.php">scribbble.io</a>
 		</div>
 
 		<div class="new-scrib">
@@ -14,7 +14,7 @@
 	</div>
 
 	<ul class="user">
-		<li><a href="#" class="notification"><span>3</span></a></li>
+		<li><a href="#" class="notification"><span>4</span></a></li>
 		<li>
 			<a class="username" href="profile.php"><?=$me->profile(PDO::FETCH_OBJ)->username?>
 			<i class="ion-ios7-arrow-down"></i></a>
