@@ -27,15 +27,15 @@
 		<div class="row">
 			<div class="column12">
 				<div class="scribs user-info">
-					<a href="#">scribs <span class="user-info-number">43</span></a>
+					<a href="#"><span class="user-info-number">43</span><br> scribs</a>
 				</div>
 				&middot;
 				<div class="following user-info">
-					<a href="#">following <span class="user-info-number">218</span></a>
+					<a href="#"><span class="user-info-number">218</span><br> following</a>
 				</div>
 				&middot;
 				<div class="followers user-info">
-					<a href="#">followers <span class="user-info-number">1085</span></a>
+					<a href="#"><span class="user-info-number">1085</span><br> followers</a>
 				</div>
 			</div>
 		</div>
