@@ -25,7 +25,7 @@
 
 		<label>
 			<input type="checkbox" name="check"> 
-			<span class="label-text">rememeber meh</span>
+			<span class="label-text">rememeber me</span>
 		</label>
 
 		<input type="submit" value="sign in">

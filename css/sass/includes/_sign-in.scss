@@ -56,7 +56,7 @@
 		-webkit-appearance: none;
 		appearance: none;
 		border: none;
-		border-radius: 2px;
+		@include border-radius(2px);
 	}
 
 	input[type="text"], input[type="password"], input[type="submit"], input[type="email"] {
@@ -72,7 +72,7 @@
 		&::-webkit-input-placeholder {
 			font-family: $base-font-family;
 			font-size: $mediam-font-size;
-			color: $accent-color;
+			color: $chalk-dark-text;
 		}
 		
 		&:focus {
@@ -80,10 +80,16 @@
 		}
 	}
 
+	input[type="text"], input[type="password"] {
+		color: $chalk-dark-text;
+		border: 1px solid $chalk-dark;
+	}
+
 	input[type="submit"] {
 		cursor: pointer;
 		background: $notification-unread;
 		color: white;
+		border: 1px solid #7783b6;
 	}
 
 	label {
@@ -106,12 +112,13 @@
 				width: 1em;
 				display: inline-block;
 				margin-right: 5px;
-				color: $notification-unread;
+				color: $chalk-dark;
 			}
 
 			&:checked + .label-text:before {
 				content: "\f14a";
-				-webkit-animation: tick .2s ease;
+				color: $notification-unread;
+				@include transition(all, .25s, ease);
 			}
 
 			.label-text {
@@ -124,8 +131,7 @@
 	.failed {
 		font-family: $base-font-family;
 		font-size: $mediam-font-size;
-		background-color: $notification-unread;
-		color: white;
+		text-decoration: line-through;
 		display: block;
 	}
 

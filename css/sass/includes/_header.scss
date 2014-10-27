@@ -33,7 +33,7 @@ header {
         
         a {
           color: $chalk-dark-text;
-          border-radius: 1px;
+          @include border-radius(1px);;
           background: $chalk;
           margin-right: 5px;
           border: 1px solid $chalk-dark;
@@ -44,9 +44,9 @@ header {
         .ion-ios7-arrow-right {
           font-size: 11px;
           display: inline-block;
-          margin-left: -12px;
+          margin-left: -10px;
           opacity: 0;
-          @include transition(all, .25s, ease);
+          @include transition(all, .35s, ease);
         }
 
         &:hover .ion-ios7-arrow-right {
@@ -99,7 +99,7 @@ header {
             font-size: $base-font-size;
             display: inline-block;
             float: right;
-            border-radius: 1px;
+            @include border-radius(1px);
             color: white;
             border: 1px solid #7783b6;
             @include transition(all, .2s, ease);
@@ -117,7 +117,7 @@ header {
         font-size: $base-font-size;
         color: $accent-color;
         display: inline-block;
-        border-radius: 1px;
+        @include border-radius(1px);
       }
     }
   }

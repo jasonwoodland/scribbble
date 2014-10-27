@@ -14,7 +14,7 @@
 					width: 100px;
 					height: 100px;
 					background: $chalk;
-					border-radius: 50%;
+					@include border-radius(50%);
 				}
 
 				.username {
@@ -55,7 +55,7 @@
 						background: $chalk;
 						border: 1px solid $chalk-dark;
 						padding: $small-button;
-						border-radius: 1px;
+						@include border-radius(1px);
 					}
 
 					.message {
@@ -71,7 +71,7 @@
 					}
 
 					.block, .message, .follow {
-						border-radius: 1px;
+						@include border-radius(1px);
 					}
 				}
 			}

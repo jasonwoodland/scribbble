@@ -13,6 +13,7 @@
         position: relative;
         background: $chalk;
         margin-bottom: 20px;
+        @include border-radius(2px);
 
         .created-by {
           display: block;
@@ -27,7 +28,7 @@
           font-family: $base-font-family;
           text-transform: lowercase;
           padding: $small-button;
-          @include transition(all, .2s, ease);
+          @include border-radius(1px);
         }
 
         .scrib-pop {
@@ -41,6 +42,7 @@
           @include transition(all, .15s, ease);
           text-align: center;
           overflow: hidden;
+          @include border-radius(1px);
 
           .view-scrib {
             color: $accent-color;
@@ -50,6 +52,7 @@
             padding: $small-button;
             background: white;
             line-height: 230px;
+            @include border-radius(1px);
           }
         }
 
@@ -70,6 +73,7 @@
             margin: 0;
             display: inline-block;
             color: $accent-color;
+            @include border-radius(1px);
 
             i {
               font-size: $mediam-font-size;

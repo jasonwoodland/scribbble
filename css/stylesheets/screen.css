@@ -114,6 +114,9 @@ header #header-wrapper .intro .new-scrib {
 /* line 34, ../sass/includes/_header.scss */
 header #header-wrapper .intro .new-scrib a {
   color: #474747;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
   border-radius: 1px;
   background: #F3F2F2;
   margin-right: 5px;
@@ -125,13 +128,13 @@ header #header-wrapper .intro .new-scrib a {
 header #header-wrapper .intro .new-scrib .ion-ios7-arrow-right {
   font-size: 11px;
   display: inline-block;
-  margin-left: -12px;
+  margin-left: -10px;
   opacity: 0;
-  -webkit-transition: all 0.25s ease;
-  -moz-transition: all 0.25s ease;
-  -ms-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
+  -webkit-transition: all 0.35s ease;
+  -moz-transition: all 0.35s ease;
+  -ms-transition: all 0.35s ease;
+  -o-transition: all 0.35s ease;
+  transition: all 0.35s ease;
 }
 /* line 52, ../sass/includes/_header.scss */
 header #header-wrapper .intro .new-scrib:hover .ion-ios7-arrow-right {
@@ -187,6 +190,9 @@ header #header-wrapper .user li .notification span {
   font-size: 16px;
   display: inline-block;
   float: right;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
   border-radius: 1px;
   color: white;
   border: 1px solid #7783b6;
@@ -207,6 +213,9 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   font-size: 16px;
   color: #151515;
   display: inline-block;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
   border-radius: 1px;
 }
 
@@ -226,8 +235,12 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   position: relative;
   background: #F3F2F2;
   margin-bottom: 20px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
 }
-/* line 17, ../sass/includes/_content.scss */
+/* line 18, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .created-by, #content-wrapper .container12 .row .column4 .created-by {
   display: block;
   text-decoration: none;
@@ -241,13 +254,12 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   font-family: "Inconsolata";
   text-transform: lowercase;
   padding: 5px 11px;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  border-radius: 1px;
 }
-/* line 33, ../sass/includes/_content.scss */
+/* line 34, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-pop, #content-wrapper .container12 .row .column4 .scrib-pop {
   position: absolute;
   top: 0;
@@ -263,8 +275,12 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   transition: all 0.15s ease;
   text-align: center;
   overflow: hidden;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  border-radius: 1px;
 }
-/* line 45, ../sass/includes/_content.scss */
+/* line 47, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-pop .view-scrib, #content-wrapper .container12 .row .column4 .scrib-pop .view-scrib {
   color: #151515;
   text-decoration: none;
@@ -273,8 +289,12 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   padding: 5px 11px;
   background: white;
   line-height: 230px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  border-radius: 1px;
 }
-/* line 56, ../sass/includes/_content.scss */
+/* line 59, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-info, #content-wrapper .container12 .row .column4 .scrib-info {
   position: absolute;
   bottom: 0;
@@ -287,7 +307,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 64, ../sass/includes/_content.scss */
+/* line 67, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-info a, #content-wrapper .container12 .row .column4 .scrib-info a {
   text-decoration: none;
   background: white;
@@ -297,24 +317,28 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   margin: 0;
   display: inline-block;
   color: #151515;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  border-radius: 1px;
 }
-/* line 74, ../sass/includes/_content.scss */
+/* line 78, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-info a i, #content-wrapper .container12 .row .column4 .scrib-info a i {
   font-size: 14px;
 }
-/* line 80, ../sass/includes/_content.scss */
+/* line 84, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3:hover .scrib-pop, #content-wrapper .container12 .row .column4:hover .scrib-pop {
   opacity: 1;
 }
-/* line 84, ../sass/includes/_content.scss */
+/* line 88, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3:hover .scrib-info, #content-wrapper .container12 .row .column4:hover .scrib-info {
   opacity: 1;
 }
-/* line 88, ../sass/includes/_content.scss */
+/* line 92, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3:hover .created-by, #content-wrapper .container12 .row .column4:hover .created-by {
   display: none;
 }
-/* line 95, ../sass/includes/_content.scss */
+/* line 99, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore a {
   font-family: "Inconsolata";
   text-decoration: none;
@@ -322,7 +346,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   padding: 5px 11px;
   color: #474747;
 }
-/* line 103, ../sass/includes/_content.scss */
+/* line 107, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore .active {
   background: #F3F2F2;
   color: #151515;
@@ -381,6 +405,9 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   -webkit-appearance: none;
   appearance: none;
   border: none;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
   border-radius: 2px;
 }
 /* line 62, ../sass/includes/_sign-in.scss */
@@ -398,29 +425,35 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 #sign-up-wrapper input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper input[type="password"]::-webkit-input-placeholder, #sign-up-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper input[type="email"]::-webkit-input-placeholder, #sign-in-wrapper input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper input[type="text"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="text"]::-webkit-input-placeholder, #sign-in-wrapper input[type="password"]::-webkit-input-placeholder, #sign-up-wrapper input[type="password"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="password"]::-webkit-input-placeholder, #sign-in-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper input[type="submit"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-in-wrapper input[type="email"]::-webkit-input-placeholder, #sign-up-wrapper input[type="email"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="email"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="text"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="password"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="submit"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="email"]::-webkit-input-placeholder {
   font-family: "Inconsolata";
   font-size: 14px;
-  color: #151515;
+  color: #474747;
 }
 /* line 78, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"]:focus, #sign-up-wrapper input[type="password"]:focus, #sign-up-wrapper input[type="submit"]:focus, #sign-up-wrapper input[type="email"]:focus, #sign-in-wrapper input[type="text"]:focus, #sign-up-wrapper input[type="text"]:focus, #forgot-password-wrapper input[type="text"]:focus, #sign-in-wrapper input[type="password"]:focus, #sign-up-wrapper input[type="password"]:focus, #forgot-password-wrapper input[type="password"]:focus, #sign-in-wrapper input[type="submit"]:focus, #sign-up-wrapper input[type="submit"]:focus, #forgot-password-wrapper input[type="submit"]:focus, #sign-in-wrapper input[type="email"]:focus, #sign-up-wrapper input[type="email"]:focus, #forgot-password-wrapper input[type="email"]:focus, #forgot-password-wrapper input[type="text"]:focus, #forgot-password-wrapper input[type="password"]:focus, #forgot-password-wrapper input[type="submit"]:focus, #forgot-password-wrapper input[type="email"]:focus {
   outline: none;
 }
 /* line 83, ../sass/includes/_sign-in.scss */
+#sign-up-wrapper input[type="text"], #sign-up-wrapper input[type="password"], #sign-in-wrapper input[type="text"], #sign-up-wrapper input[type="text"], #forgot-password-wrapper input[type="text"], #sign-in-wrapper input[type="password"], #sign-up-wrapper input[type="password"], #forgot-password-wrapper input[type="password"], #forgot-password-wrapper input[type="text"], #forgot-password-wrapper input[type="password"] {
+  color: #474747;
+  border: 1px solid #ededed;
+}
+/* line 88, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="submit"], #sign-in-wrapper input[type="submit"], #sign-up-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"] {
   cursor: pointer;
   background: #8892BF;
   color: white;
+  border: 1px solid #7783b6;
 }
-/* line 89, ../sass/includes/_sign-in.scss */
+/* line 95, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label, #sign-in-wrapper label, #sign-up-wrapper label, #forgot-password-wrapper label, #forgot-password-wrapper label {
   cursor: pointer;
   font-family: "Inconsolata";
   font-size: 14px;
 }
-/* line 94, ../sass/includes/_sign-in.scss */
+/* line 100, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"], #sign-in-wrapper label input[type="checkbox"], #sign-up-wrapper label input[type="checkbox"], #forgot-password-wrapper label input[type="checkbox"], #forgot-password-wrapper label input[type="checkbox"] {
   display: none;
 }
-/* line 97, ../sass/includes/_sign-in.scss */
+/* line 103, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #sign-in-wrapper label input[type="checkbox"] + .label-text:before, #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #forgot-password-wrapper label input[type="checkbox"] + .label-text:before, #forgot-password-wrapper label input[type="checkbox"] + .label-text:before {
   content: "\f0c8";
   font-family: "FontAwesome";
@@ -433,27 +466,31 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   width: 1em;
   display: inline-block;
   margin-right: 5px;
-  color: #8892BF;
+  color: #ededed;
 }
-/* line 112, ../sass/includes/_sign-in.scss */
+/* line 118, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-in-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #forgot-password-wrapper label input[type="checkbox"]:checked + .label-text:before, #forgot-password-wrapper label input[type="checkbox"]:checked + .label-text:before {
   content: "\f14a";
-  -webkit-animation: tick .2s ease;
+  color: #8892BF;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
-/* line 117, ../sass/includes/_sign-in.scss */
+/* line 124, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] .label-text, #sign-in-wrapper label input[type="checkbox"] .label-text, #sign-up-wrapper label input[type="checkbox"] .label-text, #forgot-password-wrapper label input[type="checkbox"] .label-text, #forgot-password-wrapper label input[type="checkbox"] .label-text {
   position: absolute;
   top: 10px;
 }
-/* line 124, ../sass/includes/_sign-in.scss */
+/* line 131, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed, #forgot-password-wrapper .failed, #forgot-password-wrapper .failed {
   font-family: "Inconsolata";
   font-size: 14px;
-  background-color: #8892BF;
-  color: white;
+  text-decoration: line-through;
   display: block;
 }
-/* line 132, ../sass/includes/_sign-in.scss */
+/* line 138, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden, #forgot-password-wrapper .hidden, #forgot-password-wrapper .hidden {
   display: none;
 }
@@ -468,6 +505,9 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   width: 100px;
   height: 100px;
   background: #F3F2F2;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
   border-radius: 50%;
 }
 /* line 20, ../sass/includes/_profile.scss */
@@ -507,6 +547,9 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   background: #F3F2F2;
   border: 1px solid #ededed;
   padding: 5px 11px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
   border-radius: 1px;
 }
 /* line 61, ../sass/includes/_profile.scss */
@@ -521,6 +564,9 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
 }
 /* line 73, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-actions .block, #content-wrapper .container12 .row .column12 .user-actions .message, #content-wrapper .container12 .row .column12 .user-actions .follow, #content-wrapper .container12 .row .column12 .user-actions .message, #content-wrapper .container12 .row .column12 .user-actions .block {
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
   border-radius: 1px;
 }
 /* line 81, ../sass/includes/_profile.scss */
@@ -579,6 +625,9 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   padding: 5px;
   z-index: 100;
   cursor: pointer;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
   border-radius: 1px;
   border: 1px solid #ededed;
 }
