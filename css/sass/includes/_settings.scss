@@ -31,7 +31,7 @@
 			border: none;
 			margin: 10px 0;
 			box-sizing: border-box;
-			background: $notification-unread;
+			background: $secondary-accent;
 			font-family: $base-font-family;
 			font-size: $mediam-font-size;
 			color: white;
@@ -108,5 +108,5 @@ p {
 	text-align: center;
 	padding: $small-button;
 	margin: 0;
-	background: $notification-unread;
+	background: $secondary-accent;
 }

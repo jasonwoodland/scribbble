@@ -37,62 +37,37 @@
           bottom: 0;
           right: 0;
           left: 0;
-          background: rgba(21,21,21,.80);
+          background: $accent-color;
           opacity: 0;
-          @include transition(all, .15s, ease);
+          @include transition(all, .17s, ease);
           text-align: center;
           overflow: hidden;
           @include border-radius(1px);
 
           .view-scrib {
+            position: absolute;
+            width: 60px;
+            height: 30px;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            line-height: 1.9;
             color: $accent-color;
             text-decoration: none;
             font-family: $base-font-family;
             font-size: $base-font-size;
-            padding: $small-button;
             background: white;
-            line-height: 230px;
-            @include border-radius(1px);
-          }
-        }
-
-        .scrib-info {
-          position: absolute;
-          bottom: 0;
-          right: 0;
-          margin: 10px;
-          opacity: 0;
-          @include transition(all, .2s, ease);
-
-          a {
-            text-decoration: none;
-            background: white;
-            padding: $small-button;
-            font-size: $mediam-font-size;
-            font-family: $base-font-family;
-            margin: 0;
-            display: inline-block;
-            color: $accent-color;
-            @include border-radius(1px);
-
-            i {
-              font-size: $mediam-font-size;
-            }
+            @include border-radius(1.8px);
+            text-align: center;
           }
         }
 
         &:hover .scrib-pop {
           opacity: 1;
         }
-
-        &:hover .scrib-info {
-          opacity: 1;
-        }
-
-        &:hover .created-by {
-          display: none;
-        }
-
       }
 
       .explore {

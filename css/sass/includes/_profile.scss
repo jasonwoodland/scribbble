@@ -33,6 +33,10 @@
 						font-size: $mediam-font-size;
 						color: $chalk-dark-text;
 					}
+
+					.user-info-number {
+						color: $secondary-accent;
+					}
 				}
 
 				.bio {
@@ -42,36 +46,6 @@
 					a {
 						@extend .username;
 						font-size: $base-font-size;
-					}
-				}
-
-				.user-actions {
-					margin-top: 5px;
-
-					.follow {
-						@extend .username;
-						font-size: $base-font-size;
-						color: $chalk-dark-text;
-						background: $chalk;
-						border: 1px solid $chalk-dark;
-						padding: $small-button;
-						@include border-radius(1px);
-					}
-
-					.message {
-						@extend .follow;
-						margin: 0 3px;
-					}
-
-					.block {
-						@extend .follow;
-						color: white;
-						border: 1px solid #dd483b;
-						background: $notification-error;
-					}
-
-					.block, .message, .follow {
-						@include border-radius(1px);
 					}
 				}
 			}

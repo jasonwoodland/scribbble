@@ -25,12 +25,6 @@
 				</div>
 
 				<a class="created-by" href="#">jason woodland</a>
-
-				<div class="scrib-info">
-					<a href="#">300</a>
-					<a href="#">10</a>
-					<a href="#">5</a>
-				</div>
 			</div>
 
 			<div class="column3">
@@ -39,12 +33,22 @@
 				</div>
 
 				<a class="created-by" href="#">tim bogdanov</a>
+			</div>
 
-				<div class="scrib-info">
-					<a href="#">300</a>
-					<a href="#">10</a>
-					<a href="#">5</a>
+			<div class="column3">
+				<div class="scrib-pop">
+					<a class="view-scrib" href="#">view</a>
 				</div>
+
+				<a class="created-by" href="#">craig johnson</a>
+			</div>
+
+			<div class="column3">
+				<div class="scrib-pop">
+					<a class="view-scrib" href="#">view</a>
+				</div>
+
+				<a class="created-by" href="#">jerry lunderson</a>
 			</div>
 
 			<div class="column3">
@@ -53,12 +57,6 @@
 				</div>
 
 				<a class="created-by" href="#">tim bogdanov</a>
-
-				<div class="scrib-info">
-					<a href="#">300</a>
-					<a href="#">10</a>
-					<a href="#">5</a>
-				</div>
 			</div>
 
 			<div class="column3">
@@ -67,12 +65,14 @@
 				</div>
 
 				<a class="created-by" href="#">jason woodland</a>
+			</div>
 
-				<div class="scrib-info">
-					<a href="#">300</a>
-					<a href="#">10</a>
-					<a href="#">5</a>
+			<div class="column3">
+				<div class="scrib-pop">
+					<a class="view-scrib" href="#">view</a>
 				</div>
+
+				<a class="created-by" href="#">lucus bonomi</a>
 			</div>
 
 			<div class="column3">
@@ -81,54 +81,6 @@
 				</div>
 
 				<a class="created-by" href="#">jason woodland</a>
-
-				<div class="scrib-info">
-					<a href="#">300</a>
-					<a href="#">10</a>
-					<a href="#">5</a>
-				</div>
-			</div>
-
-			<div class="column3">
-				<div class="scrib-pop">
-					<a class="view-scrib" href="#">view</a>
-				</div>
-
-				<a class="created-by" href="#">jason woodland</a>
-
-				<div class="scrib-info">
-					<a href="#">300</a>
-					<a href="#">10</a>
-					<a href="#">5</a>
-				</div>
-			</div>
-
-			<div class="column3">
-				<div class="scrib-pop">
-					<a class="view-scrib" href="#">view</a>
-				</div>
-
-				<a class="created-by" href="#">jason woodland</a>
-
-				<div class="scrib-info">
-					<a href="#">300</a>
-					<a href="#">10</a>
-					<a href="#">5</a>
-				</div>
-			</div>
-
-			<div class="column3">
-				<div class="scrib-pop">
-					<a class="view-scrib" href="#">view</a>
-				</div>
-
-				<a class="created-by" href="#">jason woodland</a>
-
-				<div class="scrib-info">
-					<a href="#">300</a>
-					<a href="#">10</a>
-					<a href="#">5</a>
-				</div>
 			</div>
 
 		</div>

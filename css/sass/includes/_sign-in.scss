@@ -87,7 +87,7 @@
 
 	input[type="submit"] {
 		cursor: pointer;
-		background: $notification-unread;
+		background: $secondary-accent;
 		color: white;
 		border: 1px solid #7783b6;
 	}
@@ -117,7 +117,7 @@
 
 			&:checked + .label-text:before {
 				content: "\f14a";
-				color: $notification-unread;
+				color: $secondary-accent;
 				@include transition(all, .25s, ease);
 			}
 

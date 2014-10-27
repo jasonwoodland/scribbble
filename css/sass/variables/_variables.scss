@@ -10,16 +10,13 @@ $base-font-family: 'Inconsolata';
 // colors
 $accent-color: #151515;
 $accent-color-light: #222;
-$accent-color-dark: #000;
-$chalk: #F3F2F2;
-$chalk-dark: #ededed;
+$accent-color-dark: black;
 
+$chalk: #F3F2F2;
+$chalk-dark: #EDEDED;
 $chalk-dark-text: #474747;
 
-// notifications
-$notification-unread: #8892BF;
-$notification-success: #3cc05e;
-$notification-error: #F65042;
+$secondary-accent: #8892BF;
 
 // button paddings
 $small-button: 5px 11px;
