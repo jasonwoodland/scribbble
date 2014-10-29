@@ -6,7 +6,8 @@ $(window).ready(function() {
 		matchBrackets: true,
 		indentWithTabs: true,
 		indentUnit: 4,
-		smartIndent: false
+		smartIndent: false,
+		lineWrapping: true
 	};
 	htmlOptions = $.extend(true, {}, options);
 	cssOptions = $.extend(true, {}, options);
