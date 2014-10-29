@@ -1,0 +1,7 @@
+/* line 1, ../../sass/includes/base.scss */
+body {
+  margin: 0;
+  display: table;
+  height: 100%;
+  width: 100%;
+}

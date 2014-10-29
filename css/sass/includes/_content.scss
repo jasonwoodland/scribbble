@@ -46,15 +46,15 @@
 
           .view-scrib {
             position: absolute;
-            width: 60px;
-            height: 30px;
+            width: 55px;
+            height: 25px;
             margin: auto;
             position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
             left: 0;
-            line-height: 1.9;
+            line-height: 1.6;
             color: $accent-color;
             text-decoration: none;
             font-family: $base-font-family;
@@ -77,13 +77,13 @@
           margin-right: 5px;
           padding: $small-button;
           color: $chalk-dark-text;
+          font-size: $base-font-size;
         }
 
         .active {
           background: $chalk;
           color: $accent-color;
           border: 1px solid $chalk-dark;
-          color: $accent-color;
         }
       }
     }

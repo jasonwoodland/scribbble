@@ -79,7 +79,7 @@ header {
           .ion-ios7-arrow-down {
             font-size: $small-font-size;
             display: inline-block;
-            margin-left: 5px;
+            margin-left: 10px;
           }
           
           &:hover {
@@ -94,18 +94,16 @@ header {
 
           span {
             padding: $small-button;
-            background: $secondary-accent;
             font-family: $base-font-family;
             font-size: $base-font-size;
             display: inline-block;
             float: right;
             @include border-radius(1px);
-            color: white;
-            border: 1px solid $secondary-accent-dark;
+            color: $secondary-accent-dark;
             @include transition(all, .2s, ease);
 
-            &:hover {
-              background: $secondary-accent-dark;
+            i {
+              font-size: $mediam-font-size;
             }
           }
         }

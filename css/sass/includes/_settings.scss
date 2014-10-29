@@ -5,13 +5,16 @@
 			width: 200px;
 			display: inline-block;
 			padding: 15px;
-			border: none;
 			margin: 10px 0;
 			box-sizing: border-box;
 			background: $chalk;
 			font-family: $base-font-family;
 			font-size: $mediam-font-size;
 			color: $accent-color;
+			border: 1px solid $chalk-dark !important;
+			color: $chalk-dark-text;
+			@include border-radius(1px);
+
 
 			&::-webkit-input-placeholder {
 				font-family: $base-font-family;
@@ -36,6 +39,8 @@
 			font-size: $mediam-font-size;
 			color: white;
 			cursor: pointer;
+			border: 1px solid $secondary-accent-dark;
+			@include border-radius(1px);
 
 			&::-webkit-input-placeholder {
 				font-family: $base-font-family;
@@ -109,4 +114,6 @@ p {
 	padding: $small-button;
 	margin: 0;
 	background: $secondary-accent;
+	border: 1px solid $secondary-accent-dark;
+	@include border-radius(1px);
 }

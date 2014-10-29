@@ -16,6 +16,7 @@
 		display: inline-block;
 		text-align: left;
 		cursor: text;
+		vertical-align: top;
 		
 		textarea {
 			background: $chalk;
@@ -59,6 +60,7 @@
 					display: inline-block;
 					margin-right: 15px;
 					color: $accent-color;
+					border: none !important;
 				}
 				
 				a {
@@ -83,18 +85,4 @@
 			text-align: left;
 		}
 	}
-}
-
-/* Let's get this party started */
-::-webkit-scrollbar {
-    width: 7px;
-    height: 7px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: #222; 
-}
-::-webkit-scrollbar-thumb:window-inactive {
-	background: #333;
 }

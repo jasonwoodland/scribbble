@@ -26,12 +26,10 @@
 
 				.pro {
 					@extend .username;
-					background: $secondary-accent;
 					padding: $small-button;
-					margin-left: 5px;
-					color: white;
-					border: 1px solid $secondary-accent-dark;
-					@include border-radius(1.8px);
+					color: $secondary-accent-dark;
+					text-transform: uppercase;
+					letter-spacing: 1px;
 				}
 
 				.user-info {
@@ -45,8 +43,8 @@
 					}
 
 					.user-info-number {
-						color: $secondary-accent;
-						font-size: $base-font-size;
+						color: $secondary-accent-dark;
+						font-size: $large-font-size;
 					}
 				}
 
