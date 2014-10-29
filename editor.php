@@ -42,6 +42,14 @@
 			</div>
 		</div>
 	</div>
-
-	
 </div>
+<iframe width=100% frameborder=0 id="sandbox-buffer"></iframe>
+<iframe width=100% frameborder=0 id="sandbox"></iframe>
+<style>
+	#sandbox, #sandbox-buffer {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+</style>
