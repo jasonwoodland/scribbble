@@ -23,6 +23,10 @@ header {
           border: 1px solid transparent;
         }
 
+        span {
+          font-size: 10px;
+        }
+
         .logo-anchor {
           padding: 5px 0;
         }
@@ -78,6 +82,11 @@ header {
           &:hover {
             background: $chalk-dark;
             color: $accent-color;
+          }
+
+          .ion-ios7-arrow-down {
+            font-size: $small-font-size;
+            margin-left: 8px;
           }
 
         }
