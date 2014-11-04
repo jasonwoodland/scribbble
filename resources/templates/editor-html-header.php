@@ -4,11 +4,11 @@
 	<!-- logo and create new scrib -->
 	<div class="intro">
 		<div class="logo">
-			<a class="logo-anchor" href="feed.php">scribbble.io</a>
+			<a class="logo-anchor" href="/">scribbble.io</a>
 		</div>
 
-		<div class="new-scrib">
-			<a href="../../editor.php">new <i class="ion-ios7-arrow-right"></i></a>
+		<div class="new-scrib" id="save-scribe">
+			<a href="#">save <i class="ion-ios7-arrow-right"></i></a>
 		</div>
 	</div>
 	

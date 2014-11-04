@@ -4,7 +4,7 @@
 	<!-- logo and create new scrib -->
 	<div class="intro">
 		<div class="logo">
-			<a class="logo-anchor" href="feed.php">scribbble.io</a>
+			<a class="logo-anchor" href="/">scribbble.io</a>
 		</div>
 
 		<div class="new-scrib">
