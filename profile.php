@@ -18,7 +18,7 @@
 
 		<div class="row">
 			<div class="column12">
-				<a class="username" href="#">Jason Woodland</a>
+				<a class="username" href="#"><?=USERNAME?></a>
 				<a class="pro" href="#">pro</a>
 			</div>
 		</div>
@@ -46,29 +46,44 @@
 
 	<div class="container12 profile-container">
 		<div class="row">
-			<div class="column3">
-				<div class="scrib-pop">
-					<a class="view-scrib" href="#">view</a>
-				</div>
-			</div>
+			<?php
+				$stmt = $db->prepare('SELECT id, html, css, js FROM scribes WHERE owner = ?');
+				$stmt->execute([USER_ID]);
+				$scribes = $stmt->fetchAll(PDO::FETCH_OBJ);
+				foreach($scribes as $scribe) {
+					$page = '<!DOCTYPE html><html><head>';
+					$page .= '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
+					$page .= '<script src="data:text/javascript;base64,' . base64_encode($scribe->js) . '"></script>';
+					$page .= '<style type="text/css">' . $scribe->css . '</style>';
+					$page .= '</head><body>';                                                                              
+					$page .= $scribe->html;
+					$page .= '</body></html>';                                                                             
+					$page = base64_encode($page);
+					?>
+					<div class="column3">
+							<iframe src="data:text/html;base64,<?=$page?>" width=530px height=440px frameborder=0></iframe>
 
-			<div class="column3">
-				<div class="scrib-pop">
-					<a class="view-scrib" href="#">view</a>
-				</div>
-			</div>
-
-			<div class="column3">
-				<div class="scrib-pop">
-					<a class="view-scrib" href="#">view</a>
-				</div>
-			</div>
-
-			<div class="column3">
-				<div class="scrib-pop">
-					<a class="view-scrib" href="#">view</a>
-				</div>
-			</div>
+						<div class="scrib-pop">
+							<a class="view-scrib" href="/scribe/<?=$scribe->id?>">view</a>
+						</div>
+					</div>
+				<?php } ?>
 		</div>
 	</div>
 </div>
+<style>
+	/****** tim add this to css please *******/
+
+.column3 {
+	position: relative;
+}
+.column3 iframe {
+	-webkit-transform: scale(.5,.5) translate(-265px,-220px);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 530px;
+	height: 440px;
+	opacity: 1;
+}
+</style>
