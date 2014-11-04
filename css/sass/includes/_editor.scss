@@ -26,7 +26,7 @@
 			height: 400px;
 			-webkit-box-sizing: border-box;
    			-moz-box-sizing: border-box;
-       		box-sizing: border-box;	
+       		box-sizing: border-box;
 
 			&:focus {
 				outline: none;
@@ -50,8 +50,15 @@
 			cursor: pointer;
 			@include border-radius(1px);
 			border: 1px solid $chalk-dark;
+			opacity: .2;
+			@include transition(all, .15s, ease);
+
+			&:hover {
+				opacity: .8;
+			}
 			
 			.editor-settings {
+
 
 				p {
 					font-family: $base-font-family;
@@ -71,7 +78,7 @@
 
 					.ion-gear-a {
 						position: absolute;
-						top: 5px;
+						top: 6px;
 						right: 10px;
 					}
 				}
@@ -81,8 +88,18 @@
 		.CodeMirror {
 			height: 380px;
 			padding: 10px 0;
-			overflow-x: hidden;
 			text-align: left;
 		}
 	}
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: $accent-color-light;
 }

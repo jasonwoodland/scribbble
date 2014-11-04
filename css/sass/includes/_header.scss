@@ -23,6 +23,10 @@ header {
           border: 1px solid transparent;
         }
 
+        span {
+          font-size: 10px;
+        }
+
         .logo-anchor {
           padding: 5px 0;
         }
@@ -60,8 +64,8 @@ header {
 
     .user {
       float: right;
-      position: relative;
       display: inline-block;
+      position: relative;
 
       li {
         display: inline-block;
@@ -70,21 +74,19 @@ header {
           background: $chalk;
           padding: $small-button;
           margin-left: 10px;
-          position: relative;
           float: right;
           border: 1px solid $chalk-dark;
           @include transition(all, .2s, ease);
           color: $chalk-dark-text !important;
-
-          .ion-ios7-arrow-down {
-            font-size: $small-font-size;
-            display: inline-block;
-            margin-left: 10px;
-          }
           
           &:hover {
             background: $chalk-dark;
             color: $accent-color;
+          }
+
+          .ion-ios7-arrow-down {
+            font-size: $small-font-size;
+            margin-left: 8px;
           }
 
         }
@@ -103,13 +105,20 @@ header {
             @include transition(all, .2s, ease);
 
             i {
-              font-size: $mediam-font-size;
+              font-size: $base-font-size;
             }
+          }
+        }
+
+        .header-options {
+
+          span {
+            color: $chalk-dark-text;
           }
         }
       }
 
-      .notification, .username {
+      .notification, .username, .header-options {
         text-decoration: none;
         font-family: $base-font-family;
         font-size: $base-font-size;
