@@ -8,7 +8,7 @@
 		</div>
 
 		<div class="new-scrib">
-			<a href="../../editor.php">new <i class="ion-ios7-arrow-right"></i></a>
+			<a href="/scribe">new <i class="ion-ios7-arrow-right"></i></a>
 		</div>
 	</div>
 	

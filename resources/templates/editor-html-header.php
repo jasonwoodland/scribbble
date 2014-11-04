@@ -7,9 +7,9 @@
 		</div>
 
 		<div class="new-scrib">
-			<a href="#">save</a>
-			<a href="#">make private</a>
-			<a href="#">share</a>
+			<a id="scribe-save" href="#">save</a>
+			<a id="scribe-private" href="#">make private</a>
+			<a id="share" href="#">share</a> 
 		</div>
 	</div>
 

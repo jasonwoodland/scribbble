@@ -4,6 +4,12 @@
 	define('HTML_HEADER', 'editor-html-header.php');
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
+
+	$id = intval(substr($_SERVER['PATH_INFO'], 1));
+
+	$stmt = $db->prepare('SELECT html, css, js FROM scribes WHERE id = ?');
+	$stmt->execute([$id]);
+	$result = $stmt->fetch(PDO::FETCH_OBJ);
 ?>
 
 <div id="editor-layout">
@@ -53,3 +59,9 @@
 		bottom: 0;
 	}
 </style>
+<script>
+	window.id		= <?=$id?>;
+	window.html		= '<?=base64_encode($result->html)?>';
+	window.css		= '<?=base64_encode($result->css)?>';
+	window.js		= '<?=base64_encode($result->js)?>';
+</script>
