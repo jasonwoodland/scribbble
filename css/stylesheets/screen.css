@@ -100,7 +100,7 @@ header #header-wrapper .intro .logo a, header #header-wrapper .intro .new-scrib 
   text-decoration: none;
   color: #151515;
   display: inline-block;
-  padding: 6px 13px;
+  padding: 6px 15px;
   border: 1px solid transparent;
 }
 /* line 26, ../sass/includes/_header.scss */
@@ -109,7 +109,7 @@ header #header-wrapper .intro .logo span, header #header-wrapper .intro .new-scr
 }
 /* line 30, ../sass/includes/_header.scss */
 header #header-wrapper .intro .logo .logo-anchor, header #header-wrapper .intro .new-scrib .logo-anchor {
-  padding: 7px 0;
+  padding: 6px 0;
 }
 /* line 35, ../sass/includes/_header.scss */
 header #header-wrapper .intro .new-scrib {
@@ -125,7 +125,7 @@ header #header-wrapper .intro .new-scrib a {
   background: #3cc05e;
   margin-right: 5px;
   border: 1px solid #3cc05e;
-  padding: 6px 13px;
+  padding: 6px 15px;
   text-align: center;
 }
 /* line 51, ../sass/includes/_header.scss */
@@ -141,7 +141,7 @@ header #header-wrapper .user li {
 /* line 59, ../sass/includes/_header.scss */
 header #header-wrapper .user li .username, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a {
   background: #F3F2F2;
-  padding: 6px 13px;
+  padding: 6px 15px;
   margin-left: 10px;
   float: right;
   border: 1px solid #EDEDED;
@@ -168,7 +168,7 @@ header #header-wrapper .user li .notification {
 }
 /* line 83, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification span {
-  padding: 6px 13px;
+  padding: 6px 15px;
   font-family: "Inconsolata";
   font-size: 15px;
   display: inline-block;
@@ -251,7 +251,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   font-size: 14px;
   font-family: "Inconsolata";
   text-transform: lowercase;
-  padding: 6px 13px;
+  padding: 6px 15px;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
@@ -286,7 +286,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   bottom: 0;
   right: 0;
   left: 0;
-  line-height: 14;
+  line-height: 14.5;
   color: white;
   text-decoration: none;
   font-family: "Inconsolata";
@@ -307,7 +307,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   font-family: "Inconsolata";
   text-decoration: none;
   margin-right: 5px;
-  padding: 6px 13px;
+  padding: 6px 15px;
   color: #474747;
   font-size: 15px;
 }
@@ -492,7 +492,7 @@ body {
 }
 /* line 27, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .pro {
-  padding: 6px 13px;
+  padding: 6px 15px;
   color: #398bce;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -772,7 +772,7 @@ p {
   color: white;
   display: inline-block;
   text-align: center;
-  padding: 6px 13px;
+  padding: 6px 15px;
   margin: 0;
   background: #398bce;
   border: 1px solid #398bce;
