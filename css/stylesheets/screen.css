@@ -225,8 +225,20 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
   border-radius: 2px;
+  overflow: hidden;
 }
-/* line 18, ../sass/includes/_content.scss */
+/* line 19, ../sass/includes/_content.scss */
+#content-wrapper .container12 .row .column3 iframe, #content-wrapper .container12 .row .column4 iframe {
+  -webkit-transform: scale(0.5, 0.5) translate(-265px, -220px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 530px;
+  height: 440px;
+  opacity: 1;
+  overflow: hidden;
+}
+/* line 30, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .created-by, #content-wrapper .container12 .row .column4 .created-by {
   display: block;
   text-decoration: none;
@@ -245,14 +257,13 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   -ms-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 34, ../sass/includes/_content.scss */
+/* line 46, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-pop, #content-wrapper .container12 .row .column4 .scrib-pop {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  background: #151515;
   opacity: 0;
   -webkit-transition: all 0.17s ease;
   -moz-transition: all 0.17s ease;
@@ -266,34 +277,32 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   -ms-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 47, ../sass/includes/_content.scss */
+/* line 58, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-pop .view-scrib, #content-wrapper .container12 .row .column4 .scrib-pop .view-scrib {
   position: absolute;
-  width: 55px;
-  height: 25px;
   margin: auto;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
-  line-height: 1.6;
-  color: #151515;
+  line-height: 14;
+  color: white;
   text-decoration: none;
   font-family: "Inconsolata";
   font-size: 15px;
-  background: white;
+  background: #151515;
   -webkit-border-radius: 1.8px;
   -moz-border-radius: 1.8px;
   -ms-border-radius: 1.8px;
   border-radius: 1.8px;
   text-align: center;
 }
-/* line 68, ../sass/includes/_content.scss */
+/* line 77, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3:hover .scrib-pop, #content-wrapper .container12 .row .column4:hover .scrib-pop {
   opacity: .8;
 }
-/* line 74, ../sass/includes/_content.scss */
+/* line 83, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore a {
   font-family: "Inconsolata";
   text-decoration: none;
@@ -302,7 +311,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   color: #474747;
   font-size: 15px;
 }
-/* line 83, ../sass/includes/_content.scss */
+/* line 92, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore .active {
   background: #F3F2F2;
   color: #151515;

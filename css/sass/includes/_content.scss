@@ -49,7 +49,6 @@
           bottom: 0;
           right: 0;
           left: 0;
-          background: $accent-color;
           opacity: 0;
           @include transition(all, .17s, ease);
           text-align: center;
@@ -58,20 +57,18 @@
 
           .view-scrib {
             position: absolute;
-            width: 55px;
-            height: 25px;
             margin: auto;
             position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
             left: 0;
-            line-height: 1.6;
-            color: $accent-color;
+            line-height: 14;
+            color: white;
             text-decoration: none;
             font-family: $base-font-family;
             font-size: $base-font-size;
-            background: white;
+            background: $accent-color;
             @include border-radius(1.8px);
             text-align: center;
           }
