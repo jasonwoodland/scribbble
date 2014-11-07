@@ -9,8 +9,7 @@
 	<div class="container12">
 		<div class="row">
 			<div class="column12 explore">
-				<a class="active" href="#">featured</a>
-				<a href="#">recent</a>
+				<a class="active" href="#">popular</a>
 				<a href="#">following</a>
 			</div>
 		</div>
