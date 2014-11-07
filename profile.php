@@ -71,19 +71,3 @@
 		</div>
 	</div>
 </div>
-<style>
-	/****** tim add this to css please *******/
-
-.column3 {
-	position: relative;
-}
-.column3 iframe {
-	-webkit-transform: scale(.5,.5) translate(-265px,-220px);
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 530px;
-	height: 440px;
-	opacity: 1;
-}
-</style>
