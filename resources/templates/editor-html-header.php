@@ -7,7 +7,7 @@
 			<a class="logo-anchor" href="/">scribbble.io</a>
 		</div>
 
-		<div class="new-scrib" id="save-scribe">
+		<div class="new-scrib" id="scribe-save">
 			<a href="#">save <i class="ion-ios7-arrow-right"></i></a>
 		</div>
 	</div>

@@ -53,10 +53,10 @@
 				foreach($scribes as $scribe) {
 					$page = '<!DOCTYPE html><html><head>';
 					$page .= '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
-					$page .= '<script src="data:text/javascript;base64,' . base64_encode($scribe->js) . '"></script>';
 					$page .= '<style type="text/css">' . $scribe->css . '</style>';
 					$page .= '</head><body>';                                                                              
 					$page .= $scribe->html;
+					$page .= '<script src="data:text/javascript;base64,' . base64_encode($scribe->js) . '"></script>';
 					$page .= '</body></html>';                                                                             
 					$page = base64_encode($page);
 					?>

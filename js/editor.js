@@ -41,10 +41,10 @@ $(window).ready(function() {
 	function updateSandbox() {
 		page = '<!DOCTYPE html><html><head>';
 		page += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
-		page += '<script src="data:text/javascript;base64,' + btoa(jsPane.getValue()) + '"></script>';
 		page += '<style type="text/css">' + cssPane.getValue() + '</style>';
 		page += '</head><body>';
 		page += htmlPane.getValue();
+		page += '<script src="data:text/javascript;base64,' + btoa(jsPane.getValue()) + '"></script>';
 		page += '</body></html>';
 		$('#sandbox').hide().prop('src', 'data:text/html;base64,' + btoa(page));
 	}
