@@ -28,7 +28,7 @@ header {
         }
 
         .logo-anchor {
-          padding: 5px 0;
+          padding: 7px 0;
         }
       }
 
@@ -36,27 +36,13 @@ header {
         margin-left: 15px;
         
         a {
-          color: $chalk-dark-text;
+          color: white;
           @include border-radius(1px);;
-          background: $chalk;
+          background: #3cc05e;
           margin-right: 5px;
-          border: 1px solid $chalk-dark;
-          padding: 5px 11px;
+          border: 1px solid #3cc05e;
+          padding: $small-button;
           text-align: center;
-        }
-
-        .ion-ios7-arrow-right {
-          font-size: 11px;
-          display: inline-block;
-          margin-left: -10px;
-          opacity: 0;
-          @include transition(all, .35s, ease);
-        }
-
-        &:hover .ion-ios7-arrow-right {
-          opacity: 1;
-          margin: 0 0 0 3px;
-          padding-right: 5px;
         }
       }
     }
