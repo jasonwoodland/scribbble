@@ -55,6 +55,10 @@ header {
 
       li {
         display: inline-block;
+        
+        .ion-ios7-arrow-down {
+          margin-left: 10px !important;
+        }
 
         .username {
           background: $chalk;
@@ -64,6 +68,8 @@ header {
           border: 1px solid $chalk-dark;
           @include transition(all, .2s, ease);
           color: $chalk-dark-text !important;
+
+          
           
           &:hover {
             background: $chalk-dark;
@@ -75,7 +81,7 @@ header {
             margin-left: 8px;
           }
 
-        }
+       } 
 
         .notification {
           margin: 0;
@@ -100,6 +106,54 @@ header {
 
           span {
             color: $chalk-dark-text;
+          }
+        }
+
+        .dropdown {
+          position: absolute;
+          background: $chalk;
+          border: 1px solid $chalk-dark;
+          right: 0;
+          top: 40px;
+          z-index: 100;
+          width: 250px;
+          border-radius: 2px;
+          padding: 10px;
+          
+          .dropdown-profile-img {
+            float: left;
+            height: 100px;
+            width: 100px;
+            background: $accent-color;
+            border-radius: 1px;
+          }
+
+          .dropdown-nav {
+            display: block;
+            padding: 0 20px;
+            float: right;
+
+            .scribe-count {
+              margin: 5px 0;
+            }
+
+            li {
+              display: block;
+              padding: 3px 0;
+              text-align: center;
+
+              a {
+                text-decoration: none;
+                font-family: $base-font-family;
+                font-size: $base-font-size;
+                color: $accent-color;
+              }
+
+              .number-scribes {
+                color: $secondary-accent;
+                font-size: $large-font-size;
+              }
+            }
           }
         }
       }
