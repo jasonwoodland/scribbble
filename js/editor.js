@@ -62,7 +62,7 @@ $(window).ready(function() {
 		$('#html-pane').trigger('input');
 	});
 
-	$('#scribe-save').click(function() {
+	$('#save-scribe').click(function() {
 		console.log('saving...');
 		$.post('/api/scribe-save', {
 			id: window.id,

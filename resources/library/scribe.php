@@ -21,11 +21,14 @@
 
 		public static function save($id, $html, $css, $js) {
 			global $db;
+			error_log("trying to save to id $id");
 			if($id) {
 				$stmt = $db->prepare('UPDATE scribes SET html = ?, css = ?, js = ? WHERE id = ?');
 				$stmt->execute([$html, $css, $js, $id]);
 			} else {
-				$stmt = $db->prepare('INSERT INTO scribes (html, css, js) VALUES (?, ?, ?) WHERE owner = ?');
+				error_log('inserting (new scribe)');
+			   	error_log(USER_ID);
+				$stmt = $db->prepare('INSERT INTO scribes (html, css, js, owner) VALUES (?, ?, ?, ?)');
 				$stmt->execute([
 					$html,
 					$css,
