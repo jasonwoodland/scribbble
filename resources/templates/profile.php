@@ -26,7 +26,7 @@
 		<div class="row">
 			<div class="column12">
 				<div class="scribs user-info">
-					<a href="#">scribs 15</a>
+					<a href="#">scribes 15</a>
 				</div>
 				&middot;
 				<div class="following user-info">

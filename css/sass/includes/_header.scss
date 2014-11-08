@@ -28,12 +28,12 @@ header {
         }
 
         .logo-anchor {
-          padding: 7px 0;
+          padding: 6px 0;
         }
       }
 
       .new-scrib {
-        margin-left: 15px;
+        margin-left: 20px;
         
         a {
           color: white;
@@ -43,6 +43,18 @@ header {
           border: 1px solid #3cc05e;
           padding: $small-button;
           text-align: center;
+        }
+      }
+
+      .like-scribe {
+        float: left;
+        font-size: $base-font-size;
+        padding: 0;
+
+        a {
+          color: #CD5C5C;
+          padding: $mediam-button;
+          float: left;
         }
       }
     }
@@ -55,6 +67,10 @@ header {
 
       li {
         display: inline-block;
+        
+        .ion-ios7-arrow-down {
+          margin-left: 10px !important;
+        }
 
         .username {
           background: $chalk;
@@ -64,6 +80,8 @@ header {
           border: 1px solid $chalk-dark;
           @include transition(all, .2s, ease);
           color: $chalk-dark-text !important;
+
+          
           
           &:hover {
             background: $chalk-dark;
@@ -75,7 +93,7 @@ header {
             margin-left: 8px;
           }
 
-        }
+       } 
 
         .notification {
           margin: 0;
