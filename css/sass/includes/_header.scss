@@ -33,7 +33,7 @@ header {
       }
 
       .new-scrib {
-        margin-left: 15px;
+        margin-left: 20px;
         
         a {
           color: white;
@@ -43,6 +43,18 @@ header {
           border: 1px solid #3cc05e;
           padding: $small-button;
           text-align: center;
+        }
+      }
+
+      .like-scribe {
+        float: left;
+        font-size: $base-font-size;
+        padding: 0;
+
+        a {
+          color: #CD5C5C;
+          padding: $mediam-button;
+          float: left;
         }
       }
     }
@@ -106,54 +118,6 @@ header {
 
           span {
             color: $chalk-dark-text;
-          }
-        }
-
-        .dropdown {
-          position: absolute;
-          background: $chalk;
-          border: 1px solid $chalk-dark;
-          right: 0;
-          top: 40px;
-          z-index: 100;
-          width: 250px;
-          border-radius: 2px;
-          padding: 10px;
-          
-          .dropdown-profile-img {
-            float: left;
-            height: 100px;
-            width: 100px;
-            background: $accent-color;
-            border-radius: 1px;
-          }
-
-          .dropdown-nav {
-            display: block;
-            padding: 0 20px;
-            float: right;
-
-            .scribe-count {
-              margin: 5px 0;
-            }
-
-            li {
-              display: block;
-              padding: 3px 0;
-              text-align: center;
-
-              a {
-                text-decoration: none;
-                font-family: $base-font-family;
-                font-size: $base-font-size;
-                color: $accent-color;
-              }
-
-              .number-scribes {
-                color: $secondary-accent;
-                font-size: $large-font-size;
-              }
-            }
           }
         }
       }
