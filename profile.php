@@ -9,7 +9,10 @@
 		<div class="row">
 			<div class="column12">
 				<a class="profile-image" href="#">
-					<img src="" alt="">
+					<img src="/noface" alt="">
+					<style>
+						.profile-image { background: transparent!important }
+					</style>
 				</a>
 			</div>
 		</div>
