@@ -131,12 +131,11 @@ header #header-wrapper .intro .new-scrib a {
 /* line 49, ../sass/includes/_header.scss */
 header #header-wrapper .intro .like-scribe {
   float: left;
-  font-size: 15px;
   padding: 0;
 }
 /* line 54, ../sass/includes/_header.scss */
 header #header-wrapper .intro .like-scribe a {
-  color: #CD5C5C;
+  color: #ccc;
   padding: 7px 16px;
   float: left;
 }
@@ -181,8 +180,9 @@ header #header-wrapper .user li .username .ion-ios7-arrow-down, header #header-w
 /* line 98, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification {
   margin: 0;
+  display: none;
 }
-/* line 101, ../sass/includes/_header.scss */
+/* line 102, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification span {
   padding: 6px 15px;
   font-family: "Inconsolata";
@@ -200,15 +200,15 @@ header #header-wrapper .user li .notification span {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 111, ../sass/includes/_header.scss */
+/* line 112, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification span i {
   font-size: 15px;
 }
-/* line 119, ../sass/includes/_header.scss */
+/* line 120, ../sass/includes/_header.scss */
 header #header-wrapper .user li .header-options span {
   color: #474747;
 }
-/* line 125, ../sass/includes/_header.scss */
+/* line 126, ../sass/includes/_header.scss */
 header #header-wrapper .user .notification, header #header-wrapper .user .username, header #header-wrapper .user #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user .pro, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user a, header #header-wrapper .user .header-options {
   text-decoration: none;
   font-family: "Inconsolata";
@@ -484,60 +484,85 @@ body {
   display: none;
 }
 
-/* line 9, ../sass/includes/_profile.scss */
+/* line 5, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .arrows {
+  text-align: center;
+}
+/* line 8, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .arrows a {
+  display: inline-block;
+  padding: 6px 12px;
+  color: #474747;
+  background: #F3F2F2;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  border-radius: 1px;
+  border: 1px solid #EDEDED;
+  font-size: 12px;
+}
+/* line 23, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 {
   text-align: center;
 }
-/* line 12, ../sass/includes/_profile.scss */
+/* line 26, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .profile-image {
   display: inline-block;
   width: 100px;
   height: 100px;
   background: #F3F2F2;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  border-radius: 50%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
 }
-/* line 20, ../sass/includes/_profile.scss */
+/* line 33, ../sass/includes/_profile.scss */
+#content-wrapper .container12 .row .column12 .profile-image img {
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+}
+/* line 38, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .username, #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .bio a {
   font-family: "Inconsolata";
   color: #151515;
   text-decoration: none;
   font-size: 15px;
 }
-/* line 27, ../sass/includes/_profile.scss */
+/* line 45, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .pro {
+  display: none;
   padding: 6px 15px;
   color: #222;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 35, ../sass/includes/_profile.scss */
+/* line 54, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info {
   margin: 0 10px;
   display: inline-block;
 }
-/* line 39, ../sass/includes/_profile.scss */
+/* line 58, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info a {
   font-size: 14px;
   color: #474747;
 }
-/* line 45, ../sass/includes/_profile.scss */
+/* line 64, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info .user-info-number {
   color: #222;
   font-size: 17px;
 }
-/* line 51, ../sass/includes/_profile.scss */
+/* line 70, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .bio {
   width: 30%;
   margin: 0 auto;
 }
-/* line 55, ../sass/includes/_profile.scss */
+/* line 74, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .bio a {
   font-size: 15px;
 }
-/* line 64, ../sass/includes/_profile.scss */
+/* line 83, ../sass/includes/_profile.scss */
 #content-wrapper .profile-container {
   margin-top: 30px;
 }
@@ -616,19 +641,19 @@ body {
   background: none;
   line-height: 0;
   display: inline-block;
-  margin-right: 15px;
   color: #151515;
   border: none !important;
 }
-/* line 73, ../sass/includes/_editor.scss */
+/* line 72, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a {
   color: #151515 !important;
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
 }
-/* line 79, ../sass/includes/_editor.scss */
+/* line 78, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a .ion-gear-a {
+  display: none;
   position: absolute;
   top: 6px;
   right: 10px;
@@ -642,10 +667,11 @@ body {
 
 /* line 96, ../sass/includes/_editor.scss */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
+  hieght: 4px;
 }
 
-/* line 103, ../sass/includes/_editor.scss */
+/* line 104, ../sass/includes/_editor.scss */
 ::-webkit-scrollbar-thumb {
   background: #222;
 }

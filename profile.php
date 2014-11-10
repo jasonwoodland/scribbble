@@ -9,7 +9,7 @@
 		<div class="row">
 			<div class="column12">
 				<a class="profile-image" href="#">
-					<img src="" alt="">
+					<img src="/noface" alt="">
 				</a>
 			</div>
 		</div>
@@ -69,6 +69,11 @@
 						</div>
 					</div>
 				<?php } ?>
+		</div>
+
+		<div class="arrows">
+			<a href="#"><i class="ion-ios7-arrow-left"></i></a>
+			<a href="#"><i class="ion-ios7-arrow-right"></i></a>
 		</div>
 	</div>
 </div>

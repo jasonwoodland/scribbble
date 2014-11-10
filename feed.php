@@ -23,7 +23,7 @@
 					<a class="view-scrib" href="#">view</a>
 				</div>
 
-				<a class="created-by" href="#">jason woodland</a>
+				<a class="created-by" href="#">john doe</a>
 			</div>
 
 			<div class="column3">
@@ -31,7 +31,7 @@
 					<a class="view-scrib" href="#">view</a>
 				</div>
 
-				<a class="created-by" href="#">tim bogdanov</a>
+				<a class="created-by" href="#">john doe</a>
 			</div>
 
 			<div class="column3">
@@ -39,7 +39,7 @@
 					<a class="view-scrib" href="#">view</a>
 				</div>
 
-				<a class="created-by" href="#">craig johnson</a>
+				<a class="created-by" href="#">john doe</a>
 			</div>
 
 			<div class="column3">
@@ -47,7 +47,7 @@
 					<a class="view-scrib" href="#">view</a>
 				</div>
 
-				<a class="created-by" href="#">jerry lunderson</a>
+				<a class="created-by" href="#">john doe</a>
 			</div>
 
 			<div class="column3">
@@ -55,7 +55,7 @@
 					<a class="view-scrib" href="#">view</a>
 				</div>
 
-				<a class="created-by" href="#">tim bogdanov</a>
+				<a class="created-by" href="#">john doe</a>
 			</div>
 
 			<div class="column3">
@@ -63,7 +63,7 @@
 					<a class="view-scrib" href="#">view</a>
 				</div>
 
-				<a class="created-by" href="#">jason woodland</a>
+				<a class="created-by" href="#">john doe</a>
 			</div>
 
 			<div class="column3">
@@ -71,7 +71,7 @@
 					<a class="view-scrib" href="#">view</a>
 				</div>
 
-				<a class="created-by" href="#">lucus bonomi</a>
+				<a class="created-by" href="#">john doe</a>
 			</div>
 
 			<div class="column3">
@@ -79,7 +79,7 @@
 					<a class="view-scrib" href="#">view</a>
 				</div>
 
-				<a class="created-by" href="#">jason woodland</a>
+				<a class="created-by" href="#">john doe</a>
 			</div>
 
 		</div>

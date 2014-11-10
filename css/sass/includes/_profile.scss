@@ -2,6 +2,20 @@
 
 	.container12 {
 
+		.arrows {
+			text-align: center;
+
+			a {
+				display: inline-block;
+				padding: 6px 12px;
+				color: $chalk-dark-text;
+				background: $chalk;
+				@include border-radius(1px);
+				border: 1px solid $chalk-dark;
+				font-size: $small-font-size;
+			}
+		}
+
 
 		.row {
 
@@ -14,7 +28,11 @@
 					width: 100px;
 					height: 100px;
 					background: $chalk;
-					@include border-radius(50%);
+					@include border-radius(100%);
+
+					img {
+						@include border-radius(100%);
+					}
 				}
 
 				.username {
@@ -25,6 +43,7 @@
 				}
 
 				.pro {
+					display: none;
 					@extend .username;
 					padding: $small-button;
 					color: $secondary-accent-dark;
