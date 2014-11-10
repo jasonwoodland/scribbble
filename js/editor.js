@@ -1,3 +1,5 @@
+var updateTimeout, page;
+
 $(window).ready(function() {
 	options = {
 		theme: 'base16-dark',
@@ -28,11 +30,10 @@ $(window).ready(function() {
 		jsPane.setValue(atob(window.js));
 	}
 
-	var updateTimeout, page;
 
 	$('#html-pane, #css-pane, #js-pane').bind('input propertychange cursorActivity keyup', function() {
 		clearTimeout(updateTimeout);
-		updateTimeout = setTimeout(function(){updateSandbox()}, 200);
+		updateTimeout = setTimeout(function(){updateSandbox()}, 500);
 	}).on('keydown', function(e) {
 		key = e.keyCode || e.charCode;
 		if(key == 8 || key == 46) $(this).trigger('input');
@@ -41,18 +42,22 @@ $(window).ready(function() {
 	function updateSandbox() {
 		page = '<!DOCTYPE html><html><head>';
 		page += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
-		page += '<style type="text/css">' + cssPane.getValue() + '</style>';
-		page += '</head><body>';
+		page += '<link rel=stylesheet href="data:text/css;base64,' + btoa(cssPane.getValue()) + '">';
+		page += '</head><body bgcolor="red">';
 		page += htmlPane.getValue();
 		page += '<script src="data:text/javascript;base64,' + btoa(jsPane.getValue()) + '"></script>';
 		page += '</body></html>';
-		$('#sandbox').hide().prop('src', 'data:text/html;base64,' + btoa(page));
+		$('#sandbox').css({
+			opacity: 0
+		}).prop('src', 'data:text/html;base64,' + btoa(page));
 	}
 
 	updateSandbox();
 
 	$('#sandbox').load(function() {
-		$(this).show();
+		$('#sandbox').css({
+			opacity: 1
+		});
 		$('#sandbox-buffer').prop('src', 'data:text/html;base64,' + btoa(page));
 	});
 

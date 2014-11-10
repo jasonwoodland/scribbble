@@ -10,6 +10,12 @@
 			<div class="column12">
 				<a class="profile-image" href="#">
 					<img src="/noface" alt="">
+<<<<<<< HEAD
+=======
+					<style>
+						.profile-image { background: transparent!important }
+					</style>
+>>>>>>> 9bf4dfd89e52928aba1f5955619f9f7002c7e135
 				</a>
 			</div>
 		</div>
