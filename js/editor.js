@@ -43,7 +43,7 @@ $(window).ready(function() {
 		page = '<!DOCTYPE html><html><head>';
 		page += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
 		page += '<link rel=stylesheet href="data:text/css;base64,' + btoa(cssPane.getValue()) + '">';
-		page += '</head><body bgcolor="red">';
+		page += '</head><body bgcolor="white">';
 		page += htmlPane.getValue();
 		page += '<script src="data:text/javascript;base64,' + btoa(jsPane.getValue()) + '"></script>';
 		page += '</body></html>';
@@ -84,5 +84,6 @@ $(window).ready(function() {
 });
 
 function resizeSandbox() {
-	$('#sandbox, #sandbox-buffer').height($(window).height() - 500);
+	$('#sandbox, #sandbox-buffer').height($(window).height() * .5 - 50);
+	$('#editor-layout .block .CodeMirror').height($(window).height() * .5 - 40);
 }

@@ -1,6 +1,6 @@
 <?php
 	define('ROLE', 'editor');
-	define('TITLE', 'Editor');
+	define('TITLE', '');
 	define('HTML_HEADER', 'editor-html-header.php');
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
@@ -57,6 +57,30 @@
 		left: 0;
 		right: 0;
 		bottom: 0;
+		z-index: 100;
+	}
+
+	#editor-layout .block {
+		height: auto;
+		border: 0 !important;
+		position: absolute;
+		width: 33.4% !important;
+	}
+
+	#editor-layout .block .CodeMirror {
+		height: auto;
+	}
+
+	#html-pane {
+		left: 0 !important;
+	}
+
+	#css-pane {
+		left: 33.3% !important;
+	}
+
+	#js-pane {
+		right: 0 !important;
 	}
 </style>
 <script>
