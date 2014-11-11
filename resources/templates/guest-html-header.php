@@ -3,7 +3,7 @@
 
 	<div class="intro">
 		<div class="logo">
-			<a class="logo-anchor" href="feed.php">scribbble.io</a>
+			<a class="logo-anchor" href="feed.php">scribbble.io <span>alpha</span></a>
 		</div>
 	</div>
 

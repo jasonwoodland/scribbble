@@ -4,7 +4,7 @@
 	<!-- logo and create new scrib -->
 	<div class="intro">
 		<div class="logo">
-			<a class="logo-anchor" href="/">scribbble.io <span>beta</span></a>
+			<a class="logo-anchor" href="/">scribbble.io <span>alpha</span></a>
 		</div>
 
 		<div class="new-scrib">

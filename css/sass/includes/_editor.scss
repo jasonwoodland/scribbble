@@ -65,7 +65,6 @@
 					background: none;
 					line-height: 0;
 					display: inline-block;
-					margin-right: 15px;
 					color: $accent-color;
 					border: none !important;
 				}
@@ -77,6 +76,7 @@
 					font-size: $base-font-size;
 
 					.ion-gear-a {
+						display: none;
 						position: absolute;
 						top: 6px;
 						right: 10px;
@@ -94,7 +94,8 @@
 }
 
 ::-webkit-scrollbar {
-    width: 5px;
+    width: 4px;
+    hieght: 4px;
 }
  
 ::-webkit-scrollbar-track {

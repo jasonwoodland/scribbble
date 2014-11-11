@@ -48,11 +48,11 @@ header {
 
       .like-scribe {
         float: left;
-        font-size: $base-font-size;
+        
         padding: 0;
 
         a {
-          color: #CD5C5C;
+          color: #ccc;
           padding: $mediam-button;
           float: left;
         }
@@ -97,6 +97,7 @@ header {
 
         .notification {
           margin: 0;
+          display: none;
 
           span {
             padding: $small-button;
