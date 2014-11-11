@@ -4,16 +4,21 @@
 
 		.arrows {
 			text-align: center;
+			margin-bottom: 40px;
 
 			a {
-				padding: 6px 12px;
+				padding: 10px 14px;
 				color: $chalk-dark-text;
 				background: $chalk;
-				@include border-radius(1px);
+				@include border-radius(100%);
 				border: 1px solid $chalk-dark;
 				font-size: $small-font-size;
 				display: inline-block;
-				margin: 5px 5px 25px;
+				margin: 3px;
+
+				i {
+					vertical-align: middle;
+				}
 			}
 		}
 
