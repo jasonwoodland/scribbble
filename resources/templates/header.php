@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?=TITLE?> - Scribbble</title>
+		<title><?=TITLE?><?=TITLE ? ' - ' : ''?>Scribbble</title>
 		<!-- fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 		<!-- font-icons -->
