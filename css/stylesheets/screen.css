@@ -490,7 +490,6 @@ body {
 }
 /* line 8, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .arrows a {
-  display: inline-block;
   padding: 6px 12px;
   color: #474747;
   background: #F3F2F2;
@@ -500,12 +499,14 @@ body {
   border-radius: 1px;
   border: 1px solid #EDEDED;
   font-size: 12px;
+  display: inline-block;
+  margin: 5px 5px 25px;
 }
-/* line 23, ../sass/includes/_profile.scss */
+/* line 24, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 {
   text-align: center;
 }
-/* line 26, ../sass/includes/_profile.scss */
+/* line 27, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .profile-image {
   display: inline-block;
   width: 100px;
@@ -516,21 +517,21 @@ body {
   -ms-border-radius: 100%;
   border-radius: 100%;
 }
-/* line 33, ../sass/includes/_profile.scss */
+/* line 34, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .profile-image img {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   border-radius: 100%;
 }
-/* line 38, ../sass/includes/_profile.scss */
+/* line 39, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .username, #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .bio a {
   font-family: "Inconsolata";
   color: #151515;
   text-decoration: none;
   font-size: 15px;
 }
-/* line 45, ../sass/includes/_profile.scss */
+/* line 46, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .pro {
   display: none;
   padding: 6px 15px;
@@ -538,36 +539,41 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 54, ../sass/includes/_profile.scss */
+/* line 55, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info {
   margin: 0 10px;
   display: inline-block;
 }
-/* line 58, ../sass/includes/_profile.scss */
+/* line 59, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info a {
   font-size: 14px;
   color: #474747;
 }
-/* line 64, ../sass/includes/_profile.scss */
+/* line 65, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info .user-info-number {
   color: #222;
   font-size: 17px;
 }
-/* line 70, ../sass/includes/_profile.scss */
+/* line 71, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .bio {
   width: 30%;
   margin: 0 auto;
 }
-/* line 74, ../sass/includes/_profile.scss */
+/* line 75, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .bio a {
   font-size: 15px;
 }
-/* line 83, ../sass/includes/_profile.scss */
+/* line 84, ../sass/includes/_profile.scss */
 #content-wrapper .profile-container {
   margin-top: 30px;
 }
 
 /* line 1, ../sass/includes/_editor.scss */
+body {
+  overflow: hidden;
+}
+
+/* line 5, ../sass/includes/_editor.scss */
 #editor-layout {
   width: 100%;
   margin: 0 auto;
@@ -576,7 +582,7 @@ body {
   height: 0;
   -webkit-box-sizing: border-box !important;
 }
-/* line 9, ../sass/includes/_editor.scss */
+/* line 13, ../sass/includes/_editor.scss */
 #editor-layout .block {
   margin: 0;
   padding: 0 0;
@@ -589,7 +595,7 @@ body {
   cursor: text;
   vertical-align: top;
 }
-/* line 21, ../sass/includes/_editor.scss */
+/* line 25, ../sass/includes/_editor.scss */
 #editor-layout .block textarea {
   background: #F3F2F2;
   border: none;
@@ -600,17 +606,17 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 31, ../sass/includes/_editor.scss */
+/* line 35, ../sass/includes/_editor.scss */
 #editor-layout .block textarea:focus {
   outline: none;
 }
-/* line 37, ../sass/includes/_editor.scss */
+/* line 41, ../sass/includes/_editor.scss */
 #editor-layout .block:nth-child(2) {
   margin: 0 .1%;
   border-right: 1px solid #555;
   border-left: 1px solid #555;
 }
-/* line 43, ../sass/includes/_editor.scss */
+/* line 47, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info {
   background: #F3F2F2;
   position: absolute;
@@ -631,11 +637,11 @@ body {
   -o-transition: all 0.15s ease;
   transition: all 0.15s ease;
 }
-/* line 56, ../sass/includes/_editor.scss */
+/* line 60, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info:hover {
   opacity: .8;
 }
-/* line 63, ../sass/includes/_editor.scss */
+/* line 67, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings p {
   font-family: "Inconsolata";
   background: none;
@@ -644,34 +650,34 @@ body {
   color: #151515;
   border: none !important;
 }
-/* line 72, ../sass/includes/_editor.scss */
+/* line 76, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a {
   color: #151515 !important;
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
 }
-/* line 78, ../sass/includes/_editor.scss */
+/* line 82, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a .ion-gear-a {
   display: none;
   position: absolute;
   top: 6px;
   right: 10px;
 }
-/* line 88, ../sass/includes/_editor.scss */
+/* line 92, ../sass/includes/_editor.scss */
 #editor-layout .block .CodeMirror {
   height: 380px;
   padding: 10px 0;
   text-align: left;
 }
 
-/* line 96, ../sass/includes/_editor.scss */
+/* line 100, ../sass/includes/_editor.scss */
 ::-webkit-scrollbar {
   width: 4px;
   hieght: 4px;
 }
 
-/* line 104, ../sass/includes/_editor.scss */
+/* line 108, ../sass/includes/_editor.scss */
 ::-webkit-scrollbar-thumb {
   background: #222;
 }

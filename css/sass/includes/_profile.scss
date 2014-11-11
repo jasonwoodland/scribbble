@@ -6,13 +6,14 @@
 			text-align: center;
 
 			a {
-				display: inline-block;
 				padding: 6px 12px;
 				color: $chalk-dark-text;
 				background: $chalk;
 				@include border-radius(1px);
 				border: 1px solid $chalk-dark;
 				font-size: $small-font-size;
+				display: inline-block;
+				margin: 5px 5px 25px;
 			}
 		}
 
