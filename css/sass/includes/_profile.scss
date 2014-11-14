@@ -11,7 +11,6 @@
 				color: $chalk-dark-text;
 				background: $chalk;
 				@include border-radius(100%);
-				border: 1px solid $chalk-dark;
 				font-size: $small-font-size;
 				display: inline-block;
 				margin: 3px;
@@ -46,6 +45,21 @@
 					color: $accent-color;
 					text-decoration: none;
 					font-size: $base-font-size;
+				}
+
+				.follow {
+					@extend .username;
+					margin-left: 10px;
+					padding: $small-button;
+					@include border-radius(1px);
+					background: $accent-color;
+					color: white;
+					display: none;
+				}
+
+				.follow-on-click {
+					@extend .follow;
+					background: $secondary-accent;
 				}
 
 				.pro {

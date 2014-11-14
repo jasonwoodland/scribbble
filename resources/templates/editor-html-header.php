@@ -11,8 +11,10 @@
 			<a href="">save</a>
 		</div>
 
-		<div class="like-scribe">
+		<div class="scribe-options">
 			<a href="#"><i class="ion-heart"></i></a>
+			<span class="counter"><i class="triangle-left"></i>0</span>
+			<a href="#"><i class="ion-close-circled"></i></a>
 		</div>
 	</div>
 	
