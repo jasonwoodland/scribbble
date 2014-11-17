@@ -466,26 +466,24 @@ body {
 /* line 83, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"], #sign-up-wrapper input[type="password"], #sign-in-wrapper input[type="text"], #sign-up-wrapper input[type="text"], #forgot-password-wrapper input[type="text"], #sign-in-wrapper input[type="password"], #sign-up-wrapper input[type="password"], #forgot-password-wrapper input[type="password"], #forgot-password-wrapper input[type="text"], #forgot-password-wrapper input[type="password"] {
   color: #474747;
-  border: 1px solid #EDEDED;
 }
-/* line 88, ../sass/includes/_sign-in.scss */
+/* line 87, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="submit"], #sign-in-wrapper input[type="submit"], #sign-up-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"] {
   cursor: pointer;
   background: #222;
   color: white;
-  border: 1px solid #222;
 }
-/* line 95, ../sass/includes/_sign-in.scss */
+/* line 93, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label, #sign-in-wrapper label, #sign-up-wrapper label, #forgot-password-wrapper label, #forgot-password-wrapper label {
   cursor: pointer;
   font-family: "Inconsolata";
   font-size: 14px;
 }
-/* line 100, ../sass/includes/_sign-in.scss */
+/* line 98, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"], #sign-in-wrapper label input[type="checkbox"], #sign-up-wrapper label input[type="checkbox"], #forgot-password-wrapper label input[type="checkbox"], #forgot-password-wrapper label input[type="checkbox"] {
   display: none;
 }
-/* line 103, ../sass/includes/_sign-in.scss */
+/* line 101, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #sign-in-wrapper label input[type="checkbox"] + .label-text:before, #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #forgot-password-wrapper label input[type="checkbox"] + .label-text:before, #forgot-password-wrapper label input[type="checkbox"] + .label-text:before {
   content: "\f0c8";
   font-family: "FontAwesome";
@@ -500,7 +498,7 @@ body {
   margin-right: 5px;
   color: #EDEDED;
 }
-/* line 118, ../sass/includes/_sign-in.scss */
+/* line 116, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-in-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #forgot-password-wrapper label input[type="checkbox"]:checked + .label-text:before, #forgot-password-wrapper label input[type="checkbox"]:checked + .label-text:before {
   content: "\f14a";
   color: #222;
@@ -510,19 +508,19 @@ body {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 124, ../sass/includes/_sign-in.scss */
+/* line 122, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] .label-text, #sign-in-wrapper label input[type="checkbox"] .label-text, #sign-up-wrapper label input[type="checkbox"] .label-text, #forgot-password-wrapper label input[type="checkbox"] .label-text, #forgot-password-wrapper label input[type="checkbox"] .label-text {
   position: absolute;
   top: 10px;
 }
-/* line 131, ../sass/includes/_sign-in.scss */
+/* line 129, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed, #forgot-password-wrapper .failed, #forgot-password-wrapper .failed {
   font-family: "Inconsolata";
   font-size: 14px;
   text-decoration: line-through;
   display: block;
 }
-/* line 138, ../sass/includes/_sign-in.scss */
+/* line 136, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden, #forgot-password-wrapper .hidden, #forgot-password-wrapper .hidden {
   display: none;
 }
