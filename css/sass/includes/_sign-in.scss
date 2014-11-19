@@ -82,14 +82,12 @@
 
 	input[type="text"], input[type="password"] {
 		color: $chalk-dark-text;
-		border: 1px solid $chalk-dark;
 	}
 
 	input[type="submit"] {
 		cursor: pointer;
 		background: $secondary-accent;
 		color: white;
-		border: 1px solid $secondary-accent-dark;
 	}
 
 	label {

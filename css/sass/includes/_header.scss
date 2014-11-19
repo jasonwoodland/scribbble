@@ -2,7 +2,8 @@ header {
   padding: 20px 0;
   clear: both;
   width: 100%;
-  display: inline-block;
+  display: inline-block; 
+  vertical-align: bottom;
 
   #header-wrapper {
     width: 95%;
@@ -21,7 +22,6 @@ header {
           color: $accent-color;
           display: inline-block;
           padding: $small-button;
-          border: 1px solid transparent;
         }
 
         span {
@@ -29,7 +29,7 @@ header {
         }
 
         .logo-anchor {
-          padding: 6px 0;
+          padding: 7px 0;
         }
       }
 
@@ -39,26 +39,65 @@ header {
         a {
           color: white;
           @include border-radius(1px);;
-          background: #3cc05e;
+          background: $green;
           margin-right: 5px;
-          border: 1px solid #3cc05e;
           padding: $small-button;
           text-align: center;
         }
       }
 
-      .like-scribe {
+      .scribe-options {
         float: left;
-        
         padding: 0;
 
         a {
           color: #ccc;
-          padding: $mediam-button;
+          padding: 8px 16px;
           float: left;
           font-size: $base-font-size;
+          text-decoration: none;
+
+          &:hover {
+            color: #f0506b;
+          }
+
+          &:active {
+            color: #ea052c;
+          }
+
+        }
+
+        i {
+          font-size: $mediam-font-size;
         }
       }
+        .counter {
+          float: left;
+          text-decoration: none;
+          background: $chalk;
+          padding: $small-button;
+          @include border-radius(1px);
+          color: $chalk-dark-text;
+          position: relative;
+          margin-left: 3px;
+          font-size: $base-font-size;
+
+          &:hover {
+            color: $chalk-dark-text
+          }
+
+          .triangle-left {
+            position: absolute;
+            left: -5px;
+            top: 10px;
+            width: 0; 
+            height: 0; 
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid $chalk;
+            transition: all .15s;
+          }
+        }
     }
     
 
@@ -79,7 +118,6 @@ header {
           padding: $small-button;
           margin-left: 10px;
           float: right;
-          border: 1px solid $chalk-dark;
           @include transition(all, .2s, ease);
           color: $chalk-dark-text !important;
 

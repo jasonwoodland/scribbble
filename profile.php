@@ -29,6 +29,7 @@
 			<div class="column12">
 				<a class="username" href="#"><?=USERNAME?></a>
 				<a class="pro" href="#">pro</a>
+				<a class="follow" href="">follow</a>
 			</div>
 		</div>
 
@@ -37,7 +38,7 @@
 		<div class="row">
 			<div class="column12">
 				<div class="scribs user-info">
-					<a href="#"><span class="user-info-number"><?=$scribeCount?></span><br> scrib<?=$scribeCount == 1 ? '' : 's'?></a>
+					<a href="#"><span class="user-info-number"><?=$scribeCount?></span><br> scribe<?=$scribeCount == 1 ? '' : 's'?></a>
 				</div>
 				&middot;
 				<div class="following user-info">

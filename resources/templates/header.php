@@ -3,6 +3,9 @@
 <html>
 	<head>
 		<title><?=TITLE?><?=TITLE ? ' - ' : ''?>Scribbble</title>
+		<!-- meta tags -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
 		<!-- font-icons -->
