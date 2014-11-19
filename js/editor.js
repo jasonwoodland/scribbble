@@ -1,4 +1,4 @@
-var updateTimeout, page;
+var updateTimeout, url;
 
 $(window).ready(function() {
 	options = {
@@ -42,14 +42,16 @@ $(window).ready(function() {
 	function updateSandbox() {
 		page = '<!DOCTYPE html><html><head>';
 		page += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
-		page += '<link rel=stylesheet href="data:text/css;base64,' + btoa(cssPane.getValue()) + '">';
+		page += '<style>' + cssPane.getValue() + '</style>';
 		page += '</head><body bgcolor="white">';
 		page += htmlPane.getValue();
-		page += '<script src="data:text/javascript;base64,' + btoa(jsPane.getValue()) + '"></script>';
+		page += '<script>' + jsPane.getValue() + '"</script>';
 		page += '</body></html>';
+		blob = new Blob([page], {type: 'text/html'});
+		url = URL.createObjectURL(blob);
 		$('#sandbox').css({
 			opacity: 0
-		}).prop('src', 'data:text/html;base64,' + btoa(page));
+		}).prop('src', url);
 	}
 
 	updateSandbox();
@@ -58,7 +60,7 @@ $(window).ready(function() {
 		$('#sandbox').css({
 			opacity: 1
 		});
-		$('#sandbox-buffer').prop('src', 'data:text/html;base64,' + btoa(page));
+		$('#sandbox-buffer').prop('src', url); 
 	});
 
 	$('.ion-gear-a').click(function() {
