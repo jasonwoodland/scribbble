@@ -8,6 +8,13 @@
 	$scribeCount = $stmt->fetchColumn();
 	$followingCount = 0;
 	$followersCount = 0;
+
+
+	$pageNo = intval(substr($_SERVER['PATH_INFO'], 1));
+	if(!$pageNo) {
+		$URIPrefix = $_SERVER['REQUEST_URI'] . '/';
+		$pageNo = 1;
+	}
 ?>
 
 <div id="content-wrapper">
@@ -57,18 +64,19 @@
 	<div class="container12 profile-container">
 		<div class="row">
 			<?php
-				$stmt = $db->prepare('SELECT id, html, css, js FROM scribes WHERE owner = ? ORDER BY id DESC');
-				$stmt->execute([USER_ID]);
+				$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+				$stmt = $db->prepare('SELECT id, html, css, js FROM scribes WHERE owner = ? ORDER BY id DESC LIMIT ?,8');
+				$stmt->execute([USER_ID, ($pageNo - 1) * 8]);
 				$scribes = $stmt->fetchAll(PDO::FETCH_OBJ);
 				foreach($scribes as $scribe) {
 					$page = '<!DOCTYPE html><html><head>';
 					$page .= '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
 					$page .= '<style type="text/css">' . $scribe->css . '</style>';
 					$page .= '<style type="text/css">body{overflow:hidden!important}</style>';
-					$page .= '</head><body>';                                                                              
+					$page .= '</head><body>';
 					$page .= $scribe->html;
 					$page .= '<script src="data:text/javascript;base64,' . base64_encode($scribe->js) . '"></script>';
-					$page .= '</body></html>';                                                                             
+					$page .= '</body></html>';
 					$page = base64_encode($page);
 					?>
 					<div class="column3">
@@ -82,8 +90,9 @@
 		</div>
 
 		<div class="arrows">
-			<a href="#"><i class="ion-ios7-arrow-left"></i></a>
-			<a href="#"><i class="ion-ios7-arrow-right"></i></a>
+			<a href="<?=($pageNo == 2 ? '.' : $URIPrefix . ($pageNo - 1))?>"><i class="ion-ios7-arrow-left"></i></a>
+			<a href="<?=$URIPrefix . ($pageNo + 1)?>"><i class="ion-ios7-arrow-right"></i></a>
 		</div>
 	</div>
+
 </div>

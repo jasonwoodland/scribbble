@@ -76,17 +76,29 @@ $(window).ready(function() {
 			html: htmlPane.getValue(),
 			css: cssPane.getValue(),
 			js: jsPane.getValue()
-		}, function() {
+		}, function(response) {
+			window.id = response;
 		});
 	});
 
 	$('#delete-scribe').click(function() {
 		$.post('/api/scribe-delete', {
-			id: window.id,
+			id: window.id
 		}, function() {
 			window.location = '/profile';
 		});
 	});
+
+	$('#like-scribe').click(function() {
+		$(this).off('click');
+		likes = $('span.counter span');
+		likes.html(parseInt(likes.html()) + 1);
+		$.post('/api/scribe-like', {
+			id: window.id
+		}, function() {
+		});
+	});
+
 
 	resizeSandbox();
 }).resize(function() {

@@ -26,4 +26,6 @@
 		<?=defined('ROLE') ? sprintf('<script src="/js/%s.js"></script>', ROLE) : null?>
 	</head>
 	<body>
-		<?php defined('NO_HTML_HEADER') or require HTML_HEADER ?>
+<?php
+	defined('NO_HTML_HEADER') or require defined('USER_ID') ? HTML_HEADER : 'guest-html-header.php';
+?>

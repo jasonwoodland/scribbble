@@ -13,7 +13,7 @@
 
 		<div class="scribe-options">
 			<a id="like-scribe" href="#"><i class="ion-heart"></i></a>
-			<span class="counter"><i class="triangle-left"></i>0</span>
+			<span class="counter"><i class="triangle-left"></i><span><?=intval(scribe::likes($id))?></span></span>
 			<a id="delete-scribe"href="#"><i class="ion-close-circled"></i></a>
 		</div>
 	</div>

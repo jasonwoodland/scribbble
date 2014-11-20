@@ -1,11 +1,11 @@
 <?php
+	$id = intval(substr($_SERVER['PATH_INFO'], 1));
+
 	define('ROLE', 'editor');
 	define('TITLE', '');
 	define('HTML_HEADER', 'editor-html-header.php');
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
-
-	$id = intval(substr($_SERVER['PATH_INFO'], 1));
 
 	$stmt = $db->prepare('SELECT html, css, js FROM scribes WHERE id = ?');
 	$stmt->execute([$id]);
