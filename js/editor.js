@@ -80,6 +80,14 @@ $(window).ready(function() {
 		});
 	});
 
+	$('#delete-scribe').click(function() {
+		$.post('/api/scribe-delete', {
+			id: window.id,
+		}, function() {
+			window.location = '/profile';
+		});
+	});
+
 	resizeSandbox();
 }).resize(function() {
 	resizeSandbox();

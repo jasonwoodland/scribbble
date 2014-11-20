@@ -21,7 +21,6 @@
 
 		public static function save($id, $html, $css, $js) {
 			global $db;
-			error_log("trying to save to id $id");
 			if($id) {
 				$stmt = $db->prepare('UPDATE scribes SET html = ?, css = ?, js = ? WHERE id = ?');
 				$stmt->execute([$html, $css, $js, $id]);
@@ -36,6 +35,12 @@
 					USER_ID
 				]);
 			}
+		}
+
+		public static function delete($id) {
+			global $db;
+			$stmt = $db->prepare('DELETE FROM scribes WHERE id = ?');
+			$stmt->execute([$id]);
 		}
 
 		public static function find($field, $value) {
