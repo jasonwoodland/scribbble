@@ -12,7 +12,6 @@
 @import "includes/header";
 @import "includes/content";
 @import "includes/footer";
-@import "includes/base";
 
 // pages
 @import "includes/sign-in";
@@ -20,3 +19,6 @@
 @import "includes/editor";
 @import "includes/thanks";
 @import "includes/settings";
+
+// base
+@import "includes/base";

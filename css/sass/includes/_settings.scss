@@ -8,7 +8,6 @@
 			margin: 10px 0;
 			box-sizing: border-box;
 			background: $chalk;
-			font-family: $base-font-family;
 			font-size: $mediam-font-size;
 			color: $accent-color;
 			border: 1px solid $chalk-dark !important;
@@ -17,7 +16,6 @@
 
 
 			&::-webkit-input-placeholder {
-				font-family: $base-font-family;
 				font-size: $mediam-font-size;
 				color: $accent-color;
 			}
@@ -35,7 +33,6 @@
 			margin: 10px 0;
 			box-sizing: border-box;
 			background: $secondary-accent;
-			font-family: $base-font-family;
 			font-size: $mediam-font-size;
 			color: white;
 			cursor: pointer;
@@ -43,7 +40,6 @@
 			@include border-radius(1px);
 
 			&::-webkit-input-placeholder {
-				font-family: $base-font-family;
 				font-size: $mediam-font-size;
 				color: $accent-color;
 			}
@@ -106,7 +102,6 @@
 }
 
 p {
-	font-family: $base-font-family;
 	font-size: $mediam-font-size;
 	color: white;
 	display: inline-block;

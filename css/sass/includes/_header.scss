@@ -16,7 +16,6 @@ header {
         float: left;
 
         a {
-          font-family: $base-font-family;
           font-size: $base-font-size;
           text-decoration: none;
           color: $accent-color;
@@ -148,7 +147,6 @@ header {
 
           span {
             padding: $small-button;
-            font-family: $base-font-family;
             font-size: $base-font-size;
             display: inline-block;
             float: right;
@@ -172,7 +170,6 @@ header {
 
       .notification, .username, .header-options {
         text-decoration: none;
-        font-family: $base-font-family;
         font-size: $base-font-size;
         color: $accent-color;
         display: inline-block;

@@ -14,7 +14,6 @@
 			display: block;
 			text-align: center;
 			text-decoration: none;
-			font-family: $base-font-family;
 			font-size: $base-font-size;
 			color: $accent-color;
 			margin-bottom: 20px;
@@ -40,7 +39,6 @@
 
 	.sign-option {
 		text-decoration: none;
-		font-family: $base-font-family;
 		font-size: $mediam-font-size;
 		color: $accent-color;
 		text-align: center;
@@ -51,7 +49,6 @@
 
 	input {
 		background-color: $chalk;
-		font-family: $base-font-family;
 		font-size: $mediam-font-size;
 		-webkit-appearance: none;
 		appearance: none;
@@ -70,7 +67,6 @@
 		appearance: none;
 
 		&::-webkit-input-placeholder {
-			font-family: $base-font-family;
 			font-size: $mediam-font-size;
 			color: $chalk-dark-text;
 		}
@@ -92,7 +88,6 @@
 
 	label {
 		cursor: pointer;
-		font-family: $base-font-family;
 		font-size: $mediam-font-size;
 
 		input[type="checkbox"] {
@@ -127,7 +122,6 @@
 	}
 
 	.failed {
-		font-family: $base-font-family;
 		font-size: $mediam-font-size;
 		text-decoration: line-through;
 		display: block;

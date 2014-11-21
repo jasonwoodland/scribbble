@@ -97,26 +97,25 @@ header #header-wrapper .intro .logo, header #header-wrapper .intro .new-scrib {
 }
 /* line 18, ../sass/includes/_header.scss */
 header #header-wrapper .intro .logo a, header #header-wrapper .intro .new-scrib a {
-  font-family: "Inconsolata";
   font-size: 15px;
   text-decoration: none;
   color: #151515;
   display: inline-block;
   padding: 7px 16px;
 }
-/* line 27, ../sass/includes/_header.scss */
+/* line 26, ../sass/includes/_header.scss */
 header #header-wrapper .intro .logo span, header #header-wrapper .intro .new-scrib span {
   font-size: 10px;
 }
-/* line 31, ../sass/includes/_header.scss */
+/* line 30, ../sass/includes/_header.scss */
 header #header-wrapper .intro .logo .logo-anchor, header #header-wrapper .intro .new-scrib .logo-anchor {
   padding: 7px 0;
 }
-/* line 36, ../sass/includes/_header.scss */
+/* line 35, ../sass/includes/_header.scss */
 header #header-wrapper .intro .new-scrib {
   margin-left: 20px;
 }
-/* line 39, ../sass/includes/_header.scss */
+/* line 38, ../sass/includes/_header.scss */
 header #header-wrapper .intro .new-scrib a {
   color: white;
   -webkit-border-radius: 1px;
@@ -128,12 +127,12 @@ header #header-wrapper .intro .new-scrib a {
   padding: 7px 16px;
   text-align: center;
 }
-/* line 49, ../sass/includes/_header.scss */
+/* line 48, ../sass/includes/_header.scss */
 header #header-wrapper .intro .scribe-options {
   float: left;
   padding: 0;
 }
-/* line 53, ../sass/includes/_header.scss */
+/* line 52, ../sass/includes/_header.scss */
 header #header-wrapper .intro .scribe-options a {
   color: #ccc;
   padding: 8px 16px;
@@ -141,23 +140,23 @@ header #header-wrapper .intro .scribe-options a {
   font-size: 15px;
   text-decoration: none;
 }
-/* line 60, ../sass/includes/_header.scss */
+/* line 59, ../sass/includes/_header.scss */
 header #header-wrapper .intro .scribe-options a:hover {
   color: #f0506b;
 }
-/* line 64, ../sass/includes/_header.scss */
+/* line 63, ../sass/includes/_header.scss */
 header #header-wrapper .intro .scribe-options a:active {
   color: #ea052c;
 }
-/* line 70, ../sass/includes/_header.scss */
+/* line 69, ../sass/includes/_header.scss */
 header #header-wrapper .intro .scribe-options i {
   font-size: 14px;
 }
-/* line 76, ../sass/includes/_header.scss */
+/* line 75, ../sass/includes/_header.scss */
 header #header-wrapper .intro .scribe-options #like-scribe .active {
   color: #ea052c;
 }
-/* line 81, ../sass/includes/_header.scss */
+/* line 80, ../sass/includes/_header.scss */
 header #header-wrapper .intro .counter {
   float: left;
   text-decoration: none;
@@ -172,11 +171,11 @@ header #header-wrapper .intro .counter {
   margin-left: 3px;
   font-size: 15px;
 }
-/* line 92, ../sass/includes/_header.scss */
+/* line 91, ../sass/includes/_header.scss */
 header #header-wrapper .intro .counter:hover {
   color: #474747;
 }
-/* line 96, ../sass/includes/_header.scss */
+/* line 95, ../sass/includes/_header.scss */
 header #header-wrapper .intro .counter .triangle-left {
   position: absolute;
   left: -5px;
@@ -188,21 +187,21 @@ header #header-wrapper .intro .counter .triangle-left {
   border-right: 5px solid #F3F2F2;
   transition: all .15s;
 }
-/* line 111, ../sass/includes/_header.scss */
+/* line 110, ../sass/includes/_header.scss */
 header #header-wrapper .user {
   float: right;
   display: inline-block;
   position: relative;
 }
-/* line 116, ../sass/includes/_header.scss */
+/* line 115, ../sass/includes/_header.scss */
 header #header-wrapper .user li {
   display: inline-block;
 }
-/* line 119, ../sass/includes/_header.scss */
+/* line 118, ../sass/includes/_header.scss */
 header #header-wrapper .user li .ion-ios7-arrow-down {
   margin-left: 10px !important;
 }
-/* line 123, ../sass/includes/_header.scss */
+/* line 122, ../sass/includes/_header.scss */
 header #header-wrapper .user li .username, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-on-click, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-on-click, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a {
   background: #F3F2F2;
   padding: 7px 16px;
@@ -215,25 +214,24 @@ header #header-wrapper .user li .username, header #header-wrapper .user li #cont
   transition: all 0.2s ease;
   color: #474747 !important;
 }
-/* line 133, ../sass/includes/_header.scss */
+/* line 132, ../sass/includes/_header.scss */
 header #header-wrapper .user li .username:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow:hover, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-on-click:hover, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-on-click:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro:hover, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a:hover, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a:hover, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a:hover {
   background: #EDEDED;
   color: #151515;
 }
-/* line 138, ../sass/includes/_header.scss */
+/* line 137, ../sass/includes/_header.scss */
 header #header-wrapper .user li .username .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-on-click .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-on-click .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a .ion-ios7-arrow-down, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a .ion-ios7-arrow-down, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a .ion-ios7-arrow-down {
   font-size: 12px;
   margin-left: 8px;
 }
-/* line 145, ../sass/includes/_header.scss */
+/* line 144, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification {
   margin: 0;
   display: none;
 }
-/* line 149, ../sass/includes/_header.scss */
+/* line 148, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification span {
   padding: 7px 16px;
-  font-family: "Inconsolata";
   font-size: 15px;
   display: inline-block;
   float: right;
@@ -248,18 +246,17 @@ header #header-wrapper .user li .notification span {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-/* line 159, ../sass/includes/_header.scss */
+/* line 157, ../sass/includes/_header.scss */
 header #header-wrapper .user li .notification span i {
   font-size: 15px;
 }
-/* line 167, ../sass/includes/_header.scss */
+/* line 165, ../sass/includes/_header.scss */
 header #header-wrapper .user li .header-options span {
   color: #474747;
 }
-/* line 173, ../sass/includes/_header.scss */
+/* line 171, ../sass/includes/_header.scss */
 header #header-wrapper .user .notification, header #header-wrapper .user .username, header #header-wrapper .user #content-wrapper .container12 .row .column12 .follow, #content-wrapper .container12 .row .column12 header #header-wrapper .user .follow, header #header-wrapper .user #content-wrapper .container12 .row .column12 .follow-on-click, #content-wrapper .container12 .row .column12 header #header-wrapper .user .follow-on-click, header #header-wrapper .user #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user .pro, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user a, header #header-wrapper .user .header-options {
   text-decoration: none;
-  font-family: "Inconsolata";
   font-size: 15px;
   color: #151515;
   display: inline-block;
@@ -312,7 +309,6 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   color: #151515;
   background: white;
   font-size: 14px;
-  font-family: "Inconsolata";
   text-transform: lowercase;
   padding: 7px 16px;
   -webkit-border-radius: 1px;
@@ -320,7 +316,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   -ms-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 45, ../sass/includes/_content.scss */
+/* line 44, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-pop, #content-wrapper .container12 .row .column4 .scrib-pop {
   position: absolute;
   top: 0;
@@ -340,7 +336,7 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   -ms-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 57, ../sass/includes/_content.scss */
+/* line 56, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3 .scrib-pop .view-scrib, #content-wrapper .container12 .row .column4 .scrib-pop .view-scrib {
   position: absolute;
   margin: auto;
@@ -352,7 +348,6 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   line-height: 14.5;
   color: white;
   text-decoration: none;
-  font-family: "Inconsolata";
   font-size: 15px;
   background: #151515;
   -webkit-border-radius: 1.8px;
@@ -361,33 +356,23 @@ header #header-wrapper .user .notification, header #header-wrapper .user .userna
   border-radius: 1.8px;
   text-align: center;
 }
-/* line 76, ../sass/includes/_content.scss */
+/* line 74, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .column3:hover .scrib-pop, #content-wrapper .container12 .row .column4:hover .scrib-pop {
   opacity: .8;
 }
-/* line 82, ../sass/includes/_content.scss */
+/* line 80, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore a {
-  font-family: "Inconsolata";
   text-decoration: none;
   margin-right: 5px;
   padding: 7px 16px;
   color: #474747;
   font-size: 15px;
 }
-/* line 91, ../sass/includes/_content.scss */
+/* line 88, ../sass/includes/_content.scss */
 #content-wrapper .container12 .row .explore .active {
   background: #F3F2F2;
   color: #151515;
   border: 1px solid #EDEDED;
-}
-
-/* line 1, ../sass/includes/_base.scss */
-body {
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 /* line 1, ../sass/includes/_sign-in.scss */
@@ -406,26 +391,24 @@ body {
   display: block;
   text-align: center;
   text-decoration: none;
-  font-family: "Inconsolata";
   font-size: 15px;
   color: #151515;
   margin-bottom: 20px;
 }
 
-/* line 25, ../sass/includes/_sign-in.scss */
+/* line 24, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper {
   height: 285px;
 }
 
-/* line 34, ../sass/includes/_sign-in.scss */
+/* line 33, ../sass/includes/_sign-in.scss */
 #forgot-password-wrapper {
   height: 180px;
 }
 
-/* line 41, ../sass/includes/_sign-in.scss */
+/* line 40, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .sign-option, #sign-in-wrapper .sign-option, #sign-up-wrapper .sign-option, #forgot-password-wrapper .sign-option, #forgot-password-wrapper .sign-option {
   text-decoration: none;
-  font-family: "Inconsolata";
   font-size: 14px;
   color: #151515;
   text-align: center;
@@ -433,10 +416,9 @@ body {
   margin: 15px 0;
   padding: 10px;
 }
-/* line 52, ../sass/includes/_sign-in.scss */
+/* line 50, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input, #sign-in-wrapper input, #sign-up-wrapper input, #forgot-password-wrapper input, #forgot-password-wrapper input {
   background-color: #F3F2F2;
-  font-family: "Inconsolata";
   font-size: 14px;
   -webkit-appearance: none;
   appearance: none;
@@ -446,7 +428,7 @@ body {
   -ms-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 62, ../sass/includes/_sign-in.scss */
+/* line 59, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"], #sign-up-wrapper input[type="password"], #sign-up-wrapper input[type="submit"], #sign-up-wrapper input[type="email"], #sign-in-wrapper input[type="text"], #sign-up-wrapper input[type="text"], #forgot-password-wrapper input[type="text"], #sign-in-wrapper input[type="password"], #sign-up-wrapper input[type="password"], #forgot-password-wrapper input[type="password"], #sign-in-wrapper input[type="submit"], #sign-up-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"], #sign-in-wrapper input[type="email"], #sign-up-wrapper input[type="email"], #forgot-password-wrapper input[type="email"], #forgot-password-wrapper input[type="text"], #forgot-password-wrapper input[type="password"], #forgot-password-wrapper input[type="submit"], #forgot-password-wrapper input[type="email"] {
   display: block;
   padding: 15px;
@@ -457,37 +439,35 @@ body {
   -webkit-appearance: none;
   appearance: none;
 }
-/* line 72, ../sass/includes/_sign-in.scss */
+/* line 69, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper input[type="password"]::-webkit-input-placeholder, #sign-up-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper input[type="email"]::-webkit-input-placeholder, #sign-in-wrapper input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper input[type="text"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="text"]::-webkit-input-placeholder, #sign-in-wrapper input[type="password"]::-webkit-input-placeholder, #sign-up-wrapper input[type="password"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="password"]::-webkit-input-placeholder, #sign-in-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper input[type="submit"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-in-wrapper input[type="email"]::-webkit-input-placeholder, #sign-up-wrapper input[type="email"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="email"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="text"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="password"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="submit"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="email"]::-webkit-input-placeholder {
-  font-family: "Inconsolata";
   font-size: 14px;
   color: #474747;
 }
-/* line 78, ../sass/includes/_sign-in.scss */
+/* line 74, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"]:focus, #sign-up-wrapper input[type="password"]:focus, #sign-up-wrapper input[type="submit"]:focus, #sign-up-wrapper input[type="email"]:focus, #sign-in-wrapper input[type="text"]:focus, #sign-up-wrapper input[type="text"]:focus, #forgot-password-wrapper input[type="text"]:focus, #sign-in-wrapper input[type="password"]:focus, #sign-up-wrapper input[type="password"]:focus, #forgot-password-wrapper input[type="password"]:focus, #sign-in-wrapper input[type="submit"]:focus, #sign-up-wrapper input[type="submit"]:focus, #forgot-password-wrapper input[type="submit"]:focus, #sign-in-wrapper input[type="email"]:focus, #sign-up-wrapper input[type="email"]:focus, #forgot-password-wrapper input[type="email"]:focus, #forgot-password-wrapper input[type="text"]:focus, #forgot-password-wrapper input[type="password"]:focus, #forgot-password-wrapper input[type="submit"]:focus, #forgot-password-wrapper input[type="email"]:focus {
   outline: none;
 }
-/* line 83, ../sass/includes/_sign-in.scss */
+/* line 79, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="text"], #sign-up-wrapper input[type="password"], #sign-in-wrapper input[type="text"], #sign-up-wrapper input[type="text"], #forgot-password-wrapper input[type="text"], #sign-in-wrapper input[type="password"], #sign-up-wrapper input[type="password"], #forgot-password-wrapper input[type="password"], #forgot-password-wrapper input[type="text"], #forgot-password-wrapper input[type="password"] {
   color: #474747;
 }
-/* line 87, ../sass/includes/_sign-in.scss */
+/* line 83, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper input[type="submit"], #sign-in-wrapper input[type="submit"], #sign-up-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"], #forgot-password-wrapper input[type="submit"] {
   cursor: pointer;
   background: #222;
   color: white;
 }
-/* line 93, ../sass/includes/_sign-in.scss */
+/* line 89, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label, #sign-in-wrapper label, #sign-up-wrapper label, #forgot-password-wrapper label, #forgot-password-wrapper label {
   cursor: pointer;
-  font-family: "Inconsolata";
   font-size: 14px;
 }
-/* line 98, ../sass/includes/_sign-in.scss */
+/* line 93, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"], #sign-in-wrapper label input[type="checkbox"], #sign-up-wrapper label input[type="checkbox"], #forgot-password-wrapper label input[type="checkbox"], #forgot-password-wrapper label input[type="checkbox"] {
   display: none;
 }
-/* line 101, ../sass/includes/_sign-in.scss */
+/* line 96, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #sign-in-wrapper label input[type="checkbox"] + .label-text:before, #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #forgot-password-wrapper label input[type="checkbox"] + .label-text:before, #forgot-password-wrapper label input[type="checkbox"] + .label-text:before {
   content: "\f0c8";
   font-family: "FontAwesome";
@@ -502,7 +482,7 @@ body {
   margin-right: 5px;
   color: #EDEDED;
 }
-/* line 116, ../sass/includes/_sign-in.scss */
+/* line 111, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-in-wrapper label input[type="checkbox"]:checked + .label-text:before, #sign-up-wrapper label input[type="checkbox"]:checked + .label-text:before, #forgot-password-wrapper label input[type="checkbox"]:checked + .label-text:before, #forgot-password-wrapper label input[type="checkbox"]:checked + .label-text:before {
   content: "\f14a";
   color: #222;
@@ -512,19 +492,18 @@ body {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 122, ../sass/includes/_sign-in.scss */
+/* line 117, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper label input[type="checkbox"] .label-text, #sign-in-wrapper label input[type="checkbox"] .label-text, #sign-up-wrapper label input[type="checkbox"] .label-text, #forgot-password-wrapper label input[type="checkbox"] .label-text, #forgot-password-wrapper label input[type="checkbox"] .label-text {
   position: absolute;
   top: 10px;
 }
-/* line 129, ../sass/includes/_sign-in.scss */
+/* line 124, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed, #forgot-password-wrapper .failed, #forgot-password-wrapper .failed {
-  font-family: "Inconsolata";
   font-size: 14px;
   text-decoration: line-through;
   display: block;
 }
-/* line 136, ../sass/includes/_sign-in.scss */
+/* line 130, ../sass/includes/_sign-in.scss */
 #sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden, #forgot-password-wrapper .hidden, #forgot-password-wrapper .hidden {
   display: none;
 }
@@ -575,12 +554,11 @@ body {
 }
 /* line 43, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .username, #content-wrapper .container12 .row .column12 .follow, #content-wrapper .container12 .row .column12 .follow-on-click, #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .bio a {
-  font-family: "Inconsolata";
   color: #151515;
   text-decoration: none;
   font-size: 15px;
 }
-/* line 50, ../sass/includes/_profile.scss */
+/* line 49, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .follow, #content-wrapper .container12 .row .column12 .follow-on-click {
   margin-left: 10px;
   padding: 7px 16px;
@@ -592,11 +570,11 @@ body {
   color: white;
   display: none;
 }
-/* line 60, ../sass/includes/_profile.scss */
+/* line 59, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .follow-on-click {
   background: #222;
 }
-/* line 65, ../sass/includes/_profile.scss */
+/* line 64, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .pro {
   display: none;
   padding: 7px 16px;
@@ -604,31 +582,31 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-/* line 74, ../sass/includes/_profile.scss */
+/* line 73, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info {
   margin: 0 10px;
   display: inline-block;
 }
-/* line 78, ../sass/includes/_profile.scss */
+/* line 77, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info a {
   font-size: 14px;
   color: #474747;
 }
-/* line 84, ../sass/includes/_profile.scss */
+/* line 83, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .user-info .user-info-number {
   color: #222;
   font-size: 17px;
 }
-/* line 90, ../sass/includes/_profile.scss */
+/* line 89, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .bio {
   width: 30%;
   margin: 0 auto;
 }
-/* line 94, ../sass/includes/_profile.scss */
+/* line 93, ../sass/includes/_profile.scss */
 #content-wrapper .container12 .row .column12 .bio a {
   font-size: 15px;
 }
-/* line 103, ../sass/includes/_profile.scss */
+/* line 102, ../sass/includes/_profile.scss */
 #content-wrapper .profile-container {
   margin-top: 30px;
 }
@@ -702,41 +680,40 @@ body {
 }
 /* line 61, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings p {
-  font-family: "Inconsolata";
   background: none;
   line-height: 0;
   display: inline-block;
   color: #151515;
   border: none !important;
 }
-/* line 70, ../sass/includes/_editor.scss */
+/* line 69, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a {
   color: #151515 !important;
   text-decoration: none;
   display: inline-block;
   font-size: 15px;
 }
-/* line 76, ../sass/includes/_editor.scss */
+/* line 75, ../sass/includes/_editor.scss */
 #editor-layout .block .editor-info .editor-settings a .ion-gear-a {
   display: none;
   position: absolute;
   top: 6px;
   right: 10px;
 }
-/* line 86, ../sass/includes/_editor.scss */
+/* line 85, ../sass/includes/_editor.scss */
 #editor-layout .block .CodeMirror {
   height: 380px;
   padding: 10px 0;
   text-align: left;
 }
 
-/* line 94, ../sass/includes/_editor.scss */
+/* line 93, ../sass/includes/_editor.scss */
 ::-webkit-scrollbar {
   width: 4px;
   hieght: 4px;
 }
 
-/* line 102, ../sass/includes/_editor.scss */
+/* line 101, ../sass/includes/_editor.scss */
 ::-webkit-scrollbar-thumb {
   background: #222;
 }
@@ -755,14 +732,13 @@ body {
 /* line 11, ../sass/includes/_thanks.scss */
 #thanks-content p {
   color: #151515;
-  font-family: "Inconsolata";
   font-size: 15px;
   text-align: center;
   line-height: 1.3;
   background: transparent !important;
   border: none;
 }
-/* line 21, ../sass/includes/_thanks.scss */
+/* line 20, ../sass/includes/_thanks.scss */
 #thanks-content span {
   color: #222;
 }
@@ -775,7 +751,6 @@ body {
   margin: 10px 0;
   box-sizing: border-box;
   background: #F3F2F2;
-  font-family: "Inconsolata";
   font-size: 14px;
   color: #151515;
   border: 1px solid #EDEDED !important;
@@ -785,17 +760,16 @@ body {
   -ms-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 19, ../sass/includes/_settings.scss */
+/* line 18, ../sass/includes/_settings.scss */
 .profile-image form input[type="text"]::-webkit-input-placeholder, .profile-image #sign-up-wrapper .sign-up input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper .profile-image .sign-up input[type="text"]::-webkit-input-placeholder, .name form input[type="text"]::-webkit-input-placeholder, .name #sign-up-wrapper .sign-up input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper .name .sign-up input[type="text"]::-webkit-input-placeholder, .links-settings form input[type="text"]::-webkit-input-placeholder, .links-settings #sign-up-wrapper .sign-up input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper .links-settings .sign-up input[type="text"]::-webkit-input-placeholder, .save-all-changes form input[type="text"]::-webkit-input-placeholder, .save-all-changes #sign-up-wrapper .sign-up input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper .save-all-changes .sign-up input[type="text"]::-webkit-input-placeholder {
-  font-family: "Inconsolata";
   font-size: 14px;
   color: #151515;
 }
-/* line 25, ../sass/includes/_settings.scss */
+/* line 23, ../sass/includes/_settings.scss */
 .profile-image form input[type="text"]:focus, .profile-image #sign-up-wrapper .sign-up input[type="text"]:focus, #sign-up-wrapper .profile-image .sign-up input[type="text"]:focus, .name form input[type="text"]:focus, .name #sign-up-wrapper .sign-up input[type="text"]:focus, #sign-up-wrapper .name .sign-up input[type="text"]:focus, .links-settings form input[type="text"]:focus, .links-settings #sign-up-wrapper .sign-up input[type="text"]:focus, #sign-up-wrapper .links-settings .sign-up input[type="text"]:focus, .save-all-changes form input[type="text"]:focus, .save-all-changes #sign-up-wrapper .sign-up input[type="text"]:focus, #sign-up-wrapper .save-all-changes .sign-up input[type="text"]:focus {
   outline: none;
 }
-/* line 30, ../sass/includes/_settings.scss */
+/* line 28, ../sass/includes/_settings.scss */
 .profile-image form input[type="submit"], .profile-image #sign-up-wrapper .sign-up input[type="submit"], #sign-up-wrapper .profile-image .sign-up input[type="submit"], .name form input[type="submit"], .name #sign-up-wrapper .sign-up input[type="submit"], #sign-up-wrapper .name .sign-up input[type="submit"], .links-settings form input[type="submit"], .links-settings #sign-up-wrapper .sign-up input[type="submit"], #sign-up-wrapper .links-settings .sign-up input[type="submit"], .save-all-changes form input[type="submit"], .save-all-changes #sign-up-wrapper .sign-up input[type="submit"], #sign-up-wrapper .save-all-changes .sign-up input[type="submit"] {
   width: 200px;
   display: inline-block;
@@ -804,7 +778,6 @@ body {
   margin: 10px 0;
   box-sizing: border-box;
   background: #222;
-  font-family: "Inconsolata";
   font-size: 14px;
   color: white;
   cursor: pointer;
@@ -814,27 +787,26 @@ body {
   -ms-border-radius: 1px;
   border-radius: 1px;
 }
-/* line 45, ../sass/includes/_settings.scss */
+/* line 42, ../sass/includes/_settings.scss */
 .profile-image form input[type="submit"]::-webkit-input-placeholder, .profile-image #sign-up-wrapper .sign-up input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper .profile-image .sign-up input[type="submit"]::-webkit-input-placeholder, .name form input[type="submit"]::-webkit-input-placeholder, .name #sign-up-wrapper .sign-up input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper .name .sign-up input[type="submit"]::-webkit-input-placeholder, .links-settings form input[type="submit"]::-webkit-input-placeholder, .links-settings #sign-up-wrapper .sign-up input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper .links-settings .sign-up input[type="submit"]::-webkit-input-placeholder, .save-all-changes form input[type="submit"]::-webkit-input-placeholder, .save-all-changes #sign-up-wrapper .sign-up input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper .save-all-changes .sign-up input[type="submit"]::-webkit-input-placeholder {
-  font-family: "Inconsolata";
   font-size: 14px;
   color: #151515;
 }
-/* line 51, ../sass/includes/_settings.scss */
+/* line 47, ../sass/includes/_settings.scss */
 .profile-image form input[type="submit"]:focus, .profile-image #sign-up-wrapper .sign-up input[type="submit"]:focus, #sign-up-wrapper .profile-image .sign-up input[type="submit"]:focus, .name form input[type="submit"]:focus, .name #sign-up-wrapper .sign-up input[type="submit"]:focus, #sign-up-wrapper .name .sign-up input[type="submit"]:focus, .links-settings form input[type="submit"]:focus, .links-settings #sign-up-wrapper .sign-up input[type="submit"]:focus, #sign-up-wrapper .links-settings .sign-up input[type="submit"]:focus, .save-all-changes form input[type="submit"]:focus, .save-all-changes #sign-up-wrapper .sign-up input[type="submit"]:focus, #sign-up-wrapper .save-all-changes .sign-up input[type="submit"]:focus {
   outline: none;
 }
 
-/* line 58, ../sass/includes/_settings.scss */
+/* line 54, ../sass/includes/_settings.scss */
 .image-settings {
   margin-top: 30px;
 }
-/* line 61, ../sass/includes/_settings.scss */
+/* line 57, ../sass/includes/_settings.scss */
 .image-settings .profile-image {
   position: relative;
   overflow: hidden;
 }
-/* line 67, ../sass/includes/_settings.scss */
+/* line 63, ../sass/includes/_settings.scss */
 .image-settings .profile-image form input[type="file"], .image-settings .profile-image #sign-up-wrapper .sign-up input[type="file"], #sign-up-wrapper .image-settings .profile-image .sign-up input[type="file"] {
   color: transparent;
   text-align: center;
@@ -852,29 +824,28 @@ body {
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
-/* line 80, ../sass/includes/_settings.scss */
+/* line 76, ../sass/includes/_settings.scss */
 .image-settings .profile-image form input[type="file"]:focus, .image-settings .profile-image #sign-up-wrapper .sign-up input[type="file"]:focus, #sign-up-wrapper .image-settings .profile-image .sign-up input[type="file"]:focus {
   padding: 0;
   margin: 0;
 }
-/* line 87, ../sass/includes/_settings.scss */
+/* line 83, ../sass/includes/_settings.scss */
 .image-settings .profile-image:hover input[type="file"] {
   top: 59%;
 }
 
-/* line 93, ../sass/includes/_settings.scss */
+/* line 89, ../sass/includes/_settings.scss */
 .name {
   margin-top: 20px;
 }
 
-/* line 102, ../sass/includes/_settings.scss */
+/* line 98, ../sass/includes/_settings.scss */
 .links-settings form input[type="text"]:nth-child(2), .links-settings #sign-up-wrapper .sign-up input[type="text"]:nth-child(2), #sign-up-wrapper .links-settings .sign-up input[type="text"]:nth-child(2) {
   margin: 0 10px;
 }
 
-/* line 108, ../sass/includes/_settings.scss */
+/* line 104, ../sass/includes/_settings.scss */
 p {
-  font-family: "Inconsolata";
   font-size: 14px;
   color: white;
   display: inline-block;
@@ -887,4 +858,19 @@ p {
   -moz-border-radius: 1px;
   -ms-border-radius: 1px;
   border-radius: 1px;
+}
+
+/* line 1, ../sass/includes/_base.scss */
+* {
+  font-family: "Inconsolata";
+}
+
+/* line 5, ../sass/includes/_base.scss */
+body {
+  margin: 0;
+  font-family: "Inconsolata";
+  height: 100%;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

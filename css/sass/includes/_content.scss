@@ -36,7 +36,6 @@
           color: $accent-color;
           background: white;
           font-size: $mediam-font-size;
-          font-family: $base-font-family;
           text-transform: lowercase;
           padding: $small-button;
           @include border-radius(1px);
@@ -65,7 +64,6 @@
             line-height: 14.5;
             color: white;
             text-decoration: none;
-            font-family: $base-font-family;
             font-size: $base-font-size;
             background: $accent-color;
             @include border-radius(1.8px);
@@ -80,7 +78,6 @@
 
       .explore {
         a {
-          font-family: $base-font-family;
           text-decoration: none;
           margin-right: 5px;
           padding: $small-button;
