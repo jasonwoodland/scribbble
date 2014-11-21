@@ -70,11 +70,8 @@ header {
           font-size: $mediam-font-size;
         }
 
-        #like-scribe {
-
-          .active {
-            color: #ea052c;
-          }
+        #like-scribe.active {
+          color: #ea052c;
         }
       }
         .counter {
