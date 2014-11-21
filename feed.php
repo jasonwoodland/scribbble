@@ -45,6 +45,7 @@
 
 						<div class="scrib-pop">
 							<a class="view-scrib" href="/scribe/<?=$scribe->id?>">view</a>
+							<a class="created-by" href="#">jasonwoodland</a>
 						</div>
 					</div>
 				<?php } ?>
