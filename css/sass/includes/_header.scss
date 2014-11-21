@@ -70,6 +70,13 @@ header {
         i {
           font-size: $mediam-font-size;
         }
+
+        #like-scribe {
+
+          .active {
+            color: #ea052c;
+          }
+        }
       }
         .counter {
           float: left;
