@@ -89,8 +89,8 @@ $(window).ready(function() {
 		});
 	});
 
-	$('#like-scribe').click(function() {
-		$(this).off('click');
+	$('#like-scribe:not(.active)').click(function() {
+		$(this).addClass('active');
 		likes = $('span.counter span');
 		likes.html(parseInt(likes.html()) + 1);
 		$.post('/api/scribe-like', {

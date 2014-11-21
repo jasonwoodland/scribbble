@@ -1,9 +1,13 @@
 <?php
+	require 'resources/controller.php';
 	$id = intval(substr($_SERVER['PATH_INFO'], 1));
-
 	define('ROLE', 'editor');
 	define('TITLE', '');
-	define('HTML_HEADER', 'editor-html-header.php');
+	$owner = scribe::owner($id);
+	if(null == $owner || $owner == USER_ID) 
+		define('HTML_HEADER', 'editor-html-header.php');
+	else
+		define('HTML_HEADER', 'visitor-editor-html-header.php');
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
 

@@ -33,6 +33,7 @@
 		}
 		
 		public static function likes($id) {
+			if(!$id) return false;
 			global $db;
 			$stmt = $db->prepare('SELECT COUNT(*) FROM likes WHERE scribe = ?');
 			$stmt->execute([$id]);
@@ -54,9 +55,17 @@
 		public static function liked($id) {
 			global $db;
 			$stmt = $db->prepare('SELECT COUNT(*) FROM likes WHERE scribe = ? AND user = ?');
-			$stmt->execute([$id,
+			$stmt->execute([
+				$id,
 				USER_ID
 			]);
+			return $stmt->fetch()[0];
+		}
+
+		public static function owner($id) {
+			global $db;
+			$stmt = $db->prepare('SELECT owner FROM scribes WHERE id = ?');
+			$stmt->execute([$id]);
 			return $stmt->fetch()[0];
 		}
 	}
