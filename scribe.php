@@ -7,10 +7,12 @@
 	
 	$owner = scribe::owner($id);
 
-	if($owner == USER_ID || $owner == NULL) 
-		define('HTML_HEADER', 'editor-html-header.php');
+	if(!$id)
+		define('HTML_HEADER', 'new-scribe-html-header.php');
+	else if($owner == USER_ID || $owner == NULL) 
+		define('HTML_HEADER', 'scribe-html-header.php');
 	else
-		define('HTML_HEADER', 'visitor-editor-html-header.php');
+		define('HTML_HEADER', 'view-scribe-html-header.php');
 
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
