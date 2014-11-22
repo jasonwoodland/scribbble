@@ -9,7 +9,7 @@
 <div id="sign-up-wrapper">
 
 	<div class="login-logo">
-		<a href="trendy.php">scribbble.io</a>
+		<a href="/">scribbble.io</a>
 	</div>
 	
 	<form class="sign-up"> 
@@ -19,6 +19,6 @@
 		<input type="submit" value="sign up">
 	</form>
 	
-	<a class="sign-option" href="sign-in.php">already have an account?</a>
+	<a class="sign-option" href="sign-in">already have an account?</a>
 
 </div>

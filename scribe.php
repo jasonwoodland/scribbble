@@ -2,15 +2,14 @@
 	require 'resources/controller.php';
 	$id = intval(substr($_SERVER['PATH_INFO'], 1));
 	define('ROLE', 'editor');
+	define('NO_HTML_FOOTER', TRUE);
 	define('TITLE', '');
 	
 	$owner = scribe::owner($id);
 
-	if(USER_ID == NULL)
-		define('HTML_HEADER', 'guest-html-header.php');
-	else if($owner == USER_ID) 
+	if($owner == USER_ID || $owner == NULL) 
 		define('HTML_HEADER', 'editor-html-header.php');
-	else 
+	else
 		define('HTML_HEADER', 'visitor-editor-html-header.php');
 
 	define('NO_HTML_FOOTER', TRUE);

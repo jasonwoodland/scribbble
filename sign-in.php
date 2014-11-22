@@ -2,12 +2,13 @@
 	define('ROLE', 'sign-in');
 	define('TITLE', 'Sign in');
 	define('NO_HTML_HEADER', TRUE);
+	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
 ?>
 <div id="sign-in-wrapper">
 
 	<div class="login-logo">
-		<a href="trendy.php">scribbble.io</a>
+		<a href="trendy">scribbble.io</a>
 	</div>
 
 	<div class="hidden passed">
@@ -31,6 +32,6 @@
 		<input type="submit" value="sign in">
 	</form>
 
-	<a class="sign-option" href="sign-up.php">need an account?</a>
+	<a class="sign-option" href="sign-up">need an account?</a>
 
 </div>
