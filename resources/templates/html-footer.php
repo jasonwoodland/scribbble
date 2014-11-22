@@ -7,7 +7,7 @@
 				<div class="row">
 					<div class="column12">
 						<div class="copyright-float">
-							<a href="#">about</a>|
+							<a href="/about">about</a>|
 							<p class="copyright">&copy; scribbble.io 2014. all rights reserved.</p>
 						</div>
 
