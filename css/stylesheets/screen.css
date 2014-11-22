@@ -228,6 +228,11 @@ header {
       background: #F3F2F2;
       color: #151515; }
 
+footer {
+  background: #151515;
+  padding: 10px;
+  width: 100% !important; }
+
 #sign-in-wrapper, #sign-up-wrapper, #forgot-password-wrapper {
   width: 200px;
   height: 260px;

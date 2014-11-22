@@ -9,7 +9,7 @@
 <div id="sign-up-wrapper">
 
 	<div class="login-logo">
-		<a href="feed.php">scribbble.io</a>
+		<a href="trendy.php">scribbble.io</a>
 	</div>
 	
 	<form class="sign-up"> 

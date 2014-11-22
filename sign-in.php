@@ -7,7 +7,7 @@
 <div id="sign-in-wrapper">
 
 	<div class="login-logo">
-		<a href="feed.php">scribbble.io</a>
+		<a href="trendy.php">scribbble.io</a>
 	</div>
 
 	<div class="hidden passed">
