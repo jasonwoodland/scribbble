@@ -35,7 +35,13 @@
 			$stmt = $db->prepare("SELECT id FROM users WHERE $field = ? LIMIT 1");
 			$stmt->execute([$value]);
 			return $stmt->fetch()[0];
-			
+		}
+
+		public static function username($id) {
+			global $db;
+			$stmt = $db->prepare("SELECT username FROM users WHERE id = ? LIMIT 1");
+			$stmt->execute([$id]);
+			return $stmt->fetch()[0];
 		}
 
 		public function newVerificationCode() {

@@ -85,7 +85,7 @@ $(window).ready(function() {
 		$.post('/api/scribe-delete', {
 			id: window.id
 		}, function() {
-			window.location = '/profile';
+			window.location = '/' + window.username;
 		});
 	});
 

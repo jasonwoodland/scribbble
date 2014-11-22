@@ -22,7 +22,10 @@
 		<script src="/js/codemirror/mode/xml/xml.js"></script>
 		<script src="/js/codemirror/mode/css/css.js"></script>
 		<script src="/js/codemirror/mode/javascript/javascript.js"></script>
-
+		<script>
+			window.id = "<?=USER_ID?>";
+			window.username = "<?=USERNAME?>";
+		</script>
 		<?=defined('ROLE') ? sprintf('<script src="/js/%s.js"></script>', ROLE) : null?>
 	</head>
 	<body>

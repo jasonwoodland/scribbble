@@ -26,7 +26,7 @@
 		<div class="row">
 			<?php
 				$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-				$stmt = $db->prepare('SELECT id, html, css, js FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7 ORDER BY (SELECT COUNT(*) FROM likes WHERE scribe = scribe.id) DESC LIMIT ?,8');
+				$stmt = $db->prepare('SELECT * FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7 ORDER BY (SELECT COUNT(*) FROM likes WHERE scribe = scribe.id) DESC LIMIT ?,8');
 				$stmt->execute([($pageNo - 1) * 8]);
 				$scribes = $stmt->fetchAll(PDO::FETCH_OBJ);
 				foreach($scribes as $scribe) {
@@ -45,9 +45,23 @@
 
 						<div class="scrib-pop">
 							<a class="view-scrib" href="/scribe/<?=$scribe->id?>">view</a>
-							<a class="created-by" href="#">jasonwoodland</a>
+							<a class="created-by" href="/<?=user::username($scribe->owner)?>"><?=user::username($scribe->owner)?></a>
 						</div>
 					</div>
 				<?php } ?>
+
+		</div>
+
+		<div class="arrows">
+			<?php
+				if($pageNo != 1) { ?>
+					<a href="<?=($pageNo == 2 ? '.' : $URIPrefix . ($pageNo - 1))?>"><i class="ion-ios7-arrow-left"></i></a>
+				<?php }
+				$stmt = $db->prepare('SELECT COUNT(*) FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7 ORDER BY (SELECT COUNT(*) FROM likes WHERE scribe = scribe.id)');
+				$stmt->execute();
+				if($stmt->fetchColumn() > $pageNo * 8) { ?>
+					<a href="/trendy/<?=($pageNo + 1)?>"><i class="ion-ios7-arrow-right"></i></a>
+				<?php }
+			?>
 		</div>
 </div>

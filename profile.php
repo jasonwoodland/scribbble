@@ -3,18 +3,24 @@
  	define('TITLE', 'Profile');
 	require 'resources/controller.php';
 
+	$username = explode('/', $_SERVER['REQUEST_URI'])[1];
+	$id = user::find('username', $username);
+
+	if(!$id) {
+	   	require '404.php';
+		exit;
+	}
+
+	$pageNo = intval(array_pop(explode('/', $_SERVER['PATH_INFO'])));
+	if(!$pageNo) {
+		$pageNo = 1;
+	}
+
 	$stmt = $db->prepare('SELECT count(*) FROM scribes WHERE owner = ?');
-	$stmt->execute([USER_ID]);
+	$stmt->execute([$id]);
 	$scribeCount = $stmt->fetchColumn();
 	$followingCount = 0;
 	$followersCount = 0;
-
-
-	$pageNo = intval(substr($_SERVER['PATH_INFO'], 1));
-	if(!$pageNo) {
-		$URIPrefix = $_SERVER['REQUEST_URI'] . '/';
-		$pageNo = 1;
-	}
 ?>
 
 <div id="content-wrapper">
@@ -34,7 +40,7 @@
 
 		<div class="row">
 			<div class="column12">
-				<a class="username" href="#"><?=USERNAME?></a>
+				<a class="username" href="#"><?=$username?></a>
 				<a class="pro" href="#">pro</a>
 				<a class="follow" href="">follow</a>
 			</div>
@@ -66,7 +72,7 @@
 			<?php
 				$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 				$stmt = $db->prepare('SELECT id, html, css, js FROM scribes WHERE owner = ? ORDER BY id DESC LIMIT ?,8');
-				$stmt->execute([USER_ID, ($pageNo - 1) * 8]);
+				$stmt->execute([$id, ($pageNo - 1) * 8]);
 				$scribes = $stmt->fetchAll(PDO::FETCH_OBJ);
 				foreach($scribes as $scribe) {
 					$page = '<!DOCTYPE html><html><head>';
@@ -90,8 +96,16 @@
 		</div>
 
 		<div class="arrows">
-			<a href="<?=($pageNo == 2 ? '.' : $URIPrefix . ($pageNo - 1))?>"><i class="ion-ios7-arrow-left"></i></a>
-			<a href="<?=$URIPrefix . ($pageNo + 1)?>"><i class="ion-ios7-arrow-right"></i></a>
+			<?php
+				if($pageNo != 1) { ?>
+					<a href="<?=($pageNo == 2 ? "/$username": "/$username/" . ($pageNo - 1))?>"><i class="ion-ios7-arrow-left"></i></a>
+				<?php }
+				$stmt = $db->prepare('SELECT COUNT(*) FROM scribes WHERE owner = ?');
+				$stmt->execute([$id]);
+				if($stmt->fetchColumn() > $pageNo * 8) { ?>
+					<a href="<?="/$username/" . ($pageNo + 1)?>"><i class="ion-ios7-arrow-right"></i></a>
+				<?php }
+			?>
 		</div>
 	</div>
 
