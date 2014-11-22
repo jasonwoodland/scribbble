@@ -26,7 +26,7 @@
 		<div class="row">
 			<?php
 				$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-				$stmt = $db->prepare('SELECT * FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7 ORDER BY (SELECT COUNT(*) FROM likes WHERE scribe = scribe.id) DESC LIMIT ?,8');
+				$stmt = $db->prepare('SELECT * FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7 ORDER BY (SELECT COUNT(*) FROM likes WHERE scribe = scribe.id) DESC, id DESC LIMIT ?,8');
 				$stmt->execute([($pageNo - 1) * 8]);
 				$scribes = $stmt->fetchAll(PDO::FETCH_OBJ);
 				foreach($scribes as $scribe) {
