@@ -136,7 +136,11 @@ header {
             margin-left: 8px;
           }
 
-       } 
+       }
+
+      .sign-up {
+        @extend .username;
+      }
 
         .notification {
           margin: 0;

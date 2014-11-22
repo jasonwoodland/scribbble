@@ -35,10 +35,14 @@
           padding: 0px 0 0px 7px;
           color: $accent-color;
           background: white;
-          font-size: $mediam-font-size;
+          font-size: $small-font-size;
           text-transform: lowercase;
           padding: $small-button;
           @include border-radius(1px);
+
+          &:hover {
+            background: $chalk;
+          }
         }
 
         .scrib-pop {
@@ -72,7 +76,7 @@
         }
 
         &:hover .scrib-pop {
-          opacity: .8;
+          opacity: .9;
         }
       }
 
