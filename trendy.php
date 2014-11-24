@@ -1,6 +1,6 @@
 <?php
 	define('ROLE', 'feed');
-	define('TITLE', 'Feed');
+	define('TITLE', 'trendy');
 	require 'resources/controller.php';
 
 	$pageNo = intval(substr($_SERVER['PATH_INFO'], 1));
@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="column12 explore">
 				<a class="active" href="#">trendy</a>
-				<a href="#">feed</a>
+				<a href="/recent">recent</a>
 			</div>
 		</div>
 	</div>

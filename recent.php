@@ -1,6 +1,6 @@
 <?php
 	define('ROLE', 'feed');
-	define('TITLE', 'trendy');
+	define('TITLE', 'recent');
 	require 'resources/controller.php';
 
 	$pageNo = intval(substr($_SERVER['PATH_INFO'], 1));
@@ -15,8 +15,8 @@
 	<div class="container12">
 		<div class="row">
 			<div class="column12 explore">
-				<a class="active" href="#">trendy</a>
-				<a href="/recent">recent</a>
+				<a href="/">trendy</a>
+				<a class="active" href="#">recent</a>
 			</div>
 		</div>
 	</div>
@@ -26,7 +26,7 @@
 		<div class="row">
 			<?php
 				$db->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-				$stmt = $db->prepare('SELECT * FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7 ORDER BY (SELECT COUNT(*) FROM likes WHERE scribe = scribe.id) DESC, id DESC LIMIT ?,8');
+				$stmt = $db->prepare('SELECT * FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7 ORDER BY id DESC LIMIT ?,8');
 				$stmt->execute([($pageNo - 1) * 8]);
 				$scribes = $stmt->fetchAll(PDO::FETCH_OBJ);
 				foreach($scribes as $scribe) {
@@ -57,10 +57,10 @@
 				if($pageNo != 1) { ?>
 					<a href="<?=($pageNo == 2 ? '/' : $URIPrefix . ($pageNo - 1))?>"><i class="ion-ios7-arrow-left"></i></a>
 				<?php }
-				$stmt = $db->prepare('SELECT COUNT(*) FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7 ORDER BY (SELECT COUNT(*) FROM likes WHERE scribe = scribe.id)');
+				$stmt = $db->prepare('SELECT COUNT(*) FROM scribes scribe WHERE DATEDIFF(CURDATE(), time_created) < 7');
 				$stmt->execute();
 				if($stmt->fetchColumn() > $pageNo * 8) { ?>
-					<a href="/trendy/<?=($pageNo + 1)?>"><i class="ion-ios7-arrow-right"></i></a>
+					<a href="/recent/<?=($pageNo + 1)?>"><i class="ion-ios7-arrow-right"></i></a>
 				<?php }
 			?>
 		</div>

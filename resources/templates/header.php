@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title><?=TITLE?><?=TITLE ? ' - ' : ''?>Scribbble</title>
+		<title><?=TITLE?><?=TITLE ? ' - ' : ''?>scribbble</title>
 		<!-- meta tags -->
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">

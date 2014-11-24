@@ -1,7 +1,9 @@
-		<div class="moto">
-			<h3>scribe the future of the web.</h3>
-		</div>
-
+		<style>
+			.sink {
+				position: fixed;
+				bottom: 0;
+			}
+		</style>
 		<footer>
 			<div class="container12">
 				<div class="row">
