@@ -5,6 +5,7 @@
 			}
 		</style>
 		<footer>
+			<div id="moto"><h3>scribe the web of the future</h3></div>
 			<div class="container12">
 				<div class="row">
 					<div class="column12">

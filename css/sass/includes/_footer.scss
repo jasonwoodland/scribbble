@@ -1,6 +1,5 @@
 footer {
 	background: #151515;
-	padding: 30px 0;
 	width: 100%;
 	font-size: $base-font-size;	
 
@@ -12,13 +11,14 @@ footer {
 			.copyright-float {
 				color: $chalk;
 				float: left;
+				padding: 20px 0;
 
 				.copyright {
 					text-align: left;
 					display: block;
 					background: none;
 					border: none;
-					padding: 20px 0;
+					padding: 30px 0;
 					display: inline-block;
 				}
 
@@ -37,7 +37,7 @@ footer {
 
 			.connect {
 				float: right;
-				padding: 20px 0;
+				padding: 50px 0;
 				color: $chalk;
 
 				a {
@@ -59,11 +59,10 @@ footer {
 	}
 }
 
-.moto {
+#moto {
 	width: 100%;
 	padding: 50px 0;
 	background: $chalk;
-	margin-top: 50px;
 
 	h3 {
 		text-align: center;
