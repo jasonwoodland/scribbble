@@ -17,6 +17,12 @@
 		<li><a href="#" class="notification"><span><i class="ion-ios7-bell"></i></span></a></li>
 		<li>
 			<a class="username" href="/<?=USERNAME?>"><?=USERNAME?><i class="ion-ios7-arrow-down"></i></a>
+
+			<ul class="dropdown">
+				<li><a href="#">profile</a></li>
+				<li><a href="#">settings</a></li>
+				<li><a href="../../sign-out">sign out</a></li>
+			</ul>
 	 	</li>
 	 </ul> 
 

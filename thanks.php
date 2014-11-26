@@ -1,6 +1,6 @@
 <?php
 	define('ROLE', 'verify-account-notification');
-	define('TITLE', 'Thank you');
+	define('TITLE', 'thank you');
 	define('NO_HTML_HEADER', TRUE);
 	require 'resources/controller.php';
 ?>

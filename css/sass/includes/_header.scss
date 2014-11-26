@@ -116,6 +116,37 @@ header {
           margin-left: 10px !important;
         }
 
+        .dropdown {
+          position: absolute;
+          right: 0;
+          top: 35px;
+          margin: 0;
+          padding: 0;
+          background: $chalk;
+
+          padding: $small-button;
+          @include border-radius(1px);
+
+          li {
+            display: block;
+            margin: 8px 10px;
+            text-align: center;
+
+
+            a {
+              text-decoration: none;
+              color: $chalk-dark-text;
+              font-size: $base-font-size;
+              display: block;
+
+              &:hover {
+                text-decoration: underline;
+                color: $accent-color;
+              }
+            }
+          }
+        }
+
         .username {
           background: $chalk;
           padding: $small-button;

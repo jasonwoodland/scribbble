@@ -1,6 +1,6 @@
 <?php
 	define('ROLE', 'sign-up');
-	define('TITLE', 'Sign up');
+	define('TITLE', 'sign up');
 	define('NO_HTML_HEADER', TRUE);
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
