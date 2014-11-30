@@ -1,0 +1,133 @@
+#sign-in-wrapper {
+	width: 200px;
+	height: 260px;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	.login-logo {
+
+		a {
+			display: block;
+			text-align: center;
+			text-decoration: none;
+			font-size: $base-font-size;
+			color: $accent-color;
+			margin-bottom: 20px;
+		}
+	}
+}
+
+#sign-up-wrapper {
+	@extend #sign-in-wrapper;
+	height: 285px;
+
+	.sign-up {
+		@extend form;
+	}
+}
+
+#forgot-password-wrapper {
+	@extend #sign-in-wrapper;
+	height: 180px;
+}
+
+#sign-up-wrapper, #sign-in-wrapper, #forgot-password-wrapper {
+
+	.sign-option {
+		text-decoration: none;
+		font-size: $mediam-font-size;
+		color: $accent-color;
+		text-align: center;
+		display: block;
+		margin: 15px 0;
+		padding: 10px;
+	}
+
+	input {
+		background-color: $chalk;
+		font-size: $mediam-font-size;
+		-webkit-appearance: none;
+		appearance: none;
+		border: none;
+		@include border-radius(2px);
+	}
+
+	input[type="text"], input[type="password"], input[type="submit"], input[type="email"] {
+		display: block;
+		padding: 15px;
+		border: none;
+		width: 100%;
+		margin: 10px 0;
+		box-sizing: border-box;
+		-webkit-appearance: none;
+		appearance: none;
+
+		&::-webkit-input-placeholder {
+			font-size: $mediam-font-size;
+			color: $chalk-dark-text;
+		}
+		
+		&:focus {
+			outline: none;
+		}
+	}
+
+	input[type="text"], input[type="password"] {
+		color: $chalk-dark-text;
+	}
+
+	input[type="submit"] {
+		cursor: pointer;
+		background: $secondary-accent;
+		color: white;
+	}
+
+	label {
+		cursor: pointer;
+		font-size: $mediam-font-size;
+
+		input[type="checkbox"] {
+			display: none;
+			
+			+ .label-text:before {
+				content: "\f0c8";
+				font-family: "FontAwesome";
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				width: 1em;
+				display: inline-block;
+				margin-right: 5px;
+				color: $chalk-dark;
+			}
+
+			&:checked + .label-text:before {
+				content: "\f14a";
+				color: $secondary-accent;
+				@include transition(all, .25s, ease);
+			}
+
+			.label-text {
+				position: absolute;
+				top: 10px;
+			}
+		}
+	}
+
+	.failed {
+		font-size: $mediam-font-size;
+		text-decoration: line-through;
+		display: block;
+	}
+
+	.hidden {
+		display: none;
+	}
+}

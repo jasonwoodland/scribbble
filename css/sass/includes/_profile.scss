@@ -1,0 +1,105 @@
+#content-wrapper {
+
+	.container12 {
+
+		.arrows {
+			text-align: center;
+			margin-bottom: 40px;
+
+			a {
+				padding: 10px 14px;
+				color: $chalk-dark-text;
+				background: $chalk;
+				@include border-radius(100%);
+				font-size: $small-font-size;
+				display: inline-block;
+				margin: 3px;
+
+				i {
+					vertical-align: middle;
+				}
+			}
+		}
+
+
+		.row {
+
+
+			.column12 {
+				text-align: center;
+
+				.profile-image {
+					display: inline-block;
+					width: 100px;
+					height: 100px;
+					background: $chalk;
+					@include border-radius(100%);
+
+					img {
+						@include border-radius(100%);
+					}
+				}
+
+				.username {
+					color: $accent-color;
+					text-decoration: none;
+					font-size: $base-font-size;
+				}
+
+				.follow {
+					@extend .username;
+					margin-left: 10px;
+					padding: $small-button;
+					@include border-radius(1px);
+					background: $accent-color;
+					color: white;
+					display: none;
+				}
+
+				.follow-on-click {
+					@extend .follow;
+					background: $secondary-accent;
+				}
+
+				.pro {
+					display: none;
+					@extend .username;
+					padding: $small-button;
+					color: $secondary-accent-dark;
+					text-transform: uppercase;
+					letter-spacing: 1px;
+				}
+
+				.user-info {
+					margin: 0 10px;
+					display: inline-block;
+
+					a {
+						@extend .username;
+						font-size: $mediam-font-size;
+						color: $chalk-dark-text;
+					}
+
+					.user-info-number {
+						color: $secondary-accent-dark;
+						font-size: $large-font-size;
+					}
+				}
+
+				.bio {
+					width: 30%;
+					margin: 0 auto;
+
+					a {
+						@extend .username;
+						font-size: $base-font-size;
+					}
+				}
+			}
+		}
+	}
+
+	.profile-container {
+		margin-top: 30px;
+	}
+}

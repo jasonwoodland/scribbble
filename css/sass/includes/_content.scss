@@ -1,0 +1,99 @@
+#content-wrapper {
+  width: 95%;
+  margin: 0 auto;
+
+  .container12 {
+    margin-top: 15px;
+
+    .row {
+
+      .column3, .column4 {
+        height: 220px;
+        position: relative;
+        background: $chalk;
+        margin-bottom: 20px;
+        @include border-radius(2px);
+        overflow: hidden;
+
+        iframe {
+          -webkit-transform: scale(.5,.5) translate(-265px,-220px);
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 530px;
+          height: 440px;
+          opacity: 1;
+          overflow: hidden;
+        }
+
+        .created-by {
+          display: block;
+          text-decoration: none;
+          position: absolute;
+          bottom: 0;
+          margin: 10px;
+          padding: 0px 0 0px 7px;
+          color: $accent-color;
+          background: white;
+          font-size: $small-font-size;
+          text-transform: lowercase;
+          padding: $small-button;
+          @include border-radius(1px);
+
+          &:hover {
+            background: $chalk;
+          }
+        }
+
+        .scrib-pop {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          opacity: 0;
+          @include transition(all, .17s, ease);
+          text-align: center;
+          overflow: hidden;
+          @include border-radius(1px);
+
+          .view-scrib {
+            position: absolute;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            line-height: 14.5;
+            color: white;
+            text-decoration: none;
+            font-size: $base-font-size;
+            background: $accent-color;
+            @include border-radius(1.8px);
+            text-align: center;
+          }
+        }
+
+        &:hover .scrib-pop {
+          opacity: .9;
+        }
+      }
+
+      .explore {
+        a {
+          text-decoration: none;
+          margin-right: 5px;
+          padding: $small-button;
+          color: $chalk-dark-text;
+          font-size: $base-font-size;
+        }
+
+        .active {
+          background: $chalk;
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}

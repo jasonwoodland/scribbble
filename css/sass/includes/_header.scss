@@ -1,0 +1,181 @@
+header {
+  padding: 20px 0;
+  clear: both;
+  width: 100%;
+  display: inline-block; 
+  vertical-align: bottom;
+
+  #header-wrapper {
+    width: 95%;
+    margin: 0 auto;
+
+    .intro {
+      float: left;
+
+      .logo, .new-scrib {
+        float: left;
+
+        a {
+          font-size: $base-font-size;
+          text-decoration: none;
+          color: $accent-color;
+          display: inline-block;
+          padding: $small-button;
+        }
+
+        span {
+          font-size: 10px;
+        }
+
+        .logo-anchor {
+          padding: 7px 0;
+        }
+      }
+
+      .new-scrib {
+        margin-left: 20px;
+        
+        a {
+          color: white;
+          @include border-radius(1px);;
+          background: $green;
+          margin-right: 5px;
+          padding: $small-button;
+          text-align: center;
+        }
+      }
+
+      .scribe-options {
+        float: left;
+        padding: 0;
+
+        a {
+          color: #ccc;
+          padding: 8px 16px;
+          float: left;
+          font-size: $base-font-size;
+          text-decoration: none;
+
+          &:hover {
+            color: #f0506b;
+          }
+
+          &:active {
+            color: #ea052c;
+          }
+
+        }
+
+        i {
+          font-size: $mediam-font-size;
+        }
+
+        #like-scribe.active {
+          color: #ea052c;
+        }
+      }
+        .counter {
+          float: left;
+          text-decoration: none;
+          background: $chalk;
+          padding: $small-button;
+          @include border-radius(1px);
+          color: $chalk-dark-text;
+          position: relative;
+          margin-left: 3px;
+          font-size: $base-font-size;
+
+          &:hover {
+            color: $chalk-dark-text
+          }
+
+          .triangle-left {
+            position: absolute;
+            left: -5px;
+            top: 10px;
+            width: 0; 
+            height: 0; 
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            border-right: 5px solid $chalk;
+            transition: all .15s;
+          }
+        }
+    }
+    
+
+    .user {
+      float: right;
+      display: inline-block;
+      position: relative;
+
+      li {
+        display: inline-block;
+        
+        .ion-ios7-arrow-down {
+          margin-left: 10px !important;
+        }
+
+        .username {
+          background: $chalk;
+          padding: $small-button;
+          margin-left: 10px;
+          float: right;
+          @include transition(all, .2s, ease);
+          color: $chalk-dark-text !important;
+
+          
+          
+          &:hover {
+            background: $chalk-dark;
+            color: $accent-color;
+          }
+
+          .ion-ios7-arrow-down {
+            font-size: $small-font-size;
+            margin-left: 8px;
+          }
+
+       }
+
+      .sign-up {
+        @extend .username;
+      }
+
+        .notification {
+          margin: 0;
+          display: none;
+
+          span {
+            padding: $small-button;
+            font-size: $base-font-size;
+            display: inline-block;
+            float: right;
+            @include border-radius(1px);
+            color: $secondary-accent-dark;
+            @include transition(all, .2s, ease);
+
+            i {
+              font-size: $base-font-size;
+            }
+          }
+        }
+
+        .header-options {
+
+          span {
+            color: $chalk-dark-text;
+          }
+        }
+      }
+
+      .notification, .username, .header-options {
+        text-decoration: none;
+        font-size: $base-font-size;
+        color: $accent-color;
+        display: inline-block;
+        @include border-radius(1px);
+      }
+    }
+  }
+}

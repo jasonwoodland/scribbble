@@ -1,0 +1,6 @@
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^\.]+)$ $1.php [NC]
+RewriteCond %{REQUEST_FILENAME} >""
+RewriteRule ^([^\.]+)$ profile/$1 [L]

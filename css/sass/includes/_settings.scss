@@ -1,0 +1,114 @@
+.profile-image, .name, .links-settings, .save-all-changes {
+	form {
+
+		input[type="text"] {
+			width: 200px;
+			display: inline-block;
+			padding: 15px;
+			margin: 10px 0;
+			box-sizing: border-box;
+			background: $chalk;
+			font-size: $mediam-font-size;
+			color: $accent-color;
+			border: 1px solid $chalk-dark !important;
+			color: $chalk-dark-text;
+			@include border-radius(1px);
+
+
+			&::-webkit-input-placeholder {
+				font-size: $mediam-font-size;
+				color: $accent-color;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+		}
+
+		input[type="submit"] {
+			width: 200px;
+			display: inline-block;
+			padding: 15px;
+			border: none;
+			margin: 10px 0;
+			box-sizing: border-box;
+			background: $secondary-accent;
+			font-size: $mediam-font-size;
+			color: white;
+			cursor: pointer;
+			border: 1px solid $secondary-accent-dark;
+			@include border-radius(1px);
+
+			&::-webkit-input-placeholder {
+				font-size: $mediam-font-size;
+				color: $accent-color;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+		}
+	}
+}
+
+.image-settings {
+	margin-top: 30px;
+
+	.profile-image {
+		position: relative;
+		overflow: hidden;
+
+		form {
+
+			input[type="file"] {
+				color: transparent;
+				text-align: center;
+				position: absolute;
+				left: -1px;
+				top: 100%;
+				margin: 0;
+				background: $accent-color;
+				-webkit-appearance: none;
+				padding: 10px;
+				opacity: .8;
+				@include transition(all, .25s, ease);
+
+				&:focus {
+					padding: 0;
+					margin: 0;
+				}
+			}
+		}
+
+		&:hover input[type="file"] {
+			top: 59%;
+		}
+	}
+}
+
+.name {
+	margin-top: 20px;
+}
+
+.links-settings {
+
+	form {
+
+
+		input[type="text"]:nth-child(2) {
+			margin: 0 10px;
+		}
+	}
+}
+
+p {
+	font-size: $mediam-font-size;
+	color: white;
+	display: inline-block;
+	text-align: center;
+	padding: $small-button;
+	margin: 0;
+	background: $secondary-accent;
+	border: 1px solid $secondary-accent-dark;
+	@include border-radius(1px);
+}
