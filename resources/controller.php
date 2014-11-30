@@ -11,8 +11,13 @@
 		define('PDO_HOST',		'localhost');
 		define('PDO_DBNAME',	'scribbble');
 		define('PDO_DSN',		sprintf('mysql:host=%s;dbname=%s', PDO_HOST, PDO_DBNAME));
+<<<<<<< HEAD
 		define('PDO_USERNAME',	'root');
 		define('PDO_PASSWORD',	'tb');
+=======
+		define('PDO_USERNAME',	'jason');
+		define('PDO_PASSWORD',	'rondo3000');
+>>>>>>> 0.0.2
 		if(!AUTHENTICATED) define('HTML_HEADER', 'guest-html-header.php');
 		$db = new PDO(PDO_DSN, PDO_USERNAME, PDO_PASSWORD);
 		class db {
