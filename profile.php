@@ -1,6 +1,6 @@
 <?php
 	define('ROLE', 'profile');
- 	define('TITLE', 'Profile');
+ 	define('TITLE', 'profile');
 	require 'resources/controller.php';
 
 	$username = explode('/', $_SERVER['REQUEST_URI'])[1];
@@ -36,13 +36,21 @@
 			</div>
 		</div>
 
+
 		<!-- user img -->
 
 		<div class="row">
 			<div class="column12">
 				<a class="username" href="#"><?=$username?></a>
 				<a class="pro" href="#">pro</a>
-				<a class="follow" href="">follow</a>
+			</div>
+		</div>
+		
+		<!-- follow button -->
+
+		<div class="row">
+			<div class="column12">
+				<button class="follow-btn">follow</button>
 			</div>
 		</div>
 
@@ -55,7 +63,7 @@
 				</div>
 				&middot;
 				<div class="following user-info">
-					<a href="#"><span class="user-info-number"><?=$followingCount?></span><br> following</a>
+					<a href="/following"><span class="user-info-number"><?=$followingCount?></span><br> following</a>
 				</div>
 				&middot;
 				<div class="followers user-info">

@@ -1,6 +1,6 @@
 <?php
 	define('ROLE', 'settings');
- 	define('TITLE', 'Settings');
+ 	define('TITLE', 'settings');
 	require 'resources/controller.php';
 ?>
 

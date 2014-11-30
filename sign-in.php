@@ -1,6 +1,6 @@
 <?php
 	define('ROLE', 'sign-in');
-	define('TITLE', 'Sign in');
+	define('TITLE', 'sign in');
 	define('NO_HTML_HEADER', TRUE);
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';

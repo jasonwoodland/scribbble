@@ -1,5 +1,5 @@
 <?php
 	define('ROLE', 'about');
-	define('TITLE', 'About');
+	define('TITLE', 'about');
 	require 'resources/controller.php';
 ?>
