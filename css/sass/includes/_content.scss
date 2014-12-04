@@ -45,6 +45,26 @@
           }
         }
 
+        .scribe-heart-preview {
+          @extend .created-by;
+          right: 0;
+          background: none;
+          border: none;
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+
+          i {
+            color: white;
+          }
+
+          &:hover {
+            background: none;
+          }
+        }
+
         .scrib-pop {
           position: absolute;
           top: 0;

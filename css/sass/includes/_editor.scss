@@ -101,3 +101,119 @@
 ::-webkit-scrollbar-thumb {
     background: $accent-color-light;
 }
+
+#editor-layout .block .editor-info {
+	position: absolute;
+	bottom: 10px;
+	top: auto;
+	color: #fff;
+	background: none;
+	border: 0;
+	opacity: 1;
+}
+
+#editor-layout .block .editor-info:hover {
+	opacity: 1;
+}
+
+.editor-info ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.editor-info ul li {
+	display: inline-block;
+	padding: 0 10px;
+	opacity: .25;
+	transition: all .25s ease;
+}
+
+.editor-info ul li:hover,
+.editor-info ul li.active {
+	opacity: .5;
+}
+
+.editor-info ul:not(.open) li:not(.active) {
+	width: 0 !important;
+	padding: 0;
+	visibility: hidden;
+	opacity: 0;
+}
+
+
+#sandbox, #sandbox-buffer {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+}
+
+#editor-layout {
+	position: relative;
+}
+
+#editor-layout .block {
+	height: auto;
+	border: 0 !important;
+	position: absolute;
+	width: 33.4% !important;
+}
+
+#editor-layout .block .CodeMirror {
+	height: auto;
+}
+
+#html-pane {
+	left: 0 !important;
+}
+
+#css-pane {
+	left: 33.3% !important;
+}
+
+#js-pane {
+	right: 0 !important;
+}
+
+#v-drag {
+	position: absolute;
+	left: 50%;
+	width: 32px;
+	margin-left: -16px;
+	color: #fff;
+	z-index: 100;
+	opacity: .5;
+	height: 20px;
+	line-height: 20px;
+	transition: opacity 250ms ease;
+}
+
+#v-drag:hover,
+#v-drag:active {
+	opacity: 1;
+}
+
+.username-in-editor {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	margin: 10px;
+	display: inline-block;
+
+	a {
+		text-decoration: none;
+		color: $chalk-dark-text;
+		font-size: $base-font-size;
+		display: block;
+		padding: $small-button;
+		background: $chalk;
+		@include border-radius(1px);
+
+		&:hover {
+			color: $accent-color;
+		}
+	}
+}
