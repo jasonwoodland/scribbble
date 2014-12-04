@@ -1,10 +1,6 @@
 		<style>
 			.sink {
-<<<<<<< HEAD
-				position: fixed;
-=======
 				position: absolute;
->>>>>>> 0.0.2
 				bottom: 0;
 			}
 		</style>
