@@ -5,7 +5,14 @@ var
 	windowHeight, 
 	buttonOffset, 
 	headerHeight,
-	settings = {};
+	settings = {
+		html: 'html',
+		css: 'css',
+		js: 'javascript'
+	},
+	html,
+	css,
+	js;
 
 $(window).ready(function() {
 	options = {
@@ -80,12 +87,35 @@ $(window).ready(function() {
 	});
 	   
 	function updateSandbox() {
+		html = htmlPane.getValue();
+		css = cssPane.getValue();
+		js = jsPane.getValue();
+
+		switch(settings.html) {
+			case 'jade':
+				html = jade.compile(html);
+				html = html();
+				break;
+			case 'haml':
+				html = haml.compileHamlToJsString(html);
+		}
+
+		switch(settings.css) {
+			case 'scss':
+				css = Sass.compile(css);
+		}
+
+		switch(settings.js) {
+			case 'coffeescript':
+				html = CoffeeScript.compile(js, {bare: true});
+		}
+
 		page = '<!DOCTYPE html><html><head>';
 		page += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
-		page += '<style>' + cssPane.getValue() + '</style>';
+		page += '<style>' + css + '</style>';
 		page += '</head><body bgcolor="white">';
-		page += htmlPane.getValue();
-		page += '<script>' + jsPane.getValue() + '</script>';
+		page += html;
+		page += '<script>' + js + '</script>';
 		page += '</body></html>';
 		blob = new Blob([page], {type: 'text/html'});
 		url = URL.createObjectURL(blob);
