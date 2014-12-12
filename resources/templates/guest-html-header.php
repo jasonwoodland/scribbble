@@ -8,7 +8,7 @@
 		</div>
 
 		<ul class="user">
-			<li><a href="/sign-up"><span class="sign-up">sign up</span></a></li>
+			<li><a href="/sign-in"><span class="sign-up">sign in</span></a></li>
 		</ul> 
 
    </div>
