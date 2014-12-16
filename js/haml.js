@@ -1,3 +1,1416 @@
+//     Underscore.js 1.1.6
+//     (c) 2011 Jeremy Ashkenas, DocumentCloud Inc.
+//     Underscore is freely distributable under the MIT license.
+//     Portions of Underscore are inspired or borrowed from Prototype,
+//     Oliver Steele's Functional, and John Resig's Micro-Templating.
+//     For all details and documentation:
+//     http://documentcloud.github.com/underscore
+
+(function() {
+
+  // Baseline setup
+  // --------------
+
+  // Establish the root object, `window` in the browser, or `global` on the server.
+  var root = this;
+
+  // Save the previous value of the `_` variable.
+  var previousUnderscore = root._;
+
+  // Establish the object that gets returned to break out of a loop iteration.
+  var breaker = {};
+
+  // Save bytes in the minified (but not gzipped) version:
+  var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
+
+  // Create quick reference variables for speed access to core prototypes.
+  var slice            = ArrayProto.slice,
+      unshift          = ArrayProto.unshift,
+      toString         = ObjProto.toString,
+      hasOwnProperty   = ObjProto.hasOwnProperty;
+
+  // All **ECMAScript 5** native function implementations that we hope to use
+  // are declared here.
+  var
+    nativeForEach      = ArrayProto.forEach,
+    nativeMap          = ArrayProto.map,
+    nativeReduce       = ArrayProto.reduce,
+    nativeReduceRight  = ArrayProto.reduceRight,
+    nativeFilter       = ArrayProto.filter,
+    nativeEvery        = ArrayProto.every,
+    nativeSome         = ArrayProto.some,
+    nativeIndexOf      = ArrayProto.indexOf,
+    nativeLastIndexOf  = ArrayProto.lastIndexOf,
+    nativeIsArray      = Array.isArray,
+    nativeKeys         = Object.keys,
+    nativeBind         = FuncProto.bind;
+
+  // Create a safe reference to the Underscore object for use below.
+  var _ = function(obj) { return new wrapper(obj); };
+
+  // Export the Underscore object for **CommonJS**, with backwards-compatibility
+  // for the old `require()` API. If we're not in CommonJS, add `_` to the
+  // global object.
+  if (typeof module !== 'undefined' && module.exports) {
+    module.exports = _;
+    _._ = _;
+  } else {
+    root._ = _;
+  }
+
+  // Current version.
+  _.VERSION = '1.1.6';
+
+  // Collection Functions
+  // --------------------
+
+  // The cornerstone, an `each` implementation, aka `forEach`.
+  // Handles objects implementing `forEach`, arrays, and raw objects.
+  // Delegates to **ECMAScript 5**'s native `forEach` if available.
+  var each = _.each = _.forEach = function(obj, iterator, context) {
+    if (obj == null) return;
+    if (nativeForEach && obj.forEach === nativeForEach) {
+      obj.forEach(iterator, context);
+    } else if (_.isNumber(obj.length)) {
+      for (var i = 0, l = obj.length; i < l; i++) {
+        if (iterator.call(context, obj[i], i, obj) === breaker) return;
+      }
+    } else {
+      for (var key in obj) {
+        if (hasOwnProperty.call(obj, key)) {
+          if (iterator.call(context, obj[key], key, obj) === breaker) return;
+        }
+      }
+    }
+  };
+
+  // Return the results of applying the iterator to each element.
+  // Delegates to **ECMAScript 5**'s native `map` if available.
+  _.map = function(obj, iterator, context) {
+    var results = [];
+    if (obj == null) return results;
+    if (nativeMap && obj.map === nativeMap) return obj.map(iterator, context);
+    each(obj, function(value, index, list) {
+      results[results.length] = iterator.call(context, value, index, list);
+    });
+    return results;
+  };
+
+  // **Reduce** builds up a single result from a list of values, aka `inject`,
+  // or `foldl`. Delegates to **ECMAScript 5**'s native `reduce` if available.
+  _.reduce = _.foldl = _.inject = function(obj, iterator, memo, context) {
+    var initial = memo !== void 0;
+    if (obj == null) obj = [];
+    if (nativeReduce && obj.reduce === nativeReduce) {
+      if (context) iterator = _.bind(iterator, context);
+      return initial ? obj.reduce(iterator, memo) : obj.reduce(iterator);
+    }
+    each(obj, function(value, index, list) {
+      if (!initial && index === 0) {
+        memo = value;
+        initial = true;
+      } else {
+        memo = iterator.call(context, memo, value, index, list);
+      }
+    });
+    if (!initial) throw new TypeError("Reduce of empty array with no initial value");
+    return memo;
+  };
+
+  // The right-associative version of reduce, also known as `foldr`.
+  // Delegates to **ECMAScript 5**'s native `reduceRight` if available.
+  _.reduceRight = _.foldr = function(obj, iterator, memo, context) {
+    if (obj == null) obj = [];
+    if (nativeReduceRight && obj.reduceRight === nativeReduceRight) {
+      if (context) iterator = _.bind(iterator, context);
+      return memo !== void 0 ? obj.reduceRight(iterator, memo) : obj.reduceRight(iterator);
+    }
+    var reversed = (_.isArray(obj) ? obj.slice() : _.toArray(obj)).reverse();
+    return _.reduce(reversed, iterator, memo, context);
+  };
+
+  // Return the first value which passes a truth test. Aliased as `detect`.
+  _.find = _.detect = function(obj, iterator, context) {
+    var result;
+    any(obj, function(value, index, list) {
+      if (iterator.call(context, value, index, list)) {
+        result = value;
+        return true;
+      }
+    });
+    return result;
+  };
+
+  // Return all the elements that pass a truth test.
+  // Delegates to **ECMAScript 5**'s native `filter` if available.
+  // Aliased as `select`.
+  _.filter = _.select = function(obj, iterator, context) {
+    var results = [];
+    if (obj == null) return results;
+    if (nativeFilter && obj.filter === nativeFilter) return obj.filter(iterator, context);
+    each(obj, function(value, index, list) {
+      if (iterator.call(context, value, index, list)) results[results.length] = value;
+    });
+    return results;
+  };
+
+  // Return all the elements for which a truth test fails.
+  _.reject = function(obj, iterator, context) {
+    var results = [];
+    if (obj == null) return results;
+    each(obj, function(value, index, list) {
+      if (!iterator.call(context, value, index, list)) results[results.length] = value;
+    });
+    return results;
+  };
+
+  // Determine whether all of the elements match a truth test.
+  // Delegates to **ECMAScript 5**'s native `every` if available.
+  // Aliased as `all`.
+  _.every = _.all = function(obj, iterator, context) {
+    var result = true;
+    if (obj == null) return result;
+    if (nativeEvery && obj.every === nativeEvery) return obj.every(iterator, context);
+    each(obj, function(value, index, list) {
+      if (!(result = result && iterator.call(context, value, index, list))) return breaker;
+    });
+    return result;
+  };
+
+  // Determine if at least one element in the object matches a truth test.
+  // Delegates to **ECMAScript 5**'s native `some` if available.
+  // Aliased as `any`.
+  var any = _.some = _.any = function(obj, iterator, context) {
+    iterator || (iterator = _.identity);
+    var result = false;
+    if (obj == null) return result;
+    if (nativeSome && obj.some === nativeSome) return obj.some(iterator, context);
+    each(obj, function(value, index, list) {
+      if (result = iterator.call(context, value, index, list)) return breaker;
+    });
+    return result;
+  };
+
+  // Determine if a given value is included in the array or object using `===`.
+  // Aliased as `contains`.
+  _.include = _.contains = function(obj, target) {
+    var found = false;
+    if (obj == null) return found;
+    if (nativeIndexOf && obj.indexOf === nativeIndexOf) return obj.indexOf(target) != -1;
+    any(obj, function(value) {
+      if (found = value === target) return true;
+    });
+    return found;
+  };
+
+  // Invoke a method (with arguments) on every item in a collection.
+  _.invoke = function(obj, method) {
+    var args = slice.call(arguments, 2);
+    return _.map(obj, function(value) {
+      return (method.call ? method || value : value[method]).apply(value, args);
+    });
+  };
+
+  // Convenience version of a common use case of `map`: fetching a property.
+  _.pluck = function(obj, key) {
+    return _.map(obj, function(value){ return value[key]; });
+  };
+
+  // Return the maximum element or (element-based computation).
+  _.max = function(obj, iterator, context) {
+    if (!iterator && _.isArray(obj)) return Math.max.apply(Math, obj);
+    var result = {computed : -Infinity};
+    each(obj, function(value, index, list) {
+      var computed = iterator ? iterator.call(context, value, index, list) : value;
+      computed >= result.computed && (result = {value : value, computed : computed});
+    });
+    return result.value;
+  };
+
+  // Return the minimum element (or element-based computation).
+  _.min = function(obj, iterator, context) {
+    if (!iterator && _.isArray(obj)) return Math.min.apply(Math, obj);
+    var result = {computed : Infinity};
+    each(obj, function(value, index, list) {
+      var computed = iterator ? iterator.call(context, value, index, list) : value;
+      computed < result.computed && (result = {value : value, computed : computed});
+    });
+    return result.value;
+  };
+
+  // Sort the object's values by a criterion produced by an iterator.
+  _.sortBy = function(obj, iterator, context) {
+    return _.pluck(_.map(obj, function(value, index, list) {
+      return {
+        value : value,
+        criteria : iterator.call(context, value, index, list)
+      };
+    }).sort(function(left, right) {
+      var a = left.criteria, b = right.criteria;
+      return a < b ? -1 : a > b ? 1 : 0;
+    }), 'value');
+  };
+
+  // Use a comparator function to figure out at what index an object should
+  // be inserted so as to maintain order. Uses binary search.
+  _.sortedIndex = function(array, obj, iterator) {
+    iterator || (iterator = _.identity);
+    var low = 0, high = array.length;
+    while (low < high) {
+      var mid = (low + high) >> 1;
+      iterator(array[mid]) < iterator(obj) ? low = mid + 1 : high = mid;
+    }
+    return low;
+  };
+
+  // Safely convert anything iterable into a real, live array.
+  _.toArray = function(iterable) {
+    if (!iterable)                return [];
+    if (iterable.toArray)         return iterable.toArray();
+    if (_.isArray(iterable))      return iterable;
+    if (_.isArguments(iterable))  return slice.call(iterable);
+    return _.values(iterable);
+  };
+
+  // Return the number of elements in an object.
+  _.size = function(obj) {
+    return _.toArray(obj).length;
+  };
+
+  // Array Functions
+  // ---------------
+
+  // Get the first element of an array. Passing **n** will return the first N
+  // values in the array. Aliased as `head`. The **guard** check allows it to work
+  // with `_.map`.
+  _.first = _.head = function(array, n, guard) {
+    return (n != null) && !guard ? slice.call(array, 0, n) : array[0];
+  };
+
+  // Returns everything but the first entry of the array. Aliased as `tail`.
+  // Especially useful on the arguments object. Passing an **index** will return
+  // the rest of the values in the array from that index onward. The **guard**
+  // check allows it to work with `_.map`.
+  _.rest = _.tail = function(array, index, guard) {
+    return slice.call(array, (index == null) || guard ? 1 : index);
+  };
+
+  // Get the last element of an array.
+  _.last = function(array) {
+    return array[array.length - 1];
+  };
+
+  // Trim out all falsy values from an array.
+  _.compact = function(array) {
+    return _.filter(array, function(value){ return !!value; });
+  };
+
+  // Return a completely flattened version of an array.
+  _.flatten = function(array) {
+    return _.reduce(array, function(memo, value) {
+      if (_.isArray(value)) return memo.concat(_.flatten(value));
+      memo[memo.length] = value;
+      return memo;
+    }, []);
+  };
+
+  // Return a version of the array that does not contain the specified value(s).
+  _.without = function(array) {
+    var values = slice.call(arguments, 1);
+    return _.filter(array, function(value){ return !_.include(values, value); });
+  };
+
+  // Produce a duplicate-free version of the array. If the array has already
+  // been sorted, you have the option of using a faster algorithm.
+  // Aliased as `unique`.
+  _.uniq = _.unique = function(array, isSorted) {
+    return _.reduce(array, function(memo, el, i) {
+      if (0 == i || (isSorted === true ? _.last(memo) != el : !_.include(memo, el))) memo[memo.length] = el;
+      return memo;
+    }, []);
+  };
+
+  // Produce an array that contains every item shared between all the
+  // passed-in arrays.
+  _.intersect = function(array) {
+    var rest = slice.call(arguments, 1);
+    return _.filter(_.uniq(array), function(item) {
+      return _.every(rest, function(other) {
+        return _.indexOf(other, item) >= 0;
+      });
+    });
+  };
+
+  // Zip together multiple lists into a single array -- elements that share
+  // an index go together.
+  _.zip = function() {
+    var args = slice.call(arguments);
+    var length = _.max(_.pluck(args, 'length'));
+    var results = new Array(length);
+    for (var i = 0; i < length; i++) results[i] = _.pluck(args, "" + i);
+    return results;
+  };
+
+  // If the browser doesn't supply us with indexOf (I'm looking at you, **MSIE**),
+  // we need this function. Return the position of the first occurrence of an
+  // item in an array, or -1 if the item is not included in the array.
+  // Delegates to **ECMAScript 5**'s native `indexOf` if available.
+  // If the array is large and already in sort order, pass `true`
+  // for **isSorted** to use binary search.
+  _.indexOf = function(array, item, isSorted) {
+    if (array == null) return -1;
+    var i, l;
+    if (isSorted) {
+      i = _.sortedIndex(array, item);
+      return array[i] === item ? i : -1;
+    }
+    if (nativeIndexOf && array.indexOf === nativeIndexOf) return array.indexOf(item);
+    for (i = 0, l = array.length; i < l; i++) if (array[i] === item) return i;
+    return -1;
+  };
+
+
+  // Delegates to **ECMAScript 5**'s native `lastIndexOf` if available.
+  _.lastIndexOf = function(array, item) {
+    if (array == null) return -1;
+    if (nativeLastIndexOf && array.lastIndexOf === nativeLastIndexOf) return array.lastIndexOf(item);
+    var i = array.length;
+    while (i--) if (array[i] === item) return i;
+    return -1;
+  };
+
+  // Generate an integer Array containing an arithmetic progression. A port of
+  // the native Python `range()` function. See
+  // [the Python documentation](http://docs.python.org/library/functions.html#range).
+  _.range = function(start, stop, step) {
+    if (arguments.length <= 1) {
+      stop = start || 0;
+      start = 0;
+    }
+    step = arguments[2] || 1;
+
+    var len = Math.max(Math.ceil((stop - start) / step), 0);
+    var idx = 0;
+    var range = new Array(len);
+
+    while(idx < len) {
+      range[idx++] = start;
+      start += step;
+    }
+
+    return range;
+  };
+
+  // Function (ahem) Functions
+  // ------------------
+
+  // Create a function bound to a given object (assigning `this`, and arguments,
+  // optionally). Binding with arguments is also known as `curry`.
+  // Delegates to **ECMAScript 5**'s native `Function.bind` if available.
+  // We check for `func.bind` first, to fail fast when `func` is undefined.
+  _.bind = function(func, obj) {
+    if (func.bind === nativeBind && nativeBind) return nativeBind.apply(func, slice.call(arguments, 1));
+    var args = slice.call(arguments, 2);
+    return function() {
+      return func.apply(obj, args.concat(slice.call(arguments)));
+    };
+  };
+
+  // Bind all of an object's methods to that object. Useful for ensuring that
+  // all callbacks defined on an object belong to it.
+  _.bindAll = function(obj) {
+    var funcs = slice.call(arguments, 1);
+    if (funcs.length == 0) funcs = _.functions(obj);
+    each(funcs, function(f) { obj[f] = _.bind(obj[f], obj); });
+    return obj;
+  };
+
+  // Memoize an expensive function by storing its results.
+  _.memoize = function(func, hasher) {
+    var memo = {};
+    hasher || (hasher = _.identity);
+    return function() {
+      var key = hasher.apply(this, arguments);
+      return hasOwnProperty.call(memo, key) ? memo[key] : (memo[key] = func.apply(this, arguments));
+    };
+  };
+
+  // Delays a function for the given number of milliseconds, and then calls
+  // it with the arguments supplied.
+  _.delay = function(func, wait) {
+    var args = slice.call(arguments, 2);
+    return setTimeout(function(){ return func.apply(func, args); }, wait);
+  };
+
+  // Defers a function, scheduling it to run after the current call stack has
+  // cleared.
+  _.defer = function(func) {
+    return _.delay.apply(_, [func, 1].concat(slice.call(arguments, 1)));
+  };
+
+  // Internal function used to implement `_.throttle` and `_.debounce`.
+  var limit = function(func, wait, debounce) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var throttler = function() {
+        timeout = null;
+        func.apply(context, args);
+      };
+      if (debounce) clearTimeout(timeout);
+      if (debounce || !timeout) timeout = setTimeout(throttler, wait);
+    };
+  };
+
+  // Returns a function, that, when invoked, will only be triggered at most once
+  // during a given window of time.
+  _.throttle = function(func, wait) {
+    return limit(func, wait, false);
+  };
+
+  // Returns a function, that, as long as it continues to be invoked, will not
+  // be triggered. The function will be called after it stops being called for
+  // N milliseconds.
+  _.debounce = function(func, wait) {
+    return limit(func, wait, true);
+  };
+
+  // Returns a function that will be executed at most one time, no matter how
+  // often you call it. Useful for lazy initialization.
+  _.once = function(func) {
+    var ran = false, memo;
+    return function() {
+      if (ran) return memo;
+      ran = true;
+      return memo = func.apply(this, arguments);
+    };
+  };
+
+  // Returns the first function passed as an argument to the second,
+  // allowing you to adjust arguments, run code before and after, and
+  // conditionally execute the original function.
+  _.wrap = function(func, wrapper) {
+    return function() {
+      var args = [func].concat(slice.call(arguments));
+      return wrapper.apply(this, args);
+    };
+  };
+
+  // Returns a function that is the composition of a list of functions, each
+  // consuming the return value of the function that follows.
+  _.compose = function() {
+    var funcs = slice.call(arguments);
+    return function() {
+      var args = slice.call(arguments);
+      for (var i=funcs.length-1; i >= 0; i--) {
+        args = [funcs[i].apply(this, args)];
+      }
+      return args[0];
+    };
+  };
+
+  // Returns a function that will only be executed after being called N times.
+  _.after = function(times, func) {
+    return function() {
+      if (--times < 1) { return func.apply(this, arguments); }
+    };
+  };
+
+
+  // Object Functions
+  // ----------------
+
+  // Retrieve the names of an object's properties.
+  // Delegates to **ECMAScript 5**'s native `Object.keys`
+  _.keys = nativeKeys || function(obj) {
+    if (obj !== Object(obj)) throw new TypeError('Invalid object');
+    var keys = [];
+    for (var key in obj) if (hasOwnProperty.call(obj, key)) keys[keys.length] = key;
+    return keys;
+  };
+
+  // Retrieve the values of an object's properties.
+  _.values = function(obj) {
+    return _.map(obj, _.identity);
+  };
+
+  // Return a sorted list of the function names available on the object.
+  // Aliased as `methods`
+  _.functions = _.methods = function(obj) {
+    return _.filter(_.keys(obj), function(key){ return _.isFunction(obj[key]); }).sort();
+  };
+
+  // Extend a given object with all the properties in passed-in object(s).
+  _.extend = function(obj) {
+    each(slice.call(arguments, 1), function(source) {
+      for (var prop in source) {
+        if (source[prop] !== void 0) obj[prop] = source[prop];
+      }
+    });
+    return obj;
+  };
+
+  // Fill in a given object with default properties.
+  _.defaults = function(obj) {
+    each(slice.call(arguments, 1), function(source) {
+      for (var prop in source) {
+        if (obj[prop] == null) obj[prop] = source[prop];
+      }
+    });
+    return obj;
+  };
+
+  // Create a (shallow-cloned) duplicate of an object.
+  _.clone = function(obj) {
+    return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
+  };
+
+  // Invokes interceptor with the obj, and then returns obj.
+  // The primary purpose of this method is to "tap into" a method chain, in
+  // order to perform operations on intermediate results within the chain.
+  _.tap = function(obj, interceptor) {
+    interceptor(obj);
+    return obj;
+  };
+
+  // Perform a deep comparison to check if two objects are equal.
+  _.isEqual = function(a, b) {
+    // Check object identity.
+    if (a === b) return true;
+    // Different types?
+    var atype = typeof(a), btype = typeof(b);
+    if (atype != btype) return false;
+    // Basic equality test (watch out for coercions).
+    if (a == b) return true;
+    // One is falsy and the other truthy.
+    if ((!a && b) || (a && !b)) return false;
+    // Unwrap any wrapped objects.
+    if (a._chain) a = a._wrapped;
+    if (b._chain) b = b._wrapped;
+    // One of them implements an isEqual()?
+    if (a.isEqual) return a.isEqual(b);
+    // Check dates' integer values.
+    if (_.isDate(a) && _.isDate(b)) return a.getTime() === b.getTime();
+    // Both are NaN?
+    if (_.isNaN(a) && _.isNaN(b)) return false;
+    // Compare regular expressions.
+    if (_.isRegExp(a) && _.isRegExp(b))
+      return a.source     === b.source &&
+             a.global     === b.global &&
+             a.ignoreCase === b.ignoreCase &&
+             a.multiline  === b.multiline;
+    // If a is not an object by this point, we can't handle it.
+    if (atype !== 'object') return false;
+    // Check for different array lengths before comparing contents.
+    if (a.length && (a.length !== b.length)) return false;
+    // Nothing else worked, deep compare the contents.
+    var aKeys = _.keys(a), bKeys = _.keys(b);
+    // Different object sizes?
+    if (aKeys.length != bKeys.length) return false;
+    // Recursive comparison of contents.
+    for (var key in a) if (!(key in b) || !_.isEqual(a[key], b[key])) return false;
+    return true;
+  };
+
+  // Is a given array or object empty?
+  _.isEmpty = function(obj) {
+    if (_.isArray(obj) || _.isString(obj)) return obj.length === 0;
+    for (var key in obj) if (hasOwnProperty.call(obj, key)) return false;
+    return true;
+  };
+
+  // Is a given value a DOM element?
+  _.isElement = function(obj) {
+    return !!(obj && obj.nodeType == 1);
+  };
+
+  // Is a given value an array?
+  // Delegates to ECMA5's native Array.isArray
+  _.isArray = nativeIsArray || function(obj) {
+    return toString.call(obj) === '[object Array]';
+  };
+
+  // Is a given variable an arguments object?
+  _.isArguments = function(obj) {
+    return !!(obj && hasOwnProperty.call(obj, 'callee'));
+  };
+
+  // Is a given value a function?
+  _.isFunction = function(obj) {
+    return !!(obj && obj.constructor && obj.call && obj.apply);
+  };
+
+  // Is a given value a string?
+  _.isString = function(obj) {
+    return !!(obj === '' || (obj && obj.charCodeAt && obj.substr));
+  };
+
+  // Is a given value a number?
+  _.isNumber = function(obj) {
+    return !!(obj === 0 || (obj && obj.toExponential && obj.toFixed));
+  };
+
+  // Is the given value `NaN`? `NaN` happens to be the only value in JavaScript
+  // that does not equal itself.
+  _.isNaN = function(obj) {
+    return obj !== obj;
+  };
+
+  // Is a given value a boolean?
+  _.isBoolean = function(obj) {
+    return obj === true || obj === false;
+  };
+
+  // Is a given value a date?
+  _.isDate = function(obj) {
+    return !!(obj && obj.getTimezoneOffset && obj.setUTCFullYear);
+  };
+
+  // Is the given value a regular expression?
+  _.isRegExp = function(obj) {
+    return !!(obj && obj.test && obj.exec && (obj.ignoreCase || obj.ignoreCase === false));
+  };
+
+  // Is a given value equal to null?
+  _.isNull = function(obj) {
+    return obj === null;
+  };
+
+  // Is a given variable undefined?
+  _.isUndefined = function(obj) {
+    return obj === void 0;
+  };
+
+  // Utility Functions
+  // -----------------
+
+  // Run Underscore.js in *noConflict* mode, returning the `_` variable to its
+  // previous owner. Returns a reference to the Underscore object.
+  _.noConflict = function() {
+    root._ = previousUnderscore;
+    return this;
+  };
+
+  // Keep the identity function around for default iterators.
+  _.identity = function(value) {
+    return value;
+  };
+
+  // Run a function **n** times.
+  _.times = function (n, iterator, context) {
+    for (var i = 0; i < n; i++) iterator.call(context, i);
+  };
+
+  // Add your own custom functions to the Underscore object, ensuring that
+  // they're correctly added to the OOP wrapper as well.
+  _.mixin = function(obj) {
+    each(_.functions(obj), function(name){
+      addToWrapper(name, _[name] = obj[name]);
+    });
+  };
+
+  // Generate a unique integer id (unique within the entire client session).
+  // Useful for temporary DOM ids.
+  var idCounter = 0;
+  _.uniqueId = function(prefix) {
+    var id = idCounter++;
+    return prefix ? prefix + id : id;
+  };
+
+  // By default, Underscore uses ERB-style template delimiters, change the
+  // following template settings to use alternative delimiters.
+  _.templateSettings = {
+    evaluate    : /<%([\s\S]+?)%>/g,
+    interpolate : /<%=([\s\S]+?)%>/g
+  };
+
+  // JavaScript micro-templating, similar to John Resig's implementation.
+  // Underscore templating handles arbitrary delimiters, preserves whitespace,
+  // and correctly escapes quotes within interpolated code.
+  _.template = function(str, data) {
+    var c  = _.templateSettings;
+    var tmpl = 'var __p=[],print=function(){__p.push.apply(__p,arguments);};' +
+      'with(obj||{}){__p.push(\'' +
+      str.replace(/\\/g, '\\\\')
+         .replace(/'/g, "\\'")
+         .replace(c.interpolate, function(match, code) {
+           return "'," + code.replace(/\\'/g, "'") + ",'";
+         })
+         .replace(c.evaluate || null, function(match, code) {
+           return "');" + code.replace(/\\'/g, "'")
+                              .replace(/[\r\n\t]/g, ' ') + "__p.push('";
+         })
+         .replace(/\r/g, '\\r')
+         .replace(/\n/g, '\\n')
+         .replace(/\t/g, '\\t')
+         + "');}return __p.join('');";
+    var func = new Function('obj', tmpl);
+    return data ? func(data) : func;
+  };
+
+  // The OOP Wrapper
+  // ---------------
+
+  // If Underscore is called as a function, it returns a wrapped object that
+  // can be used OO-style. This wrapper holds altered versions of all the
+  // underscore functions. Wrapped objects may be chained.
+  var wrapper = function(obj) { this._wrapped = obj; };
+
+  // Expose `wrapper.prototype` as `_.prototype`
+  _.prototype = wrapper.prototype;
+
+  // Helper function to continue chaining intermediate results.
+  var result = function(obj, chain) {
+    return chain ? _(obj).chain() : obj;
+  };
+
+  // A method to easily add functions to the OOP wrapper.
+  var addToWrapper = function(name, func) {
+    wrapper.prototype[name] = function() {
+      var args = slice.call(arguments);
+      unshift.call(args, this._wrapped);
+      return result(func.apply(_, args), this._chain);
+    };
+  };
+
+  // Add all of the Underscore functions to the wrapper object.
+  _.mixin(_);
+
+  // Add all mutator Array functions to the wrapper.
+  each(['pop', 'push', 'reverse', 'shift', 'sort', 'splice', 'unshift'], function(name) {
+    var method = ArrayProto[name];
+    wrapper.prototype[name] = function() {
+      method.apply(this._wrapped, arguments);
+      return result(this._wrapped, this._chain);
+    };
+  });
+
+  // Add all accessor Array functions to the wrapper.
+  each(['concat', 'join', 'slice'], function(name) {
+    var method = ArrayProto[name];
+    wrapper.prototype[name] = function() {
+      return result(method.apply(this._wrapped, arguments), this._chain);
+    };
+  });
+
+  // Start chaining a wrapped Underscore object.
+  wrapper.prototype.chain = function() {
+    this._chain = true;
+    return this;
+  };
+
+  // Extracts the result from a wrapped and chained object.
+  wrapper.prototype.value = function() {
+    return this._wrapped;
+  };
+
+})();
+
+
+
+//  Underscore.string
+//  (c) 2010 Esa-Matti Suuronen <esa-matti aet suuronen dot org>
+//  Underscore.string is freely distributable under the terms of the MIT license.
+//  Documentation: https://github.com/epeli/underscore.string
+//  Some code is borrowed from MooTools and Alexandru Marasteanu.
+//  Version '2.3.0'
+
+!function(root, String){
+  'use strict';
+
+  // Defining helper functions.
+
+  var nativeTrim = String.prototype.trim;
+  var nativeTrimRight = String.prototype.trimRight;
+  var nativeTrimLeft = String.prototype.trimLeft;
+
+  var parseNumber = function(source) { return source * 1 || 0; };
+
+  var strRepeat = function(str, qty){
+    if (qty < 1) return '';
+    var result = '';
+    while (qty > 0) {
+      if (qty & 1) result += str;
+      qty >>= 1, str += str;
+    }
+    return result;
+  };
+
+  var slice = [].slice;
+
+  var defaultToWhiteSpace = function(characters) {
+    if (characters == null)
+      return '\\s';
+    else if (characters.source)
+      return characters.source;
+    else
+      return '[' + _s.escapeRegExp(characters) + ']';
+  };
+
+  var escapeChars = {
+    lt: '<',
+    gt: '>',
+    quot: '"',
+    apos: "'",
+    amp: '&'
+  };
+
+  var reversedEscapeChars = {};
+  for(var key in escapeChars){ reversedEscapeChars[escapeChars[key]] = key; }
+
+  // sprintf() for JavaScript 0.7-beta1
+  // http://www.diveintojavascript.com/projects/javascript-sprintf
+  //
+  // Copyright (c) Alexandru Marasteanu <alexaholic [at) gmail (dot] com>
+  // All rights reserved.
+
+  var sprintf = (function() {
+    function get_type(variable) {
+      return Object.prototype.toString.call(variable).slice(8, -1).toLowerCase();
+    }
+
+    var str_repeat = strRepeat;
+
+    var str_format = function() {
+      if (!str_format.cache.hasOwnProperty(arguments[0])) {
+        str_format.cache[arguments[0]] = str_format.parse(arguments[0]);
+      }
+      return str_format.format.call(null, str_format.cache[arguments[0]], arguments);
+    };
+
+    str_format.format = function(parse_tree, argv) {
+      var cursor = 1, tree_length = parse_tree.length, node_type = '', arg, output = [], i, k, match, pad, pad_character, pad_length;
+      for (i = 0; i < tree_length; i++) {
+        node_type = get_type(parse_tree[i]);
+        if (node_type === 'string') {
+          output.push(parse_tree[i]);
+        }
+        else if (node_type === 'array') {
+          match = parse_tree[i]; // convenience purposes only
+          if (match[2]) { // keyword argument
+            arg = argv[cursor];
+            for (k = 0; k < match[2].length; k++) {
+              if (!arg.hasOwnProperty(match[2][k])) {
+                throw new Error(sprintf('[_.sprintf] property "%s" does not exist', match[2][k]));
+              }
+              arg = arg[match[2][k]];
+            }
+          } else if (match[1]) { // positional argument (explicit)
+            arg = argv[match[1]];
+          }
+          else { // positional argument (implicit)
+            arg = argv[cursor++];
+          }
+
+          if (/[^s]/.test(match[8]) && (get_type(arg) != 'number')) {
+            throw new Error(sprintf('[_.sprintf] expecting number but found %s', get_type(arg)));
+          }
+          switch (match[8]) {
+            case 'b': arg = arg.toString(2); break;
+            case 'c': arg = String.fromCharCode(arg); break;
+            case 'd': arg = parseInt(arg, 10); break;
+            case 'e': arg = match[7] ? arg.toExponential(match[7]) : arg.toExponential(); break;
+            case 'f': arg = match[7] ? parseFloat(arg).toFixed(match[7]) : parseFloat(arg); break;
+            case 'o': arg = arg.toString(8); break;
+            case 's': arg = ((arg = String(arg)) && match[7] ? arg.substring(0, match[7]) : arg); break;
+            case 'u': arg = Math.abs(arg); break;
+            case 'x': arg = arg.toString(16); break;
+            case 'X': arg = arg.toString(16).toUpperCase(); break;
+          }
+          arg = (/[def]/.test(match[8]) && match[3] && arg >= 0 ? '+'+ arg : arg);
+          pad_character = match[4] ? match[4] == '0' ? '0' : match[4].charAt(1) : ' ';
+          pad_length = match[6] - String(arg).length;
+          pad = match[6] ? str_repeat(pad_character, pad_length) : '';
+          output.push(match[5] ? arg + pad : pad + arg);
+        }
+      }
+      return output.join('');
+    };
+
+    str_format.cache = {};
+
+    str_format.parse = function(fmt) {
+      var _fmt = fmt, match = [], parse_tree = [], arg_names = 0;
+      while (_fmt) {
+        if ((match = /^[^\x25]+/.exec(_fmt)) !== null) {
+          parse_tree.push(match[0]);
+        }
+        else if ((match = /^\x25{2}/.exec(_fmt)) !== null) {
+          parse_tree.push('%');
+        }
+        else if ((match = /^\x25(?:([1-9]\d*)\$|\(([^\)]+)\))?(\+)?(0|'[^$])?(-)?(\d+)?(?:\.(\d+))?([b-fosuxX])/.exec(_fmt)) !== null) {
+          if (match[2]) {
+            arg_names |= 1;
+            var field_list = [], replacement_field = match[2], field_match = [];
+            if ((field_match = /^([a-z_][a-z_\d]*)/i.exec(replacement_field)) !== null) {
+              field_list.push(field_match[1]);
+              while ((replacement_field = replacement_field.substring(field_match[0].length)) !== '') {
+                if ((field_match = /^\.([a-z_][a-z_\d]*)/i.exec(replacement_field)) !== null) {
+                  field_list.push(field_match[1]);
+                }
+                else if ((field_match = /^\[(\d+)\]/.exec(replacement_field)) !== null) {
+                  field_list.push(field_match[1]);
+                }
+                else {
+                  throw new Error('[_.sprintf] huh?');
+                }
+              }
+            }
+            else {
+              throw new Error('[_.sprintf] huh?');
+            }
+            match[2] = field_list;
+          }
+          else {
+            arg_names |= 2;
+          }
+          if (arg_names === 3) {
+            throw new Error('[_.sprintf] mixing positional and named placeholders is not (yet) supported');
+          }
+          parse_tree.push(match);
+        }
+        else {
+          throw new Error('[_.sprintf] huh?');
+        }
+        _fmt = _fmt.substring(match[0].length);
+      }
+      return parse_tree;
+    };
+
+    return str_format;
+  })();
+
+
+
+  // Defining underscore.string
+
+  var _s = {
+
+    VERSION: '2.3.0',
+
+    isBlank: function(str){
+      if (str == null) str = '';
+      return (/^\s*$/).test(str);
+    },
+
+    stripTags: function(str){
+      if (str == null) return '';
+      return String(str).replace(/<\/?[^>]+>/g, '');
+    },
+
+    capitalize : function(str){
+      str = str == null ? '' : String(str);
+      return str.charAt(0).toUpperCase() + str.slice(1);
+    },
+
+    chop: function(str, step){
+      if (str == null) return [];
+      str = String(str);
+      step = ~~step;
+      return step > 0 ? str.match(new RegExp('.{1,' + step + '}', 'g')) : [str];
+    },
+
+    clean: function(str){
+      return _s.strip(str).replace(/\s+/g, ' ');
+    },
+
+    count: function(str, substr){
+      if (str == null || substr == null) return 0;
+      return String(str).split(substr).length - 1;
+    },
+
+    chars: function(str) {
+      if (str == null) return [];
+      return String(str).split('');
+    },
+
+    swapCase: function(str) {
+      if (str == null) return '';
+      return String(str).replace(/\S/g, function(c){
+        return c === c.toUpperCase() ? c.toLowerCase() : c.toUpperCase();
+      });
+    },
+
+    escapeHTML: function(str) {
+      if (str == null) return '';
+      return String(str).replace(/[&<>"']/g, function(m){ return '&' + reversedEscapeChars[m] + ';'; });
+    },
+
+    unescapeHTML: function(str) {
+      if (str == null) return '';
+      return String(str).replace(/\&([^;]+);/g, function(entity, entityCode){
+        var match;
+
+        if (entityCode in escapeChars) {
+          return escapeChars[entityCode];
+        } else if (match = entityCode.match(/^#x([\da-fA-F]+)$/)) {
+          return String.fromCharCode(parseInt(match[1], 16));
+        } else if (match = entityCode.match(/^#(\d+)$/)) {
+          return String.fromCharCode(~~match[1]);
+        } else {
+          return entity;
+        }
+      });
+    },
+
+    escapeRegExp: function(str){
+      if (str == null) return '';
+      return String(str).replace(/([.*+?^=!:${}()|[\]\/\\])/g, '\\$1');
+    },
+
+    splice: function(str, i, howmany, substr){
+      var arr = _s.chars(str);
+      arr.splice(~~i, ~~howmany, substr);
+      return arr.join('');
+    },
+
+    insert: function(str, i, substr){
+      return _s.splice(str, i, 0, substr);
+    },
+
+    include: function(str, needle){
+      if (needle === '') return true;
+      if (str == null) return false;
+      return String(str).indexOf(needle) !== -1;
+    },
+
+    join: function() {
+      var args = slice.call(arguments),
+        separator = args.shift();
+
+      if (separator == null) separator = '';
+
+      return args.join(separator);
+    },
+
+    lines: function(str) {
+      if (str == null) return [];
+      return String(str).split("\n");
+    },
+
+    reverse: function(str){
+      return _s.chars(str).reverse().join('');
+    },
+
+    startsWith: function(str, starts){
+      if (starts === '') return true;
+      if (str == null || starts == null) return false;
+      str = String(str); starts = String(starts);
+      return str.length >= starts.length && str.slice(0, starts.length) === starts;
+    },
+
+    endsWith: function(str, ends){
+      if (ends === '') return true;
+      if (str == null || ends == null) return false;
+      str = String(str); ends = String(ends);
+      return str.length >= ends.length && str.slice(str.length - ends.length) === ends;
+    },
+
+    succ: function(str){
+      if (str == null) return '';
+      str = String(str);
+      return str.slice(0, -1) + String.fromCharCode(str.charCodeAt(str.length-1) + 1);
+    },
+
+    titleize: function(str){
+      if (str == null) return '';
+      return String(str).replace(/(?:^|\s)\S/g, function(c){ return c.toUpperCase(); });
+    },
+
+    camelize: function(str){
+      return _s.trim(str).replace(/[-_\s]+(.)?/g, function(match, c){ return c.toUpperCase(); });
+    },
+
+    underscored: function(str){
+      return _s.trim(str).replace(/([a-z\d])([A-Z]+)/g, '$1_$2').replace(/[-\s]+/g, '_').toLowerCase();
+    },
+
+    dasherize: function(str){
+      return _s.trim(str).replace(/([A-Z])/g, '-$1').replace(/[-_\s]+/g, '-').toLowerCase();
+    },
+
+    classify: function(str){
+      return _s.titleize(String(str).replace(/_/g, ' ')).replace(/\s/g, '');
+    },
+
+    humanize: function(str){
+      return _s.capitalize(_s.underscored(str).replace(/_id$/,'').replace(/_/g, ' '));
+    },
+
+    trim: function(str, characters){
+      if (str == null) return '';
+      if (!characters && nativeTrim) return nativeTrim.call(str);
+      characters = defaultToWhiteSpace(characters);
+      return String(str).replace(new RegExp('\^' + characters + '+|' + characters + '+$', 'g'), '');
+    },
+
+    ltrim: function(str, characters){
+      if (str == null) return '';
+      if (!characters && nativeTrimLeft) return nativeTrimLeft.call(str);
+      characters = defaultToWhiteSpace(characters);
+      return String(str).replace(new RegExp('^' + characters + '+'), '');
+    },
+
+    rtrim: function(str, characters){
+      if (str == null) return '';
+      if (!characters && nativeTrimRight) return nativeTrimRight.call(str);
+      characters = defaultToWhiteSpace(characters);
+      return String(str).replace(new RegExp(characters + '+$'), '');
+    },
+
+    truncate: function(str, length, truncateStr){
+      if (str == null) return '';
+      str = String(str); truncateStr = truncateStr || '...';
+      length = ~~length;
+      return str.length > length ? str.slice(0, length) + truncateStr : str;
+    },
+
+    /**
+     * _s.prune: a more elegant version of truncate
+     * prune extra chars, never leaving a half-chopped word.
+     * @author github.com/rwz
+     */
+    prune: function(str, length, pruneStr){
+      if (str == null) return '';
+
+      str = String(str); length = ~~length;
+      pruneStr = pruneStr != null ? String(pruneStr) : '...';
+
+      if (str.length <= length) return str;
+
+      var tmpl = function(c){ return c.toUpperCase() !== c.toLowerCase() ? 'A' : ' '; },
+        template = str.slice(0, length+1).replace(/.(?=\W*\w*$)/g, tmpl); // 'Hello, world' -> 'HellAA AAAAA'
+
+      if (template.slice(template.length-2).match(/\w\w/))
+        template = template.replace(/\s*\S+$/, '');
+      else
+        template = _s.rtrim(template.slice(0, template.length-1));
+
+      return (template+pruneStr).length > str.length ? str : str.slice(0, template.length)+pruneStr;
+    },
+
+    words: function(str, delimiter) {
+      if (_s.isBlank(str)) return [];
+      return _s.trim(str, delimiter).split(delimiter || /\s+/);
+    },
+
+    pad: function(str, length, padStr, type) {
+      str = str == null ? '' : String(str);
+      length = ~~length;
+
+      var padlen  = 0;
+
+      if (!padStr)
+        padStr = ' ';
+      else if (padStr.length > 1)
+        padStr = padStr.charAt(0);
+
+      switch(type) {
+        case 'right':
+          padlen = length - str.length;
+          return str + strRepeat(padStr, padlen);
+        case 'both':
+          padlen = length - str.length;
+          return strRepeat(padStr, Math.ceil(padlen/2)) + str
+                  + strRepeat(padStr, Math.floor(padlen/2));
+        default: // 'left'
+          padlen = length - str.length;
+          return strRepeat(padStr, padlen) + str;
+        }
+    },
+
+    lpad: function(str, length, padStr) {
+      return _s.pad(str, length, padStr);
+    },
+
+    rpad: function(str, length, padStr) {
+      return _s.pad(str, length, padStr, 'right');
+    },
+
+    lrpad: function(str, length, padStr) {
+      return _s.pad(str, length, padStr, 'both');
+    },
+
+    sprintf: sprintf,
+
+    vsprintf: function(fmt, argv){
+      argv.unshift(fmt);
+      return sprintf.apply(null, argv);
+    },
+
+    toNumber: function(str, decimals) {
+      if (str == null || str == '') return 0;
+      str = String(str);
+      var num = parseNumber(parseNumber(str).toFixed(~~decimals));
+      return num === 0 && !str.match(/^0+$/) ? Number.NaN : num;
+    },
+
+    numberFormat : function(number, dec, dsep, tsep) {
+      if (isNaN(number) || number == null) return '';
+
+      number = number.toFixed(~~dec);
+      tsep = tsep || ',';
+
+      var parts = number.split('.'), fnums = parts[0],
+        decimals = parts[1] ? (dsep || '.') + parts[1] : '';
+
+      return fnums.replace(/(\d)(?=(?:\d{3})+$)/g, '$1' + tsep) + decimals;
+    },
+
+    strRight: function(str, sep){
+      if (str == null) return '';
+      str = String(str); sep = sep != null ? String(sep) : sep;
+      var pos = !sep ? -1 : str.indexOf(sep);
+      return ~pos ? str.slice(pos+sep.length, str.length) : str;
+    },
+
+    strRightBack: function(str, sep){
+      if (str == null) return '';
+      str = String(str); sep = sep != null ? String(sep) : sep;
+      var pos = !sep ? -1 : str.lastIndexOf(sep);
+      return ~pos ? str.slice(pos+sep.length, str.length) : str;
+    },
+
+    strLeft: function(str, sep){
+      if (str == null) return '';
+      str = String(str); sep = sep != null ? String(sep) : sep;
+      var pos = !sep ? -1 : str.indexOf(sep);
+      return ~pos ? str.slice(0, pos) : str;
+    },
+
+    strLeftBack: function(str, sep){
+      if (str == null) return '';
+      str += ''; sep = sep != null ? ''+sep : sep;
+      var pos = str.lastIndexOf(sep);
+      return ~pos ? str.slice(0, pos) : str;
+    },
+
+    toSentence: function(array, separator, lastSeparator, serial) {
+      separator = separator || ', '
+      lastSeparator = lastSeparator || ' and '
+      var a = array.slice(), lastMember = a.pop();
+
+      if (array.length > 2 && serial) lastSeparator = _s.rtrim(separator) + lastSeparator;
+
+      return a.length ? a.join(separator) + lastSeparator + lastMember : lastMember;
+    },
+
+    toSentenceSerial: function() {
+      var args = slice.call(arguments);
+      args[3] = true;
+      return _s.toSentence.apply(_s, args);
+    },
+
+    slugify: function(str) {
+      if (str == null) return '';
+
+      var from  = "ąàáäâãåæćęèéëêìíïîłńòóöôõøùúüûñçżź",
+          to    = "aaaaaaaaceeeeeiiiilnoooooouuuunczz",
+          regex = new RegExp(defaultToWhiteSpace(from), 'g');
+
+      str = String(str).toLowerCase().replace(regex, function(c){
+        var index = from.indexOf(c);
+        return to.charAt(index) || '-';
+      });
+
+      return _s.dasherize(str.replace(/[^\w\s-]/g, ''));
+    },
+
+    surround: function(str, wrapper) {
+      return [wrapper, str, wrapper].join('');
+    },
+
+    quote: function(str) {
+      return _s.surround(str, '"');
+    },
+
+    exports: function() {
+      var result = {};
+
+      for (var prop in this) {
+        if (!this.hasOwnProperty(prop) || prop.match(/^(?:include|contains|reverse)$/)) continue;
+        result[prop] = this[prop];
+      }
+
+      return result;
+    },
+
+    repeat: function(str, qty, separator){
+      if (str == null) return '';
+
+      qty = ~~qty;
+
+      // using faster implementation if separator is not needed;
+      if (separator == null) return strRepeat(String(str), qty);
+
+      // this one is about 300x slower in Google Chrome
+      for (var repeat = []; qty > 0; repeat[--qty] = str) {}
+      return repeat.join(separator);
+    },
+
+    levenshtein: function(str1, str2) {
+      if (str1 == null && str2 == null) return 0;
+      if (str1 == null) return String(str2).length;
+      if (str2 == null) return String(str1).length;
+
+      str1 = String(str1); str2 = String(str2);
+
+      var current = [], prev, value;
+
+      for (var i = 0; i <= str2.length; i++)
+        for (var j = 0; j <= str1.length; j++) {
+          if (i && j)
+            if (str1.charAt(j - 1) === str2.charAt(i - 1))
+              value = prev;
+            else
+              value = Math.min(current[j], current[j - 1], prev) + 1;
+          else
+            value = i + j;
+
+          prev = current[j];
+          current[j] = value;
+        }
+
+      return current.pop();
+    }
+  };
+
+  // Aliases
+
+  _s.strip    = _s.trim;
+  _s.lstrip   = _s.ltrim;
+  _s.rstrip   = _s.rtrim;
+  _s.center   = _s.lrpad;
+  _s.rjust    = _s.lpad;
+  _s.ljust    = _s.rpad;
+  _s.contains = _s.include;
+  _s.q        = _s.quote;
+
+  // CommonJS module is defined
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      // Export module
+      module.exports = _s;
+    }
+    exports._s = _s;
+
+  } else if (typeof define === 'function' && define.amd) {
+    // Register as a named module with AMD.
+    define('underscore.string', [], function() {
+      return _s;
+    });
+
+  } else {
+    // Integrate with Underscore.js if defined
+    // or create our own underscore object.
+    root._ = root._ || {};
+    root._.string = root._.str = _s;
+  }
+
+}(this, String);
+
+
+
 // Generated by CoffeeScript 1.6.2
 /*
   clientside HAML compiler for Javascript and Coffeescript (Version 5)

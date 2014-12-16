@@ -97,7 +97,8 @@ $(window).ready(function() {
 				html = html();
 				break;
 			case 'haml':
-				html = haml.compileHamlToJsString(html);
+				html = haml.compileHaml({source: html});
+				html = html();
 		}
 
 		switch(settings.css) {
@@ -107,7 +108,7 @@ $(window).ready(function() {
 
 		switch(settings.js) {
 			case 'coffeescript':
-				html = CoffeeScript.compile(js, {bare: true});
+				js = CoffeeScript.compile(js, {bare: true});
 		}
 
 		page = '<!DOCTYPE html><html><head>';
