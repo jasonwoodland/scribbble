@@ -14,7 +14,7 @@
 		<div class="scribe-options">
 			<a id="like-scribe" <?=scribe::liked($id) ? 'class="active"' : ''?> href="#"><i class="ion-heart"></i></a>
 			<span class="counter"><i class="triangle-left"></i><span><?=intval(scribe::likes($id))?></span></span>
-			<a id="delete-scribe"href="#"><i class="ion-close-circled"></i></a>
+			<a id="delete-scribe"href="#"><i class="ion-android-close"></i></a>
 		</div>
 	</div>
 	
@@ -25,7 +25,7 @@
 			<a class="username" href="#"><i class="ion-navicon"></i></a>
 
 			<ul class="dropdown">
-				<li><a href="<?=USERNAME?>">profile</a></li>
+				<li><a href="../<?=USERNAME?>">profile</a></li>
 				<li><a href="#">settings</a></li>
 				<li><a href="../../sign-out">sign out</a></li>
 			</ul>

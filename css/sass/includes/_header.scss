@@ -38,7 +38,7 @@ header {
         a {
           color: white;
           @include border-radius(1px);;
-          background: $accent-color;
+          background: $green;
           margin-right: 5px;
           padding: $small-button;
           text-align: center;
@@ -107,7 +107,6 @@ header {
     .user {
       float: right;
       display: inline-block;
-      position: relative;
 
       li {
         display: inline-block;
