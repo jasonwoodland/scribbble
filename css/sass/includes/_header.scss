@@ -1,5 +1,5 @@
 header {
-  padding: 20px 0;
+  padding: 25px 0;
   clear: both;
   width: 100%;
   display: inline-block; 
@@ -38,7 +38,7 @@ header {
         a {
           color: white;
           @include border-radius(1px);;
-          background: $green;
+          background: $accent-color;
           margin-right: 5px;
           padding: $small-button;
           text-align: center;
@@ -111,18 +111,15 @@ header {
 
       li {
         display: inline-block;
-        
-        .ion-ios7-arrow-down {
-          margin-left: 10px !important;
-        }
 
         .dropdown {
           position: absolute;
           right: 0;
-          top: 35px;
+          top: 0;
           margin: 0;
           padding: 0;
           background: $chalk;
+          z-index: 100;
 
           padding: $small-button;
           @include border-radius(1px);
@@ -148,23 +145,18 @@ header {
         }
 
         .username {
-          background: $chalk;
           padding: $small-button;
           margin-left: 10px;
           float: right;
           @include transition(all, .2s, ease);
           color: $chalk-dark-text !important;
-
-          
           
           &:hover {
-            background: $chalk-dark;
             color: $accent-color;
           }
 
           i {
-            font-size: $small-font-size;
-            margin-left: 8px;
+            font-size: $large-font-size;
           }
 
        }

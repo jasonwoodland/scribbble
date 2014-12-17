@@ -7,7 +7,7 @@
     opacity: 1;
     transform: scale(1); } }
 header {
-  padding: 20px 0;
+  padding: 25px 0;
   clear: both;
   width: 100%;
   display: inline-block;
@@ -20,7 +20,7 @@ header {
       header #header-wrapper .intro .logo, header #header-wrapper .intro .new-scrib {
         float: left; }
         header #header-wrapper .intro .logo a, header #header-wrapper .intro .new-scrib a {
-          font-size: 15px;
+          font-size: 13px;
           text-decoration: none;
           color: #151515;
           display: inline-block;
@@ -37,7 +37,7 @@ header {
           -moz-border-radius: 1px;
           -ms-border-radius: 1px;
           border-radius: 1px;
-          background: #3cc05e;
+          background: #151515;
           margin-right: 5px;
           padding: 7px 16px;
           text-align: center; }
@@ -48,14 +48,14 @@ header {
           color: #ccc;
           padding: 8px 16px;
           float: left;
-          font-size: 15px;
+          font-size: 13px;
           text-decoration: none; }
           header #header-wrapper .intro .scribe-options a:hover {
             color: #f0506b; }
           header #header-wrapper .intro .scribe-options a:active {
             color: #ea052c; }
         header #header-wrapper .intro .scribe-options i {
-          font-size: 14px; }
+          font-size: 12px; }
         header #header-wrapper .intro .scribe-options #like-scribe.active {
           color: #ea052c; }
       header #header-wrapper .intro .counter {
@@ -70,7 +70,7 @@ header {
         color: #474747;
         position: relative;
         margin-left: 3px;
-        font-size: 15px; }
+        font-size: 13px; }
         header #header-wrapper .intro .counter:hover {
           color: #474747; }
         header #header-wrapper .intro .counter .triangle-left {
@@ -89,15 +89,14 @@ header {
       position: relative; }
       header #header-wrapper .user li {
         display: inline-block; }
-        header #header-wrapper .user li .ion-ios7-arrow-down {
-          margin-left: 10px !important; }
         header #header-wrapper .user li .dropdown {
           position: absolute;
           right: 0;
-          top: 35px;
+          top: 0;
           margin: 0;
           padding: 0;
           background: #F3F2F2;
+          z-index: 100;
           padding: 7px 16px;
           -webkit-border-radius: 1px;
           -moz-border-radius: 1px;
@@ -110,13 +109,12 @@ header {
             header #header-wrapper .user li .dropdown li a {
               text-decoration: none;
               color: #474747;
-              font-size: 15px;
+              font-size: 13px;
               display: block; }
               header #header-wrapper .user li .dropdown li a:hover {
                 text-decoration: underline;
                 color: #151515; }
         header #header-wrapper .user li .username, header #header-wrapper .user li .sign-up, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-btn, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-btn {
-          background: #F3F2F2;
           padding: 7px 16px;
           margin-left: 10px;
           float: right;
@@ -127,17 +125,15 @@ header {
           transition: all 0.2s ease;
           color: #474747 !important; }
           header #header-wrapper .user li .username:hover, header #header-wrapper .user li .sign-up:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro:hover, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a:hover, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a:hover, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-btn:hover, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-btn:hover {
-            background: #EDEDED;
             color: #151515; }
           header #header-wrapper .user li .username i, header #header-wrapper .user li .sign-up i, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro i, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro i, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a i, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a i, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a i, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a i, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-btn i, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-btn i {
-            font-size: 12px;
-            margin-left: 8px; }
+            font-size: 16px; }
         header #header-wrapper .user li .notification {
           margin: 0;
           display: none; }
           header #header-wrapper .user li .notification span {
             padding: 7px 16px;
-            font-size: 15px;
+            font-size: 13px;
             display: inline-block;
             float: right;
             -webkit-border-radius: 1px;
@@ -151,12 +147,12 @@ header {
             -o-transition: all 0.2s ease;
             transition: all 0.2s ease; }
             header #header-wrapper .user li .notification span i {
-              font-size: 15px; }
+              font-size: 13px; }
         header #header-wrapper .user li .header-options span {
           color: #474747; }
       header #header-wrapper .user .notification, header #header-wrapper .user .username, header #header-wrapper .user li .sign-up, header #header-wrapper .user #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user .pro, header #header-wrapper .user #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user a, header #header-wrapper .user #content-wrapper .container12 .row .column12 .follow-btn, #content-wrapper .container12 .row .column12 header #header-wrapper .user .follow-btn, header #header-wrapper .user .header-options {
         text-decoration: none;
-        font-size: 15px;
+        font-size: 13px;
         color: #151515;
         display: inline-block;
         -webkit-border-radius: 1px;
@@ -197,7 +193,7 @@ header {
         padding: 0px 0 0px 7px;
         color: #151515;
         background: white;
-        font-size: 12px;
+        font-size: 11px;
         text-transform: lowercase;
         padding: 7px 16px;
         -webkit-border-radius: 1px;
@@ -238,15 +234,14 @@ header {
         #content-wrapper .container12 .row .column3 .scrib-pop .view-scrib, #content-wrapper .container12 .row .column4 .scrib-pop .view-scrib {
           position: absolute;
           margin: auto;
-          position: absolute;
           top: 0;
           bottom: 0;
           right: 0;
           left: 0;
-          line-height: 14.5;
+          line-height: 16.7;
           color: white;
           text-decoration: none;
-          font-size: 15px;
+          font-size: 13px;
           background: #151515;
           -webkit-border-radius: 1.8px;
           -moz-border-radius: 1.8px;
@@ -254,13 +249,12 @@ header {
           border-radius: 1.8px;
           text-align: center; }
       #content-wrapper .container12 .row .column3:hover .scrib-pop, #content-wrapper .container12 .row .column4:hover .scrib-pop {
-        opacity: .9; }
+        opacity: .7; }
     #content-wrapper .container12 .row .explore a {
       text-decoration: none;
-      margin-right: 5px;
       padding: 7px 16px;
       color: #474747;
-      font-size: 15px; }
+      font-size: 13px; }
     #content-wrapper .container12 .row .explore .active {
       background: #F3F2F2;
       color: #151515; }
@@ -268,7 +262,7 @@ header {
 footer {
   background: #151515;
   width: 100%;
-  font-size: 15px; }
+  font-size: 13px; }
   footer .container12 .row {
     margin: 0 !important; }
     footer .container12 .row .copyright-float {
@@ -295,13 +289,12 @@ footer {
       color: #F3F2F2; }
       footer .container12 .row .connect a {
         text-decoration: none;
-        padding-right: 5px;
         color: #F3F2F2; }
         footer .container12 .row .connect a:hover {
           text-decoration: underline; }
         footer .container12 .row .connect a i {
-          font-size: 15px;
-          margin-right: 15px; }
+          font-size: 13px;
+          margin-left: 20px; }
 
 #moto {
   width: 100%;
@@ -309,7 +302,7 @@ footer {
   background: #F3F2F2; }
   #moto h3 {
     text-align: center;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: lighter; }
 
 #sign-in-wrapper, #sign-up-wrapper, #forgot-password-wrapper {
@@ -325,7 +318,7 @@ footer {
     display: block;
     text-align: center;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 13px;
     color: #151515;
     margin-bottom: 20px; }
 
@@ -337,7 +330,7 @@ footer {
 
 #sign-up-wrapper .sign-option, #sign-in-wrapper .sign-option, #sign-up-wrapper .sign-option, #forgot-password-wrapper .sign-option, #forgot-password-wrapper .sign-option {
   text-decoration: none;
-  font-size: 14px;
+  font-size: 12px;
   color: #151515;
   text-align: center;
   display: block;
@@ -345,7 +338,7 @@ footer {
   padding: 10px; }
 #sign-up-wrapper input, #sign-in-wrapper input, #sign-up-wrapper input, #forgot-password-wrapper input, #forgot-password-wrapper input {
   background-color: #F3F2F2;
-  font-size: 14px;
+  font-size: 12px;
   -webkit-appearance: none;
   appearance: none;
   border: none;
@@ -363,7 +356,7 @@ footer {
   -webkit-appearance: none;
   appearance: none; }
   #sign-up-wrapper input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper input[type="password"]::-webkit-input-placeholder, #sign-up-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper input[type="email"]::-webkit-input-placeholder, #sign-in-wrapper input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper input[type="text"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="text"]::-webkit-input-placeholder, #sign-in-wrapper input[type="password"]::-webkit-input-placeholder, #sign-up-wrapper input[type="password"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="password"]::-webkit-input-placeholder, #sign-in-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper input[type="submit"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="submit"]::-webkit-input-placeholder, #sign-in-wrapper input[type="email"]::-webkit-input-placeholder, #sign-up-wrapper input[type="email"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="email"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="text"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="password"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="submit"]::-webkit-input-placeholder, #forgot-password-wrapper input[type="email"]::-webkit-input-placeholder {
-    font-size: 14px;
+    font-size: 12px;
     color: #474747; }
   #sign-up-wrapper input[type="text"]:focus, #sign-up-wrapper input[type="password"]:focus, #sign-up-wrapper input[type="submit"]:focus, #sign-up-wrapper input[type="email"]:focus, #sign-in-wrapper input[type="text"]:focus, #sign-up-wrapper input[type="text"]:focus, #forgot-password-wrapper input[type="text"]:focus, #sign-in-wrapper input[type="password"]:focus, #sign-up-wrapper input[type="password"]:focus, #forgot-password-wrapper input[type="password"]:focus, #sign-in-wrapper input[type="submit"]:focus, #sign-up-wrapper input[type="submit"]:focus, #forgot-password-wrapper input[type="submit"]:focus, #sign-in-wrapper input[type="email"]:focus, #sign-up-wrapper input[type="email"]:focus, #forgot-password-wrapper input[type="email"]:focus, #forgot-password-wrapper input[type="text"]:focus, #forgot-password-wrapper input[type="password"]:focus, #forgot-password-wrapper input[type="submit"]:focus, #forgot-password-wrapper input[type="email"]:focus {
     outline: none; }
@@ -375,7 +368,7 @@ footer {
   color: white; }
 #sign-up-wrapper label, #sign-in-wrapper label, #sign-up-wrapper label, #forgot-password-wrapper label, #forgot-password-wrapper label {
   cursor: pointer;
-  font-size: 14px; }
+  font-size: 12px; }
   #sign-up-wrapper label input[type="checkbox"], #sign-in-wrapper label input[type="checkbox"], #sign-up-wrapper label input[type="checkbox"], #forgot-password-wrapper label input[type="checkbox"], #forgot-password-wrapper label input[type="checkbox"] {
     display: none; }
     #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #sign-in-wrapper label input[type="checkbox"] + .label-text:before, #sign-up-wrapper label input[type="checkbox"] + .label-text:before, #forgot-password-wrapper label input[type="checkbox"] + .label-text:before, #forgot-password-wrapper label input[type="checkbox"] + .label-text:before {
@@ -403,7 +396,7 @@ footer {
       position: absolute;
       top: 10px; }
 #sign-up-wrapper .failed, #sign-in-wrapper .failed, #sign-up-wrapper .failed, #forgot-password-wrapper .failed, #forgot-password-wrapper .failed {
-  font-size: 14px;
+  font-size: 12px;
   text-decoration: line-through;
   display: block; }
 #sign-up-wrapper .hidden, #sign-in-wrapper .hidden, #sign-up-wrapper .hidden, #forgot-password-wrapper .hidden, #forgot-password-wrapper .hidden {
@@ -420,7 +413,7 @@ footer {
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     border-radius: 100%;
-    font-size: 12px;
+    font-size: 11px;
     display: inline-block;
     margin: 3px; }
     #content-wrapper .container12 .arrows a i {
@@ -444,7 +437,7 @@ footer {
   #content-wrapper .container12 .row .column12 .username, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .sign-up, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .sign-up, #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .follow-btn {
     color: #151515;
     text-decoration: none;
-    font-size: 15px; }
+    font-size: 13px; }
   #content-wrapper .container12 .row .column12 .pro {
     display: none;
     padding: 7px 16px;
@@ -455,16 +448,16 @@ footer {
     margin: 0 10px;
     display: inline-block; }
     #content-wrapper .container12 .row .column12 .user-info a {
-      font-size: 14px;
+      font-size: 12px;
       color: #474747; }
     #content-wrapper .container12 .row .column12 .user-info .user-info-number {
       color: #222;
-      font-size: 17px; }
+      font-size: 16px; }
   #content-wrapper .container12 .row .column12 .bio {
     width: 30%;
     margin: 0 auto; }
     #content-wrapper .container12 .row .column12 .bio a {
-      font-size: 15px; }
+      font-size: 13px; }
   #content-wrapper .container12 .row .column12 .follow-btn {
     display: block;
     padding: 7px 16px;
@@ -543,7 +536,7 @@ footer {
         color: #151515 !important;
         text-decoration: none;
         display: inline-block;
-        font-size: 15px; }
+        font-size: 13px; }
         #editor-layout .block .editor-info .editor-settings a .ion-gear-a {
           display: none;
           position: absolute;
@@ -648,7 +641,7 @@ footer {
   .username-in-editor a {
     text-decoration: none;
     color: #474747;
-    font-size: 15px;
+    font-size: 13px;
     display: block;
     padding: 7px 16px;
     background: #F3F2F2;
@@ -670,7 +663,7 @@ footer {
   left: 0; }
   #thanks-content p {
     color: #151515;
-    font-size: 15px;
+    font-size: 13px;
     text-align: center;
     line-height: 1.3;
     background: transparent !important;
@@ -685,7 +678,7 @@ footer {
   margin: 10px 0;
   box-sizing: border-box;
   background: #F3F2F2;
-  font-size: 14px;
+  font-size: 12px;
   color: #151515;
   border: 1px solid #EDEDED !important;
   color: #474747;
@@ -694,7 +687,7 @@ footer {
   -ms-border-radius: 1px;
   border-radius: 1px; }
   .profile-image form input[type="text"]::-webkit-input-placeholder, .profile-image #sign-up-wrapper .sign-up input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper .profile-image .sign-up input[type="text"]::-webkit-input-placeholder, .name form input[type="text"]::-webkit-input-placeholder, .name #sign-up-wrapper .sign-up input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper .name .sign-up input[type="text"]::-webkit-input-placeholder, .links-settings form input[type="text"]::-webkit-input-placeholder, .links-settings #sign-up-wrapper .sign-up input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper .links-settings .sign-up input[type="text"]::-webkit-input-placeholder, .save-all-changes form input[type="text"]::-webkit-input-placeholder, .save-all-changes #sign-up-wrapper .sign-up input[type="text"]::-webkit-input-placeholder, #sign-up-wrapper .save-all-changes .sign-up input[type="text"]::-webkit-input-placeholder {
-    font-size: 14px;
+    font-size: 12px;
     color: #151515; }
   .profile-image form input[type="text"]:focus, .profile-image #sign-up-wrapper .sign-up input[type="text"]:focus, #sign-up-wrapper .profile-image .sign-up input[type="text"]:focus, .name form input[type="text"]:focus, .name #sign-up-wrapper .sign-up input[type="text"]:focus, #sign-up-wrapper .name .sign-up input[type="text"]:focus, .links-settings form input[type="text"]:focus, .links-settings #sign-up-wrapper .sign-up input[type="text"]:focus, #sign-up-wrapper .links-settings .sign-up input[type="text"]:focus, .save-all-changes form input[type="text"]:focus, .save-all-changes #sign-up-wrapper .sign-up input[type="text"]:focus, #sign-up-wrapper .save-all-changes .sign-up input[type="text"]:focus {
     outline: none; }
@@ -706,7 +699,7 @@ footer {
   margin: 10px 0;
   box-sizing: border-box;
   background: #222;
-  font-size: 14px;
+  font-size: 12px;
   color: white;
   cursor: pointer;
   border: 1px solid #222;
@@ -715,7 +708,7 @@ footer {
   -ms-border-radius: 1px;
   border-radius: 1px; }
   .profile-image form input[type="submit"]::-webkit-input-placeholder, .profile-image #sign-up-wrapper .sign-up input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper .profile-image .sign-up input[type="submit"]::-webkit-input-placeholder, .name form input[type="submit"]::-webkit-input-placeholder, .name #sign-up-wrapper .sign-up input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper .name .sign-up input[type="submit"]::-webkit-input-placeholder, .links-settings form input[type="submit"]::-webkit-input-placeholder, .links-settings #sign-up-wrapper .sign-up input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper .links-settings .sign-up input[type="submit"]::-webkit-input-placeholder, .save-all-changes form input[type="submit"]::-webkit-input-placeholder, .save-all-changes #sign-up-wrapper .sign-up input[type="submit"]::-webkit-input-placeholder, #sign-up-wrapper .save-all-changes .sign-up input[type="submit"]::-webkit-input-placeholder {
-    font-size: 14px;
+    font-size: 12px;
     color: #151515; }
   .profile-image form input[type="submit"]:focus, .profile-image #sign-up-wrapper .sign-up input[type="submit"]:focus, #sign-up-wrapper .profile-image .sign-up input[type="submit"]:focus, .name form input[type="submit"]:focus, .name #sign-up-wrapper .sign-up input[type="submit"]:focus, #sign-up-wrapper .name .sign-up input[type="submit"]:focus, .links-settings form input[type="submit"]:focus, .links-settings #sign-up-wrapper .sign-up input[type="submit"]:focus, #sign-up-wrapper .links-settings .sign-up input[type="submit"]:focus, .save-all-changes form input[type="submit"]:focus, .save-all-changes #sign-up-wrapper .sign-up input[type="submit"]:focus, #sign-up-wrapper .save-all-changes .sign-up input[type="submit"]:focus {
     outline: none; }
@@ -754,7 +747,7 @@ footer {
   margin: 0 10px; }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
   color: white;
   display: inline-block;
   text-align: center;
@@ -782,12 +775,12 @@ p {
     margin: 30px 0 0 40px; }
 
 * {
-  font-family: "Inconsolata"; }
+  font-family: "Source Code Pro"; }
 
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: "Inconsolata";
+  font-family: "Source Code Pro";
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;

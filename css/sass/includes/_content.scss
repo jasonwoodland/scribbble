@@ -80,12 +80,11 @@
           .view-scrib {
             position: absolute;
             margin: auto;
-            position: absolute;
             top: 0;
             bottom: 0;
             right: 0;
             left: 0;
-            line-height: 14.5;
+            line-height: 16.7;
             color: white;
             text-decoration: none;
             font-size: $base-font-size;
@@ -96,14 +95,13 @@
         }
 
         &:hover .scrib-pop {
-          opacity: .9;
+          opacity: .7;
         }
       }
 
       .explore {
         a {
           text-decoration: none;
-          margin-right: 5px;
           padding: $small-button;
           color: $chalk-dark-text;
           font-size: $base-font-size;

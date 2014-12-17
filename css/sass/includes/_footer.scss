@@ -1,5 +1,5 @@
 footer {
-	background: #151515;
+	background: $accent-color;
 	width: 100%;
 	font-size: $base-font-size;	
 
@@ -42,7 +42,6 @@ footer {
 
 				a {
 					text-decoration: none;
-					padding-right: 5px;
 					color: $chalk;
 
 					&:hover {
@@ -51,7 +50,7 @@ footer {
 
 					i {
 						font-size: $base-font-size;
-						margin-right: 15px;
+						margin-left: 20px;
 					}
 				}
 			}
