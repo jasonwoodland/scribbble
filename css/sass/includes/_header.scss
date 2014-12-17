@@ -34,6 +34,7 @@ header {
 
       .new-scrib {
         margin-left: 20px;
+        position: relative;
         
         a {
           color: white;
@@ -42,6 +43,7 @@ header {
           margin-right: 5px;
           padding: $small-button;
           text-align: center;
+          @include transition(all, .15s, ease);
         }
       }
 

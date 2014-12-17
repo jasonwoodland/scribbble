@@ -44,7 +44,7 @@
 							<iframe src="data:text/html;base64,<?=$page?>" width=530px height=440px frameborder=0></iframe>
 
 						<div class="scrib-pop">
-							<a class="view-scrib" href="/scribe/<?=$scribe->id?>">view</a>
+							<a class="view-scrib" href="/scribe/<?=$scribe->id?>"></a>
 							<a class="created-by" href="/<?=user::username($scribe->owner)?>"><?=user::username($scribe->owner)?></a>
 						</div>
 					</div>
