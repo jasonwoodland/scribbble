@@ -77,11 +77,9 @@ header {
         position: relative;
         margin-left: 3px;
         font-size: 13px; }
-        header #header-wrapper .intro .counter:hover {
-          color: #474747; }
         header #header-wrapper .intro .counter .triangle-left {
           position: absolute;
-          left: -5px;
+          left: -4px;
           top: 10px;
           width: 0;
           height: 0;
@@ -258,8 +256,7 @@ header {
       color: #474747;
       font-size: 13px; }
     #content-wrapper .container12 .row .explore .active {
-      background: #F3F2F2;
-      color: #151515; }
+      color: #82bb80; }
 
 footer {
   background: #151515;
