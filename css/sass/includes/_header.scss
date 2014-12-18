@@ -2,12 +2,12 @@ header {
   padding: 25px 0;
   clear: both;
   width: 100%;
-  display: inline-block; 
-  vertical-align: bottom;
+  text-align: center;
 
   #header-wrapper {
     width: 95%;
     margin: 0 auto;
+    display: inline-block;
 
     .intro {
       float: left;
@@ -51,12 +51,16 @@ header {
         float: left;
         padding: 0;
 
-        a {
+        button {
           color: #ccc;
-          padding: 8px 16px;
+          padding: $small-button;
           float: left;
           font-size: $base-font-size;
           text-decoration: none;
+          background: none;
+          display: block;
+          cursor: pointer;
+          border: none;
 
           &:hover {
             color: #f0506b;
@@ -66,10 +70,14 @@ header {
             color: #ea052c;
           }
 
+          &:focus {
+            outline: none;
+          }
+
         }
 
         i {
-          font-size: $mediam-font-size;
+          font-size: $small-font-size;
         }
 
         #like-scribe.active {
@@ -142,7 +150,7 @@ header {
         }
 
         .username {
-          padding: $small-button;
+          padding: 4px 16px;
           margin-left: 10px;
           float: right;
           @include transition(all, .2s, ease);

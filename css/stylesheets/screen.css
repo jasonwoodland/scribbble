@@ -10,11 +10,11 @@ header {
   padding: 25px 0;
   clear: both;
   width: 100%;
-  display: inline-block;
-  vertical-align: bottom; }
+  text-align: center; }
   header #header-wrapper {
     width: 95%;
-    margin: 0 auto; }
+    margin: 0 auto;
+    display: inline-block; }
     header #header-wrapper .intro {
       float: left; }
       header #header-wrapper .intro .logo, header #header-wrapper .intro .new-scrib {
@@ -50,18 +50,24 @@ header {
       header #header-wrapper .intro .scribe-options {
         float: left;
         padding: 0; }
-        header #header-wrapper .intro .scribe-options a {
+        header #header-wrapper .intro .scribe-options button {
           color: #ccc;
-          padding: 8px 16px;
+          padding: 7px 16px;
           float: left;
           font-size: 13px;
-          text-decoration: none; }
-          header #header-wrapper .intro .scribe-options a:hover {
+          text-decoration: none;
+          background: none;
+          display: block;
+          cursor: pointer;
+          border: none; }
+          header #header-wrapper .intro .scribe-options button:hover {
             color: #f0506b; }
-          header #header-wrapper .intro .scribe-options a:active {
+          header #header-wrapper .intro .scribe-options button:active {
             color: #ea052c; }
+          header #header-wrapper .intro .scribe-options button:focus {
+            outline: none; }
         header #header-wrapper .intro .scribe-options i {
-          font-size: 12px; }
+          font-size: 11px; }
         header #header-wrapper .intro .scribe-options #like-scribe.active {
           color: #ea052c; }
       header #header-wrapper .intro .counter {
@@ -118,7 +124,7 @@ header {
                 text-decoration: underline;
                 color: #151515; }
         header #header-wrapper .user li .username, header #header-wrapper .user li .sign-up, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-btn, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-btn {
-          padding: 7px 16px;
+          padding: 4px 16px;
           margin-left: 10px;
           float: right;
           -webkit-transition: all 0.2s ease;
