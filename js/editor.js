@@ -4,15 +4,7 @@ var
 	editorHeight, 
 	windowHeight, 
 	buttonOffset, 
-	headerHeight,
-	settings = {
-		html: 'html',
-		css: 'css',
-		js: 'javascript'
-	},
-	html,
-	css,
-	js;
+	headerHeight;
 
 $(window).ready(function() {
 	options = {
@@ -65,6 +57,8 @@ $(window).ready(function() {
 				settings.js = syntax;
 				break;
 		}
+		
+		$('#html-pane').trigger('input');
 	});
 
 	$('.editor-settings li').each(function() {

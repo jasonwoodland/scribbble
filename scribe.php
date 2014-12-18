@@ -17,7 +17,7 @@
 	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
 
-	$stmt = $db->prepare('SELECT html, css, js FROM scribes WHERE id = ?');
+	$stmt = $db->prepare('SELECT * FROM scribes WHERE id = ?');
 	$stmt->execute([$id]);
 	$result = $stmt->fetch(PDO::FETCH_OBJ);
 ?>
@@ -63,8 +63,13 @@
 <script src="/js/jade.js"></script>
 <script src="/js/sass.js"></script>
 <script>
-	window.id		= <?=$id?>;
-	window.html		= '<?=base64_encode($result->html)?>';
-	window.css		= '<?=base64_encode($result->css)?>';
-	window.js		= '<?=base64_encode($result->js)?>';
+	id	= <?=$id?>;
+	html	= '<?=base64_encode($result->html)?>';
+	css	= '<?=base64_encode($result->css)?>';
+	js	= '<?=base64_encode($result->js)?>';
+	var settings = {
+		html:	'<?=$result->html_preprocessor?>',
+		css:	'<?=$result->css_preprocessor?>',
+		js:		'<?=$result->js_preprocessor?>'
+	};
 </script>
