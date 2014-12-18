@@ -124,9 +124,8 @@ header {
                 text-decoration: underline;
                 color: #151515; }
         header #header-wrapper .user li .username, header #header-wrapper .user li .sign-up, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-btn, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-btn {
-          padding: 4px 16px;
+          padding: 5px 16px;
           margin-left: 10px;
-          float: right;
           -webkit-transition: all 0.2s ease;
           -moz-transition: all 0.2s ease;
           -ms-transition: all 0.2s ease;

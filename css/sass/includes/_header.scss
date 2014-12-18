@@ -150,9 +150,8 @@ header {
         }
 
         .username {
-          padding: 4px 16px;
+          padding: 5px 16px;
           margin-left: 10px;
-          float: right;
           @include transition(all, .2s, ease);
           color: $chalk-dark-text !important;
           
