@@ -119,13 +119,13 @@ header {
 
         .dropdown {
           position: absolute;
-          right: 0;
+          right: -120px;
           top: 0;
           margin: 0;
           padding: 0;
           background: $chalk;
           z-index: 100;
-
+          @include transition(all, .2s, ease);
           padding: $small-button;
           @include border-radius(1px);
 
@@ -147,6 +147,11 @@ header {
               }
             }
           }
+        }
+
+        .dropdown.open {
+          position: absolute;
+          right: 0;
         }
 
         .username {

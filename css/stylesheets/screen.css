@@ -100,12 +100,17 @@ header {
         display: inline-block; }
         header #header-wrapper .user li .dropdown {
           position: absolute;
-          right: 0;
+          right: -120px;
           top: 0;
           margin: 0;
           padding: 0;
           background: #F3F2F2;
           z-index: 100;
+          -webkit-transition: all 0.2s ease;
+          -moz-transition: all 0.2s ease;
+          -ms-transition: all 0.2s ease;
+          -o-transition: all 0.2s ease;
+          transition: all 0.2s ease;
           padding: 7px 16px;
           -webkit-border-radius: 1px;
           -moz-border-radius: 1px;
@@ -123,6 +128,9 @@ header {
               header #header-wrapper .user li .dropdown li a:hover {
                 text-decoration: underline;
                 color: #151515; }
+        header #header-wrapper .user li .dropdown.open {
+          position: absolute;
+          right: 0; }
         header #header-wrapper .user li .username, header #header-wrapper .user li .sign-up, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-btn, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-btn {
           padding: 5px 16px;
           margin-left: 10px;
