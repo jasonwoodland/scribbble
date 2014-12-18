@@ -4,19 +4,20 @@ $(function() {
 	updateFooter();
 
 	$('header .user .username').mouseenter(function() {
-		var out;
-		$('.dropdown').addClass('open').mouseout(function() {
+		var out = false;
+		$('.dropdown').addClass('open')
+		$('.dropdown').mouseleave(function() {
 			out = true;
-			alert('left before transition');
 		});
 		setTimeout(function() {
-			alert(out);
+			$('.dropdown').off('mouseleave');
 			if(out) {
-				$('.dropdown').removeClass('open').off('mouseout');
+				$('.dropdown').removeClass('open');
+				alert('left before transition');
 			} else {
-				$('.dropdown.open').mouseout(function() {
+				$('.dropdown.open').mouseleave(function() {
 					$(this).removeClass('open');
-					$(this).off('mouseout');
+					$(this).off('mouseleave');
 				});
 			}
 		}, 1000);
