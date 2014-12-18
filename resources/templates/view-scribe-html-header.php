@@ -12,7 +12,7 @@
 		</div>
 
 		<div class="scribe-options">
-			<a id="like-scribe" <?=scribe::liked($id) ? 'class="active"' : ''?> href="#"><i class="ion-heart"></i></a>
+			<a id="like-scribe" <?=scribe::liked($id) ? 'class="active"' : ''?> href="#">like</a>
 			<span class="counter"><i class="triangle-left"></i><span><?=intval(scribe::likes($id))?></span></span>
 		</div>
 	</div>
