@@ -27,12 +27,58 @@
 	<div class="container12">
 		<div class="row">
 			<div class="column12">
-				<a class="profile-image" href="profile">
+				<a class="profile-image" id="profile-image" href="profile">
 					<img src="/noface" alt="">
-					<style>
-						.profile-image { background: transparent !important }
-					</style>
 				</a>
+				<style>
+					#profile-image { 
+						background: #ddd !important;
+						border-radius: 100%;
+						transition: .5s ease all;
+					}
+
+					#profile-image.drag {
+						background: #333 !important;
+						position: relative;
+					}
+
+					#profile-image.drag img {
+						opacity: .25;
+					}
+
+#profile-image.drag::after {
+	content: 'update profile photo';
+	position: absolute;
+	font-size: 14px;
+	top: 22px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	color: #fff;
+}
+
+
+				</style>
+				<script>
+					$(function() {
+						$('#profile-image').on('dragover', function(e) {
+							e.preventDefault();
+							e.stopPropagation();
+							$('#profile-image').addClass('drag');
+							return false;
+						}).on('dragend', function(e) {
+							e.preventDefault();
+							e.stopPropagation();
+							$('#profile-image').removeClass('drag');
+							return false;
+						}).on('drop', function(e) {
+							e.preventDefault();
+							e.stopPropagation();
+							alert('haha');
+							$('#profile-image').removeClass('drag');
+						});
+					});
+				</script>
 			</div>
 		</div>
 

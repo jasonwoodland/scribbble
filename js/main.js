@@ -2,25 +2,29 @@ window.alert = function(v) { console.log('alert: ' + v) }
 
 $(function() {
 	updateFooter();
+	$('#overlay').hide();
 
 	$('header .user .username').mouseenter(function() {
 		var out = false;
-		$('.dropdown').addClass('open')
+		$('#overlay').fadeIn(250);
+		$('.dropdown').addClass('open');
 		$('.dropdown').mouseleave(function() {
 			out = true;
 		});
 		setTimeout(function() {
 			$('.dropdown').off('mouseleave');
 			if(out) {
+				$('#overlay').fadeOut(250);
 				$('.dropdown').removeClass('open');
 				alert('left before transition');
 			} else {
 				$('.dropdown.open').mouseleave(function() {
+					$('#overlay').fadeOut(250);
 					$(this).removeClass('open');
 					$(this).off('mouseleave');
 				});
 			}
-		}, 1000);
+		}, 250);
 	});
 });
 
