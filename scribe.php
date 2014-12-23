@@ -26,7 +26,7 @@
 	<div class="html block" id="html-pane">
 		<div class="editor-info">
 			<ul class="editor-settings">
-				<li class="active" data-syntax="html"><span>HTML</span>
+				<li data-syntax="html"><span>HTML</span>
 				<li data-syntax="haml"><span>HAML</span>
 				<li data-syntax="jade"><span>JADE</span>
 			</ul>
@@ -36,7 +36,7 @@
 	<div class="css block" id="css-pane">
 		<div class="editor-info">
 			<ul class="editor-settings">
-				<li class="active" data-syntax=""><span>CSS</span>
+				<li data-syntax="css"><span>CSS</span>
 				<li data-syntax="scss"><span>SCSS</span>
 			</ul>
 		</div>
@@ -45,7 +45,7 @@
 	<div class="js block" id="js-pane">
 		<div class="editor-info">
 			<ul class="editor-settings">
-				<li class="active" data-syntax="javascript"><span>JavaScript</span>
+				<li data-syntax="javascript"><span>JavaScript</span>
 				<li data-syntax="coffeescript"><span>CoffeeScript</span>
 			</ul>
 		</div>
@@ -56,8 +56,8 @@
 <div class="username-in-editor">
 	<a href="#">username</a>
 </div>
-<iframe width=100% frameborder=0 id="sandbox-buffer"></iframe>
-<iframe width=100% frameborder=0 id="sandbox"></iframe>
+<iframe sandbox="allow-scripts" width=100% frameborder=0 id="sandbox-buffer"></iframe>
+<iframe sandbox="allow-scripts" width=100% frameborder=0 id="sandbox"></iframe>
 <script src="/js/haml.js"></script>
 <script src="/js/coffee-script.js"></script>
 <script src="/js/jade.js"></script>
@@ -68,8 +68,8 @@
 	css	= '<?=base64_encode($result->css)?>';
 	js	= '<?=base64_encode($result->js)?>';
 	var settings = {
-		html:	'<?=$result->html_preprocessor?>',
-		css:	'<?=$result->css_preprocessor?>',
-		js:		'<?=$result->js_preprocessor?>'
+		html:	'<?=$result->html_preprocessor?>' || 'html',
+		css:	'<?=$result->css_preprocessor?>' || 'css',
+		js:		'<?=$result->js_preprocessor?>' || 'javascript'
 	};
 </script>

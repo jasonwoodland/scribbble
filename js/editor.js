@@ -36,6 +36,11 @@ $(window).ready(function() {
 		jsPane.setValue(atob(window.js));
 	}
 
+	$('#html-pane [data-syntax="' + settings.html + '"]').addClass('active');
+	$('#css-pane [data-syntax="' + settings.css + '"]').addClass('active');
+	$('#js-pane [data-syntax="' + settings.js + '"]').addClass('active');
+
+
 	$('.editor-settings li').on('click', function(e) {
 		if($(this).parent().hasClass('open'))
 			e.stopPropagation();
@@ -91,7 +96,7 @@ $(window).ready(function() {
 				html = html();
 				break;
 			case 'haml':
-				html = haml.compileHaml({source: html});
+				html = haml.compileHaml({source: html, generator: 'coffeescript'});
 				html = html();
 		}
 
@@ -129,14 +134,24 @@ $(window).ready(function() {
 	});
 
 	$('#save-scribe').click(function() {
-		console.log('saving...');
+		var indicator = $(this).children();
+		indicator.html('saving&hellip;');
 		$.post('/api/scribe-save', {
 			id: window.id,
 			html: htmlPane.getValue(),
 			css: cssPane.getValue(),
-			js: jsPane.getValue()
+			js: jsPane.getValue(),
+			htmlPreprocessor: settings.html,
+			cssPreprocessor: settings.css,
+			jsPreprocessor: settings.js
 		}, function(response) {
 			window.id = response;
+			setTimeout(function() {
+				indicator.html('saved');
+			}, 500);
+			setTimeout(function() {
+				indicator.html('save');
+			}, 3000);
 		});
 	});
 

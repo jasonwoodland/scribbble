@@ -7,19 +7,22 @@
 			$this->username = $username;
 		}
 
-		public static function save($id, $html, $css, $js) {
+		public static function save($id, $html, $css, $js, $html_preprocessor, $css_preprocessor, $js_preprocessor) {
 			global $db;
+			error_log($id);
 			if($id) {
-				$stmt = $db->prepare('UPDATE scribes SET html = ?, css = ?, js = ? WHERE id = ?');
-				$stmt->execute([$html, $css, $js, $id]);
+				$stmt = $db->prepare('UPDATE scribes SET html = ?, css = ?, js = ?, html_preprocessor = ?, css_preprocessor = ?, js_preprocessor = ? WHERE id = ?');
+				$stmt->execute([$html, $css, $js, $html_preprocessor, $css_preprocessor, $js_preprocessor, $id]);
 			} else {
-				error_log('inserting (new scribe)');
-			   	error_log(USER_ID);
-				$stmt = $db->prepare('INSERT INTO scribes (html, css, js, owner) VALUES (?, ?, ?, ?)');
+				error_log('INERRTTTTING');
+				$stmt = $db->prepare('INSERT INTO scribes (html, css, js, html_preprocessor, css_preprocessor, js_preprocessor, owner) VALUES (?, ?, ?, ?, ?, ?, ?)');
 				$stmt->execute([
 					$html,
 					$css,
 					$js,
+					$html_preprocessor,
+					$css_preprocessor,
+					$js_preprocessor,
 					USER_ID
 				]);
 				echo $db->lastInsertId();

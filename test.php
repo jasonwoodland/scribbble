@@ -1,4 +1,6 @@
 <?php
+phpinfo();
+exit();
 require 'resources/controller.php';
 
 $letter = new email();

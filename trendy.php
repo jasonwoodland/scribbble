@@ -42,7 +42,7 @@
 					$page = base64_encode($page);
 					?>
 					<div class="column3">
-						<iframe src="data:text/html;base64,<?=$page?>" width=530px height=440px frameborder=0></iframe>
+						<iframe sandbox="allow-scripts" src="data:text/html;base64,<?=$page?>" width=530px height=440px frameborder=0></iframe>
 
 						<div class="scrib-pop">
 							<a class="view-scrib" href="/scribe/<?=$scribe->id?>"></a>

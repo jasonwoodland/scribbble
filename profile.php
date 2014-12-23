@@ -21,6 +21,10 @@
 	$scribeCount = $stmt->fetchColumn();
 	$followingCount = 0;
 	$followersCount = 0;
+
+	if($id == USER_ID) { ?>
+		<script src="/js/user-photo.js"></script>
+	<?php }
 ?>
 
 <div id="content-wrapper">
@@ -28,56 +32,47 @@
 		<div class="row">
 			<div class="column12">
 				<a class="profile-image" id="profile-image" href="profile">
-					<img src="/noface" alt="">
 				</a>
 				<style>
-					#profile-image { 
-						background: #ddd !important;
+					#content-wrapper .container12 .row .column12 #profile-image { 
+						background-color: #ddd;
+						background-image: url(/images/users/<?=$username . '?' . time()?>), url(/noface);
+						background-size: cover;
+						background-position: center center;
+						background-repeat: no-repeat;
 						border-radius: 100%;
 						transition: .5s ease all;
-					}
-
-					#profile-image.drag {
-						background: #333 !important;
 						position: relative;
+						padding-top: 40px;
+						text-decoration: none;
+						color: #fff;
+						text-shadow: 0 0 2px #000;
+						box-sizing: border-box;
 					}
 
-					#profile-image.drag img {
-						opacity: .25;
+					#profile-image::after {
+						opacity: 0;
+						transition: .25s ease opacity;
+						content: 'update profile photo';
+						position: absolute;
+						font-size: 14px;
+						padding: 22px 10px 10px;
+						top: 0;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						background: rgba(0,0,0,.75);
+						border-radius: 100%;
+						color: #fff;
 					}
 
-#profile-image.drag::after {
-	content: 'update profile photo';
-	position: absolute;
-	font-size: 14px;
-	top: 22px;
-	left: 10px;
-	right: 10px;
-	bottom: 10px;
-	color: #fff;
-}
+					#profile-image.drag::after {
+						opacity: 1;
+					}
 
 
 				</style>
 				<script>
-					$(function() {
-						$('#profile-image').on('dragover', function(e) {
-							e.preventDefault();
-							e.stopPropagation();
-							$('#profile-image').addClass('drag');
-							return false;
-						}).on('dragend', function(e) {
-							e.preventDefault();
-							e.stopPropagation();
-							$('#profile-image').removeClass('drag');
-							return false;
-						}).on('drop', function(e) {
-							e.preventDefault();
-							e.stopPropagation();
-							alert('haha');
-							$('#profile-image').removeClass('drag');
-						});
-					});
 				</script>
 			</div>
 		</div>
@@ -140,7 +135,7 @@
 					$page = base64_encode($page);
 					?>
 					<div class="column3">
-							<iframe src="data:text/html;base64,<?=$page?>" width=530px height=440px frameborder=0></iframe>
+							<iframe sandbox="allow-scripts" src="data:text/html;base64,<?=$page?>" width=530px height=440px frameborder=0></iframe>
 
 						<div class="scrib-pop">
 							<a class="view-scrib" href="/scribe/<?=$scribe->id?>">view</a>

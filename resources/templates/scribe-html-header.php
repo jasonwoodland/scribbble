@@ -24,9 +24,9 @@
 			<a class="username" href="#"><i class="ion-grid"></i></a>
 
 			<ul class="dropdown">
-				<li><a href="../<?=USERNAME?>">profile</a></li>
+				<li><a href="/<?=USERNAME?>">profile</a></li>
 				<li><a href="#">settings</a></li>
-				<li><a href="../../sign-out">sign out</a></li>
+				<li><a href="/sign-out?session_id=<?=session_id()?>">sign out</a></li>
 			</ul>
 	 	</li>
 	 </ul> 
