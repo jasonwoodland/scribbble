@@ -4,7 +4,16 @@ var
 	editorHeight, 
 	windowHeight, 
 	buttonOffset, 
-	headerHeight;
+	headerHeight,
+	modes = {
+		html:			'xml',
+		haml:			'haml',
+		jade:			'jade',
+		css:			'css',
+		scss:			'sass',
+		javascript:		'javascript',
+		coffeescript:	'coffeescript'
+	};
 
 $(window).ready(function() {
 	options = {
@@ -22,9 +31,9 @@ $(window).ready(function() {
 	jsOptions = $.extend(true, {}, options);
 
 	htmlOptions.htmlMode = true;
-	htmlOptions.mode = 'xml';
-	cssOptions.mode = 'css';
-	jsOptions.mode = 'javascript';
+	htmlOptions.mode = modes[settings.html];
+	cssOptions.mode = modes[settings.css];
+	jsOptions.mode = modes[settings.js];
 
 	htmlPane = CodeMirror($('#html-pane')[0], htmlOptions);
 	cssPane = CodeMirror($('#css-pane')[0], cssOptions);
@@ -52,16 +61,19 @@ $(window).ready(function() {
 			case 'haml':
 			case 'jade':
 				settings.html = syntax;
+				htmlPane.setOption('mode', modes[syntax]);
 				break;
 			case 'css':
 			case 'scss':
 				settings.css = syntax;
+				cssPane.setOption('mode', modes[syntax]);
 				break; 
 			case 'javascript':
 			case 'coffeescript':
 				settings.js = syntax;
-				break;
+				jsPane.setOption('mode', modes[syntax]);
 		}
+		console.log(modes[syntax]);
 		
 		$('#html-pane').trigger('input');
 	});
@@ -165,7 +177,7 @@ $(window).ready(function() {
 
 	$('#like-scribe:not(.active)').click(function() {
 		$(this).addClass('active');
-		likes = $('span.counter span');
+		likes = $('#like-scribe span');
 		likes.html(parseInt(likes.html()) + 1);
 		$.post('/api/scribe-like', {
 			id: window.id
