@@ -82,8 +82,8 @@
 				}
 
 				.follow-btn {
+					display: none;
 					@extend .username;
-					display: block;
 					padding: $small-button;
 					@include border-radius(1px);
 					background: $accent-color;

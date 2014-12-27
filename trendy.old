@@ -17,7 +17,6 @@
 			<div class="column12 explore">
 				<a class="active" href="#">trendy</a>
 				<a href="/recent">recent</a>
-				<a href="/following">following</a>
 			</div>
 		</div>
 	</div>

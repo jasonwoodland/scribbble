@@ -70,10 +70,7 @@
 						opacity: 1;
 					}
 
-
 				</style>
-				<script>
-				</script>
 			</div>
 		</div>
 
@@ -86,14 +83,6 @@
 				<a class="pro" href="#">pro</a>
 			</div>
 		</div>
-		
-		<!-- follow button -->
-
-		<div class="row">
-			<div class="column12">
-				<button class="follow-btn">follow</button>
-			</div>
-		</div>
 
 		<!-- user info -->
 
@@ -104,7 +93,7 @@
 				</div>
 				&middot;
 				<div class="following user-info">
-					<a href="/following"><span class="user-info-number"><?=$followingCount?></span><br> following</a>
+					<a href="#"><span class="user-info-number"><?=$followingCount?></span><br> following</a>
 				</div>
 				&middot;
 				<div class="followers user-info">

@@ -39,40 +39,16 @@
 			window.id = "<?=USER_ID?>";
 			window.username = "<?=USERNAME?>";
 		</script>
-		<style>
-			body {
-				background: #f9f9f9;
-				color: #383838;
-			}
 
-			footer {
-				background: #383838;
-				color: #ddd;
-			}
-
-			footer * {
-				color: #ddd !important;
-			}
-		</style>
 		<?php 
 			if(defined('ROLE')) echo(sprintf('<script src="/js/%s.js"></script>', ROLE));
 		?>
 	</head>
-	<body>
-		<div id="overlay">&nbsp;</div>
-		<style>
-			#overlay {
-				z-index: 50;
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				bottom: 0;
-				background-color: rgba(0,0,0,.25);
-			}
-		</style>
-		<?php
-			defined('NO_HTML_HEADER') or require defined('USER_ID') ? HTML_HEADER : 'guest-html-header.php';
-		?>
 
-		<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*newDate();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-54948422-2','auto');ga('send','pageview');</script>
+	<div id="overlay">&nbsp;</div>
+
+	<?php
+		defined('NO_HTML_HEADER') or require defined('USER_ID') ? HTML_HEADER : 'guest-html-header.php';
+	?>
+
+	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*newDate();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-54948422-2','auto');ga('send','pageview');</script>

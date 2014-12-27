@@ -8,11 +8,11 @@
 		</div>
 
 		<div class="new-scrib" id="save-scribe">
-			<a href="#">save</a>
+			<button>save</button>
 		</div>
 
 		<div class="scribe-options">
-			<button id="like-scribe" <?=scribe::liked($id) ? 'class="active"' : ''?> href="#">like &middot; <span><?=intval(scribe::likes($id))?></span></button>
+			<button id="like-scribe" <?=scribe::liked($id) ? 'class="active"' : ''?> href="#"><i class="ion-heart"></i><span><?=intval(scribe::likes($id))?></span></button>
 			<button id="delete-scribe">delete</button>
 		</div>
 	</div>
@@ -25,7 +25,7 @@
 
 			<ul class="dropdown">
 				<li><a href="/<?=USERNAME?>">profile</a></li>
-				<li><a href="#">settings</a></li>
+				<li><a href="mailto:timbog80@gmail.com">report bug</a></li>
 				<li><a href="/sign-out?session_id=<?=session_id()?>">sign out</a></li>
 			</ul>
 	 	</li>

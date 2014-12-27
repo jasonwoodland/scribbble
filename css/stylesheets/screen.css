@@ -32,7 +32,7 @@ header {
       header #header-wrapper .intro .new-scrib {
         margin-left: 20px;
         position: relative; }
-        header #header-wrapper .intro .new-scrib a {
+        header #header-wrapper .intro .new-scrib button, header #header-wrapper .intro .new-scrib a {
           color: white;
           -webkit-border-radius: 1px;
           -moz-border-radius: 1px;
@@ -42,15 +42,19 @@ header {
           margin-right: 5px;
           padding: 7px 16px;
           text-align: center;
+          border: none;
           -webkit-transition: all 0.15s ease;
           -moz-transition: all 0.15s ease;
           -ms-transition: all 0.15s ease;
           -o-transition: all 0.15s ease;
-          transition: all 0.15s ease; }
+          transition: all 0.15s ease;
+          cursor: pointer; }
+          header #header-wrapper .intro .new-scrib button:focus, header #header-wrapper .intro .new-scrib a:focus {
+            outline: none; }
       header #header-wrapper .intro .scribe-options {
         float: left;
         padding: 0; }
-        header #header-wrapper .intro .scribe-options button {
+        header #header-wrapper .intro .scribe-options button, header #header-wrapper .intro .scribe-options .new-scrib a, header #header-wrapper .intro .new-scrib .scribe-options a {
           color: #ccc;
           padding: 7px 16px;
           float: left;
@@ -60,16 +64,18 @@ header {
           display: block;
           cursor: pointer;
           border: none; }
-          header #header-wrapper .intro .scribe-options button:hover {
+          header #header-wrapper .intro .scribe-options button:hover, header #header-wrapper .intro .scribe-options .new-scrib a:hover, header #header-wrapper .intro .new-scrib .scribe-options a:hover {
             color: #f0506b; }
-          header #header-wrapper .intro .scribe-options button:active {
+          header #header-wrapper .intro .scribe-options button:active, header #header-wrapper .intro .scribe-options .new-scrib a:active, header #header-wrapper .intro .new-scrib .scribe-options a:active {
             color: #ea052c; }
-          header #header-wrapper .intro .scribe-options button:focus {
+          header #header-wrapper .intro .scribe-options button:focus, header #header-wrapper .intro .scribe-options .new-scrib a:focus, header #header-wrapper .intro .new-scrib .scribe-options a:focus {
             outline: none; }
         header #header-wrapper .intro .scribe-options i {
           font-size: 11px; }
         header #header-wrapper .intro .scribe-options #like-scribe.active {
           color: #ea052c; }
+        header #header-wrapper .intro .scribe-options .ion-heart {
+          margin-right: 10px; }
       header #header-wrapper .intro .counter {
         float: left;
         text-decoration: none;
@@ -100,12 +106,12 @@ header {
         display: inline-block; }
         header #header-wrapper .user li .dropdown {
           position: absolute;
-          right: -120px;
+          right: -140px;
           top: 0;
           margin: 0;
           padding: 0;
           background: #F3F2F2;
-          z-index: 100;
+          z-index: 250;
           -webkit-transition: all 0.2s ease;
           -moz-transition: all 0.2s ease;
           -ms-transition: all 0.2s ease;
@@ -175,6 +181,15 @@ header {
         -moz-border-radius: 1px;
         -ms-border-radius: 1px;
         border-radius: 1px; }
+
+#overlay {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25); }
 
 #content-wrapper {
   width: 95%;
@@ -313,6 +328,7 @@ footer {
   padding: 50px 0;
   background: #F3F2F2; }
   #moto h3 {
+    color: #474747;
     text-align: center;
     font-size: 13px;
     font-weight: lighter; }
@@ -471,7 +487,7 @@ footer {
     #content-wrapper .container12 .row .column12 .bio a {
       font-size: 13px; }
   #content-wrapper .container12 .row .column12 .follow-btn {
-    display: block;
+    display: none;
     padding: 7px 16px;
     -webkit-border-radius: 1px;
     -moz-border-radius: 1px;
@@ -797,6 +813,8 @@ body {
   height: 100%;
   width: 100%;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  -moz-osx-font-smoothing: grayscale;
+  background: #f9f9f9;
+  color: #151515; }
 
 /*# sourceMappingURL=screen.css.map */

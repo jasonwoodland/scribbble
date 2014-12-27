@@ -1,3 +1,3 @@
 <center>
-	404: you bloody idiot
+	404: page does not exist. 
 </center>

@@ -4,6 +4,8 @@ header {
   width: 100%;
   text-align: center;
 
+
+
   #header-wrapper {
     width: 95%;
     margin: 0 auto;
@@ -36,14 +38,24 @@ header {
         margin-left: 20px;
         position: relative;
         
-        a {
+        button {
           color: white;
           @include border-radius(1px);;
           background: $green;
           margin-right: 5px;
           padding: $small-button;
           text-align: center;
+          border: none;
           @include transition(all, .15s, ease);
+          cursor: pointer;
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        a {
+          @extend button;
         }
       }
 
@@ -83,6 +95,10 @@ header {
         #like-scribe.active {
           color: #ea052c;
         }
+        
+        .ion-heart {
+          margin-right: 10px;
+        }
       }
         .counter {
           float: left;
@@ -119,12 +135,12 @@ header {
 
         .dropdown {
           position: absolute;
-          right: -120px;
+          right: -140px;
           top: 0;
           margin: 0;
           padding: 0;
           background: $chalk;
-          z-index: 100;
+          z-index: 250;
           @include transition(all, .2s, ease);
           padding: $small-button;
           @include border-radius(1px);
@@ -210,4 +226,14 @@ header {
       }
     }
   }
+}
+
+#overlay {
+  z-index: 200;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,.25);
 }
