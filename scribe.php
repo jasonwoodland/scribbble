@@ -21,7 +21,11 @@
 	$stmt->execute([$id]);
 	$result = $stmt->fetch(PDO::FETCH_OBJ);
 ?>
-
+<style>
+body {
+	overflow: hidden;
+}
+</style>
 <div id="editor-layout">
 	<div class="html block" id="html-pane">
 		<div class="editor-info">
