@@ -9,7 +9,6 @@
 		$_POST['cssPreprocessor'],
 		$_POST['jsPreprocessor']
 	);
-	error_log(print_r($_POST,true));
-	error_log('SCRIBE SAVE');
+	echo $_POST['id'];
 ?>
 

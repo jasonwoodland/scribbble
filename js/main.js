@@ -35,9 +35,8 @@ $(window).on('resize scroll', function() {
 });
 
 function updateFooter() {
-	if($('body').height() < $(window).height()) {
+	if($('body').height() + $('footer.sink').height() < $(window).height()) {
 		$('footer').addClass('sink');
-
 	} else {
 		$('footer').removeClass('sink');
 	}

@@ -145,8 +145,8 @@ $(window).ready(function() {
 		$('#sandbox-buffer').prop('src', url); 
 	});
 
-	$('#save-scribe').click(function() {
-		var indicator = $(this).children();
+	$('#save-scribe button').click(function() {
+		var indicator = $(this);
 		indicator.html('saving&hellip;');
 		$.post('/api/scribe-save', {
 			id: window.id,
