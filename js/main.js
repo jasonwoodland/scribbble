@@ -5,7 +5,7 @@ $(function() {
 	$('#overlay').hide();
 
 	setTimeout(function() {
-		$('header .user .username').mouseenter(function() {
+		$('header .user .username').click(function() {
 			var out = false;
 			$('#overlay').fadeIn(250);
 			$('.dropdown').addClass('open');
