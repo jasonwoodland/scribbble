@@ -2,6 +2,7 @@
 	define('ROLE', 'verify-account-notification');
 	define('TITLE', 'thank you');
 	define('NO_HTML_HEADER', TRUE);
+	define('NO_HTML_FOOTER', TRUE);
 	require 'resources/controller.php';
 ?>
 

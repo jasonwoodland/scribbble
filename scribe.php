@@ -57,9 +57,6 @@ body {
 	<div id="v-drag"><i class="ion-drag"></i></div>
 </div>
 
-<div class="username-in-editor">
-	<a href="#">username</a>
-</div>
 <iframe sandbox="allow-scripts" width=100% frameborder=0 id="sandbox-buffer"></iframe>
 <iframe sandbox="allow-scripts" width=100% frameborder=0 id="sandbox"></iframe>
 <script src="/js/haml.js"></script>
