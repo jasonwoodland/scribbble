@@ -33,6 +33,7 @@
 	?>
 	page = '<!DOCTYPE html><html><head>';
 	page += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">\x3C/script>';
+	page += '<style>body{overflow:hidden!important}</style>';
 	page += '<style>' + css + '</style>';
 	page += '</head><body bgcolor="white">';
 	page += html;
