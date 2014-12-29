@@ -284,7 +284,7 @@ header {
       color: #474747;
       font-size: 13px; }
     #content-wrapper .container12 .row .explore .active {
-      color: #82bb80; }
+      font-weight: bold; }
 
 footer {
   background: #151515;
