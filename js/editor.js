@@ -157,7 +157,7 @@ $(window).ready(function() {
 			cssPreprocessor: settings.css,
 			jsPreprocessor: settings.js
 		}, function(response) {
-			window.id = response;
+			if(!window.id) window.id = parseInt(response);
 			setTimeout(function() {
 				indicator.html('saved');
 			}, 500);

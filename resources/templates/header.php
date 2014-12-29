@@ -44,7 +44,7 @@
 			if(defined('ROLE')) echo(sprintf('<script src="/js/%s.js"></script>', ROLE));
 		?>
 	</head>
-
+	<body>
 	<div id="overlay">&nbsp;</div>
 
 	<?php
