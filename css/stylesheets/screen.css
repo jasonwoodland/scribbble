@@ -207,14 +207,13 @@ header {
       border-radius: 2px;
       overflow: hidden; }
       #content-wrapper .container12 .row .column3 iframe, #content-wrapper .container12 .row .column4 iframe {
-        -webkit-transform: scale(0.5, 0.5) translate(-265px, -220px);
+        -webkit-transform: scale(0.5, 0.5) translate(-420px, -220px);
         position: absolute;
         top: 0;
-        left: 0;
-        width: 530px;
-        height: 440px;
-        opacity: 1;
-        overflow: hidden; }
+        margin-left: -210px;
+        left: 50%;
+        width: 840px;
+        height: 440px; }
       #content-wrapper .container12 .row .column3 .created-by, #content-wrapper .container12 .row .column3 .scribe-heart-preview, #content-wrapper .container12 .row .column4 .created-by, #content-wrapper .container12 .row .column4 .scribe-heart-preview {
         display: block;
         text-decoration: none;

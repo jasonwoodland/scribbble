@@ -16,14 +16,13 @@
         overflow: hidden;
 
         iframe {
-          -webkit-transform: scale(.5,.5) translate(-265px,-220px);
+          -webkit-transform: scale(0.5, 0.5) translate(-420px, -220px);
           position: absolute;
           top: 0;
-          left: 0;
-          width: 530px;
+          margin-left: -210px;
+          left: 50%;
+          width: 840px;
           height: 440px;
-          opacity: 1;
-          overflow: hidden;
         }
 
         .created-by {
