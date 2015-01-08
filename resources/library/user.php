@@ -8,7 +8,8 @@
 		}
 
 		public function exist() {
-			$stmt = $this->db->prepare('SELECT username FROM users WHERE username = ?');
+			global $db;
+			$stmt = $db->prepare('SELECT username FROM users WHERE username = ?');
 			$stmt->execute([$this->username]);
 			return !!$stmt->rowCount();
 		}
@@ -21,10 +22,11 @@
 		}
 
 		public function create($email, $password) {
+			global $db;
 			if(static::find('username', $this->username) || static::find('email', $email)) 
 				return FALSE;
 			else {
-				$stmt = $this->db->prepare('INSERT INTO users (username, email, password) VALUES (?, ?, ?)');
+				$stmt = $db->prepare('INSERT INTO users (username, email, password) VALUES (?, ?, ?)');
 				$stmt->execute([$this->username, $email, sha1($password, true)]);
 				return TRUE;
 			}
@@ -45,14 +47,16 @@
 		}
 
 		public function newVerificationCode() {
+			global $db;
 			$verificationCode = secure::token(6);
-			$stmt = $this->db->prepare('UPDATE users SET verification_code = ? WHERE username = ?');
+			$stmt = $db->prepare('UPDATE users SET verification_code = ? WHERE username = ?');
 			$stmt->execute([$verificationCode, $this->username]);
 			return $verificationCode;
 		}	
 
 		public function verify($verificationCode) {
-			$stmt = $this->db->prepare('UPDATE users SET verification_code = NULL WHERE verification_code = ?');
+			global $db;
+			$stmt = $db->prepare('UPDATE users SET verification_code = NULL WHERE verification_code = ?');
 			$stmt->execute([$verificationCode]);
 			return $stmt->rowCount() == 1;
 		}

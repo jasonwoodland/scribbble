@@ -14,12 +14,15 @@
 		<!-- styles -->
 		<link href="/css/stylesheets/1140.css" media="screen, projection" rel="stylesheet" type="text/css">
 		<link href="/js/codemirror/lib/codemirror.css" media="screen, projection" rel="stylesheet" type="text/css">
-		<link href="/js/codemirror/theme/base16-dark.css" media="screen, projection" rel="stylesheet" type="text/css">
+		<link href="/js/codemirror/theme/tomorrow-night-eighties.css" media="screen, projection" rel="stylesheet" type="text/css">
 		<link href="/css/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 		<!-- dependencies -->
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 		<script src="/js/main.js"></script>
 		<script src="/js/codemirror/lib/codemirror.js"></script>
+		<script src="/js/codemirror/addon/edit/closebrackets.js"></script>
+		<script src="/js/emmet.js"></script>
 		<script src="/js/codemirror/mode/xml/xml.js"></script>
 		<script src="/js/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 		<script src="/js/codemirror/mode/ruby/ruby.js"></script>
@@ -51,4 +54,14 @@
 		defined('NO_HTML_HEADER') or require defined('USER_ID') ? HTML_HEADER : 'guest-html-header.php';
 	?>
 
-	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*newDate();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','UA-54948422-2','auto');ga('send','pageview');</script>
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-54948422-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+

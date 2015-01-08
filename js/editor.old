@@ -1,4 +1,4 @@
-var preview,
+var 
 	updateTimeout, 
 	oldUrl, url, 
 	editorHeight, 
@@ -122,26 +122,28 @@ $(window).ready(function() {
 				js = CoffeeScript.compile(js, {bare: true});
 		}
 
-		css = PrefixFree.prefixCSS(css, true);
 		page = '<!DOCTYPE html><html><head>';
-		page += '<style>' + css + '</style>';
 		page += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>';
+		page += '<style>' + css + '</style>';
 		page += '</head><body bgcolor="white">';
 		page += html;
 		page += '<script>' + js + '</script>';
 		page += '</body></html>';
 		blob = new Blob([page], {type: 'text/html'});
 		url = URL.createObjectURL(blob);
-		$('#sandbox').attr('id', 'sandbox-buffer');
-		$('#editor-layout').after('<iframe sandbox="allow-scripts" src="' + url + '" id="sandbox" width=100% frameborder=0 height=' + $('#sandbox-buffer').height() + 'px></iframe>');
-		
-	$('#sandbox').load(function() {
-		$('#sandbox-buffer').remove(); 
-	});
+		$('#sandbox').css({
+			opacity: 0
+		}).prop('src', url);
 	}
 
 	updateSandbox();
 
+	$('#sandbox').load(function() {
+		$('#sandbox').css({
+			opacity: 1
+		});
+		$('#sandbox-buffer').prop('src', url); 
+	});
 
 	$('#save-scribe button').click(function() {
 		var indicator = $(this);
@@ -229,7 +231,7 @@ $(window).ready(function() {
 
 function resizeSandbox() {
 	$('#editor-layout .block .CodeMirror').height(editorHeight);
-	$('#sandbox').height($(window).height() - $('header').outerHeight() - $('#editor-layout .block .CodeMirror').outerHeight());
+	$('#sandbox, #sandbox-buffer').height($(window).height() - $('header').outerHeight() - $('#editor-layout .block .CodeMirror').outerHeight());
 	$('#v-drag').css({
 		top: editorHeight 
 	});

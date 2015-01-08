@@ -1,6 +1,6 @@
 <?php
 	require '../resources/controller.php';
-	scribe::save(
+	echo scribe::save(
 		$_POST['id'],
 		$_POST['html'],
 		$_POST['css'],
@@ -9,6 +9,5 @@
 		$_POST['cssPreprocessor'],
 		$_POST['jsPreprocessor']
 	);
-	echo $_POST['id'];
 ?>
 

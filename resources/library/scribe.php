@@ -25,7 +25,7 @@
 					$js_preprocessor,
 					USER_ID
 				]);
-				echo $db->lastInsertId();
+				return $db->lastInsertId();
 			}
 		}
 

@@ -31,8 +31,10 @@
 				<?php
 		}
 	?>
+	css = PrefixFree.prefixCSS(css);
 	page = '<!DOCTYPE html><html><head>';
 	page += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">\x3C/script>';
+	page += '<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js">\x3C/script>';
 	page += '<style>body{overflow:hidden!important}</style>';
 	page += '<style>' + css + '</style>';
 	page += '</head><body bgcolor="white">';
@@ -43,7 +45,7 @@
 	scribes[<?=$index?>] = URL.createObjectURL(blob);
 </script>
 <div class="column3">
-	<iframe sandbox="allow-scripts" data-index=<?=$index?> width=530px height=440px frameborder=0></iframe>
+	<iframe style="volume:silent" sandbox="allow-scripts" data-index=<?=$index?> width=530px height=440px frameborder=0></iframe>
 
 	<div class="scrib-pop">
 		<a class="view-scrib" href="/scribe/<?=$scribe->id?>"></a>

@@ -1,5 +1,5 @@
 <?php
-require '../resources/controller.php';
+	require '../resources/controller.php';
 /*try {
 	$stmt = $db->prepare('INSERT INTO users (username, email, password) VALUES (:username, :email, :password)');
 	var_dump($_POST);
@@ -19,7 +19,6 @@ echo $e->getMessage();
 }
  */
 	$me = new user($_POST['username']);
-var_dump($me);
 	if($me->create($_POST['email'], $_POST['password'])) {
 		$verificationCode = $me->newVerificationCode();	
 		$letter = new mailer();

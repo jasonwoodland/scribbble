@@ -57,7 +57,7 @@ body {
 	<div id="v-drag"><i class="ion-drag"></i></div>
 </div>
 
-<iframe sandbox="allow-scripts" width=100% frameborder=0 id="sandbox-buffer"></iframe>
+<!--iframe sandbox="allow-scripts" width=100% frameborder=0 id="sandbox-buffer"></iframe-->
 <iframe sandbox="allow-scripts" width=100% frameborder=0 id="sandbox"></iframe>
 <script src="/js/haml.js"></script>
 <script src="/js/coffee-script.js"></script>
