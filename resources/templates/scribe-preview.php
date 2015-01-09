@@ -50,10 +50,10 @@
 	<div class="scrib-pop">
 		<a class="view-scrib" href="/scribe/<?=$scribe->id?>"></a>
 		
-		<a href="#" class="scribe-profile-pic"><img src="noface" alt=""></a>
+		<a href="#" class="scribe-profile-pic"><img src="/images/users/<?=user::username($scribe->owner)?>" alt=""></a>
 		<a class="created-by" href="/<?=user::username($scribe->owner)?>"><?=user::username($scribe->owner)?></a>
 		
-		<button class="scribe-heart-preview" href="#"><i class="ion-heart"></i>6</button>
+		<button class="scribe-heart-preview" href="#"><i class="ion-heart"></i><?=scribe::likes($scribe->id)?></button>
 		<button class="delete-scribe"><i class="ion-android-close"></i></button>
 	</div>
 </div>
