@@ -30,22 +30,42 @@
           text-decoration: none;
           position: absolute;
           bottom: 0;
-          margin: 10px;
-          padding: 0px 0 0px 7px;
+          left: 25px;
+          margin: 5px;
+          padding: $small-button;
           color: white;
-          
           font-size: $small-font-size;
           text-transform: lowercase;
-          padding: $small-button;
-          @include border-radius(1px);
+        }
+
+        .scribe-profile-pic {
+
+          img {
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            bottom: 0;
+            left: 0;
+            padding: $small-button;
+            margin: 4px 5px;
+          }
         }
 
         .scribe-heart-preview {
-          @extend .created-by;
           right: 0;
+          bottom: 0;
           background: none;
           border: none;
           cursor: pointer;
+          font-size: 11px;
+          display: block;
+          text-decoration: none;
+          position: absolute;
+          margin: 5px;
+          padding: $small-button;
+          color: white;
+          font-size: $small-font-size;
+          text-transform: lowercase;
 
           &:focus {
             outline: none;
@@ -53,6 +73,8 @@
 
           i {
             color: white;
+            margin-right: 10px;
+            font-size: 9px;
           }
 
           &:hover {
@@ -71,6 +93,21 @@
           text-align: center;
           overflow: hidden;
           @include border-radius(1px);
+
+          .delete-scribe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            padding: $small-button;
+            color: white;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            display: block;
+            margin: 5px;
+            font-size: $small-font-size;
+          }
 
           .view-scrib {
             position: absolute;

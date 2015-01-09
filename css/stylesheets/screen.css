@@ -149,7 +149,7 @@ header {
           header #header-wrapper .user li .username:hover, header #header-wrapper .user li .sign-up:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro:hover, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a:hover, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a:hover, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a:hover, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-btn:hover, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-btn:hover {
             color: #151515; }
           header #header-wrapper .user li .username i, header #header-wrapper .user li .sign-up i, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .pro i, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .pro i, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .user-info a i, #content-wrapper .container12 .row .column12 .user-info header #header-wrapper .user li a i, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .bio a i, #content-wrapper .container12 .row .column12 .bio header #header-wrapper .user li a i, header #header-wrapper .user li #content-wrapper .container12 .row .column12 .follow-btn i, #content-wrapper .container12 .row .column12 header #header-wrapper .user li .follow-btn i {
-            font-size: 16px; }
+            font-size: 20px; }
         header #header-wrapper .user li .notification {
           margin: 0;
           display: none; }
@@ -214,30 +214,46 @@ header {
         left: 50%;
         width: 840px;
         height: 440px; }
-      #content-wrapper .container12 .row .column3 .created-by, #content-wrapper .container12 .row .column3 .scribe-heart-preview, #content-wrapper .container12 .row .column4 .created-by, #content-wrapper .container12 .row .column4 .scribe-heart-preview {
+      #content-wrapper .container12 .row .column3 .created-by, #content-wrapper .container12 .row .column4 .created-by {
         display: block;
         text-decoration: none;
         position: absolute;
         bottom: 0;
-        margin: 10px;
-        padding: 0px 0 0px 7px;
+        left: 25px;
+        margin: 5px;
+        padding: 7px 16px;
         color: white;
         font-size: 11px;
-        text-transform: lowercase;
+        text-transform: lowercase; }
+      #content-wrapper .container12 .row .column3 .scribe-profile-pic img, #content-wrapper .container12 .row .column4 .scribe-profile-pic img {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        bottom: 0;
+        left: 0;
         padding: 7px 16px;
-        -webkit-border-radius: 1px;
-        -moz-border-radius: 1px;
-        -ms-border-radius: 1px;
-        border-radius: 1px; }
+        margin: 4px 5px; }
       #content-wrapper .container12 .row .column3 .scribe-heart-preview, #content-wrapper .container12 .row .column4 .scribe-heart-preview {
         right: 0;
+        bottom: 0;
         background: none;
         border: none;
-        cursor: pointer; }
+        cursor: pointer;
+        font-size: 11px;
+        display: block;
+        text-decoration: none;
+        position: absolute;
+        margin: 5px;
+        padding: 7px 16px;
+        color: white;
+        font-size: 11px;
+        text-transform: lowercase; }
         #content-wrapper .container12 .row .column3 .scribe-heart-preview:focus, #content-wrapper .container12 .row .column4 .scribe-heart-preview:focus {
           outline: none; }
         #content-wrapper .container12 .row .column3 .scribe-heart-preview i, #content-wrapper .container12 .row .column4 .scribe-heart-preview i {
-          color: white; }
+          color: white;
+          margin-right: 10px;
+          font-size: 9px; }
         #content-wrapper .container12 .row .column3 .scribe-heart-preview:hover, #content-wrapper .container12 .row .column4 .scribe-heart-preview:hover {
           background: none; }
       #content-wrapper .container12 .row .column3 .scrib-pop, #content-wrapper .container12 .row .column4 .scrib-pop {
@@ -258,6 +274,19 @@ header {
         -moz-border-radius: 1px;
         -ms-border-radius: 1px;
         border-radius: 1px; }
+        #content-wrapper .container12 .row .column3 .scrib-pop .delete-scribe, #content-wrapper .container12 .row .column4 .scrib-pop .delete-scribe {
+          position: absolute;
+          top: 0;
+          right: 0;
+          background: none;
+          padding: 7px 16px;
+          color: white;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          display: block;
+          margin: 5px;
+          font-size: 11px; }
         #content-wrapper .container12 .row .column3 .scrib-pop .view-scrib, #content-wrapper .container12 .row .column4 .scrib-pop .view-scrib {
           position: absolute;
           margin: auto;

@@ -8,7 +8,7 @@
 		define('AUTHENTICATED', $_SESSION['authenticated']);
 		define('USERNAME',		$_SESSION['username']);
 		define('USER_ID',		$_SESSION['user_id']);
-		define('PDO_HOST',		'localhost');
+		define('PDO_HOST',		'127.0.0.1');
 		define('PDO_DBNAME',	'scribbble');
 		define('PDO_DSN',		sprintf('mysql:host=%s;dbname=%s', PDO_HOST, PDO_DBNAME));
 		define('PDO_USERNAME',	'root');
